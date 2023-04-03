@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="noindex,nofollow" />
+
+    <link rel="stylesheet" href="../Content/bootstrap-4.3.1.min.css" />
+    <link rel="stylesheet" href="../Content/font-awesome-4.7.0.min.css" />
+	
+	<!-- Load the Telegram Library before any other scripts-->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <script src="../Content/js/jquery-3.4.1.min.js"></script>
+    <script src="../Content/js/bootstrap-4.3.1.min.js"></script>
+</head>
+<body >
+	<form id="myForm" method="post">
+		<section>
+			<div class="row">
+				<div id="btn_status" class="hint" style="display: none;" class="col-lg-12 col-md-12 col-sm-12">
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="card card-shadow">
+						<div class="card-header">
+							<h4>Ingresa la información de los niveles:</h4>
+						</div>
+						<div class="card-body">
+							<div class="form-row">
+								<div class="form-group  col-lg-12 col-md-12 col-sm-12">
+									<span>Aceite de motor</span>
+									<input type="number" id="txtAceitoMotor" name="txtAceitoMotor" min="0.5" max="4.0" step="0.5" class="form-control" onchange="validateRange(this)" required>
+								</div>
+								<div class="form-group  col-lg-12 col-md-12 col-sm-12">
+									<span>Aceite Hidráulico</span>
+									<input type="number" id="txtAceiteHidraulico" name="txtAceiteHidraulico" min="0.25" max="1" step="0.25" class="form-control" onchange="validateRange(this)" required>
+								</div>
+								<div class="form-group  col-lg-12 col-md-12 col-sm-12">
+									<span>Aceite Transmisión Automática</span>
+									<input type="number" id="txtAceiteTransmisionAut" name="txtAceiteTransmisionAut" min="0.25" max="1" step="0.25" class="form-control" onchange="validateRange(this)" required>
+								</div>
+								<div class="form-group  col-lg-12 col-md-12 col-sm-12">
+									<span>Anticongelante</span>
+									<input type="number" id="txtAnticongelante" name="txtAnticongelante" min="0.5" max="4" step="0.5" class="form-control" onchange="validateRange(this)" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-auto">
+									<div class="form-check form-check-inline">
+										<span class="form-check-label">Líquido Frenos&nbsp;&nbsp;</span>
+										<input type="checkbox" id="chkLiqFrenos" name="chkLiqFrenos" class="form-check-input">
+									</div>
+								</div>
+								<div class="form-group  col-auto">
+									<div class="form-check form-check-inline">
+										<span class="form-check-label">Agua Parabrisas&nbsp;&nbsp;</span>
+										<input type="checkbox" id="chkAguaP" name="chkAguaP" class="form-check-input">
+									</div>
+								</div>
+								<div class="form-group  col-auto">
+									<div class="form-check form-check-inline">
+										<span class="form-check-label">Embrague&nbsp;&nbsp;</span>
+										<input type="checkbox" id="chkEmbrague" name="chkEmbrague" class="form-check-input">
+									</div>
+								</div>
+								<div class="form-group  col-auto">
+									<div class="form-check form-check-inline">
+										<span class="form-check-label">Publicidad&nbsp;&nbsp;</span>
+										<input type="checkbox" id="chkPublicidadP" name="chkPublicidad" class="form-check-input">
+									</div>
+								</div>
+								<div class="form-group  col-auto">
+									<div class="form-check form-check-inline">
+										<span class="form-check-label">Terminales&nbsp;&nbsp;</span>
+										<input type="checkbox" id="chkTerminales" name="chkTerminales" class="form-check-input">
+									</div>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group  col-lg-12 col-md-12 col-sm-12">
+									<span>Observaciones</span>
+									<textarea id="txtObservaciones" name="txtObservaciones" rows="3"  maxlength="200" class="form-control"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer ">
+						</div>
+					</div>
+				</div>
+				<div class="fixed-bottom">
+					<input type="submit" value="ENVIAR NIVELES" class="btn btn-primary btn-lg btn-block" onclick="sendDataToBot()">
+				</div>
+			</div>
+		</section>
+	</form>
+	
+	<script type="application/javascript">
+		
+		function validateRange(me) {
+			//console.log(me.id + ' ' + me.value);
+			var value = 0;
+			switch (me.id) {
+				case "txtAceitoMotor":
+				case "txtAnticongelante":
+					value = me.value;
+					if(value < 0.5 || value > 4)
+						me.value = "";
+				break;
+				case "txtAceiteHidraulico":
+				case "txtAceiteTransmisionAut":
+					value = me.value;
+					if(value < 0.25 || value > 1)
+						me.value = "";
+				break;
+			}
+		}
+		
+		function getJsonData() {
+			var aceite_motor = $("#txtAceitoMotor").val();
+			var aceite_hidraulico = $("#txtAceiteHidraulico").val();
+			var aceite_transmision_aut = $("#txtAceiteTransmisionAut").val();
+			var anticongelante = $("#txtAnticongelante").val();
+			var frenos = $("#chkLiqFrenos").prop('checked');
+			var agua_parabrisas = $("#chkAguaP").prop('checked');
+			var embrague = $("#chkEmbrague").prop('checked');
+			var publicidad = $("#chkPublicidadP").prop('checked');
+			var terminales = $("#chkTerminales").prop('checked');
+			var observaciones = $("#txtObservaciones").val();
+			
+			var json = { 'aceite_motor': aceite_motor,
+						 'aceite_hidraulico': aceite_hidraulico,
+						 'aceite_transmision_aut': aceite_transmision_aut,
+						 'anticongelante': anticongelante,
+						 'frenos': frenos,
+						 'agua_parabrisas': agua_parabrisas,
+						 'embrague': embrague,
+						 'publicidad': publicidad,
+						 'terminales': terminales,
+						 'observaciones': observaciones
+					   };
+			return json;
+		}
+		
+		function sendDataToBot() {
+			var form = document.getElementById("myForm");
+			if(form.checkValidity() == false)
+				return;
+			Telegram.WebApp.sendData(JSON.stringify(getJsonData()));
+			//Telegram.WebApp.close();
+		}
+		
+		const SgaApp = {
+			initData: Telegram.WebApp.initData || '',
+			initDataUnsafe: Telegram.WebApp.initDataUnsafe || {},
+			//MainButton: Telegram.WebApp.MainButton,
+
+			init(options) {
+				//document.body.style.visibility = '';
+				Telegram.WebApp.ready();
+			},
+			close() {
+				Telegram.WebApp.close();
+			}
+		}
+
+		SgaApp.init();
+		
+	</script>
+    
+</body>
+</html>
