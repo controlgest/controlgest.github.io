@@ -267,14 +267,15 @@
 			
 			XAVApp.init();
 			
-			<!-- alert(XAVApp.initData); -->
-			<!-- alert(XAVApp.initDataUnsafe); -->
+			$(document).ready(function () {
+				const params = new URLSearchParams(document.location.search);
+				
+				if(params.size > 0) {
+					cargarEmpleados(params);
+				}
 			
-			<!-- const params = new URLSearchParams(document.location.search); -->
-            <!-- var d1 = params.get("d1"); -->
-			<!-- var d2 = params.get("d2"); -->
-			<!-- alert(d1); -->
-			<!-- alert(d2); -->
+			});
+
 			
 			XAVApp.MainButton.onClick(() => {
 				var form = document.getElementById("myForm");
@@ -465,6 +466,29 @@
 					
 			}
 		
+			function cargarEmpleados(params) {
+				for (const p of params) {
+					console.log(p);
+			
+					let posicion = p[0].replace(/^\D+/g, '');
+					let values = p[1].split('|');
+					let pnl = $('#pnlEmpleado' + posicion);
+					pnl.show(1000);
+					let txtExp = $('#txtExpediente' + posicion);
+					let txtFIni = $('#txtFechaIni' + posicion);
+					let txtFFin = $('#txtFechaFin' + posicion);
+					let txtHrs = $('#txtTotalHoras' + posicion);
+					txtExp.attr("required", "");
+					txtExp.val(values[0]);	
+					txtFIni.attr("required", "");
+					txtFIni.val(values[1]);
+					txtFFin.attr("required", "");
+					txtFFin.val(values[2]);
+					txtHrs.val(values[3]);
+				  
+				}
+				
+			}
 		
 	</script>
     
