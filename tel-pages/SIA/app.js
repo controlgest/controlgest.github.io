@@ -58,7 +58,6 @@ let getJsonData = () => {
     //obtener json con el id de los inputs con su valor de myform
     var data = {};
     var formInventario = document.getElementById("formInventario");
-    console.log('FORM_INVENTARIO: ', formInventario);
     $(formInventario).find('input')
         .each(function () {
             let el = $(this);

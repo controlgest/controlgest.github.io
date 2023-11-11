@@ -1,6 +1,3 @@
-.logo{
-    height: 45px;
-}
 .header{
     align-items: center;
     display: flex;
@@ -12,7 +9,7 @@
 .form-check-inline{
     margin-right: 0;
 }
-.inputCantidad{
+.control-hidden{
     display: none;
 }
 .form-check-input{
