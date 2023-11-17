@@ -30,6 +30,10 @@ $(document).ready(function () {
 
 });
 
+$('input[type="checkbox"]').on('change', function() {
+    $('input[name="' + this.name + '"]').not(this).prop('checked', false);
+});
+
 
 XAVApp.MainButton.onClick(() => {
     var form = document.getElementById("myForm");
@@ -69,8 +73,15 @@ let getJsonData = () => {
                 case 'number':
                     data[el[0].id] = el[0].value
                     break;
+                case 'date':
+                    data[el[0].id] = el[0].value
+                    break;    
             }
         });
+        if(!data.chkBuenEstado && !data.chkEstadoDañado){
+            alert('Estado de vestiduras incompleto...')
+            return
+        }
     console.log(data);
 
     let jsonString = JSON.stringify(data);
@@ -95,20 +106,30 @@ let cantidadesInput = (idCheck, idInput) => {
 
 let cargarDatos = (params) => {
     // url prueba = ?cantidad=12&txtLimpiadores=2&chkLimpiadores=true&chkHerramienta=true
+    document.getElementById("txtNoEco").textContent = params.get("txtNoEco");
+    document.getElementById("txtResponsable").value = params.get("txtResponsable");
+    document.getElementById("txtFechaAsignasion").value = params.get("txtFechaAsignasion");
+
     for (const [key, value] of params.entries()) {
         let element = document.getElementById(key)
+        console.log(element);
+        let txt
         if (element) {
             switch (element.type) {
                 case 'checkbox':
                     document.getElementById(key).checked = value
                     break;
                 case 'number':
-                    let txt = document.getElementById(key)
-                        txt.value = value
+                    txt = document.getElementById(key)
+                    txt.value = value
                     txt.style.display = 'block'; // Muestra el campo de entrada
                     txt.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
                     txt.removeAttribute('disabled'); // Habilita el campo de entrada
                     break;
+                case 'span':
+                    document.getElementById(key).value = value
+                    break
+
             }
         }
     }
