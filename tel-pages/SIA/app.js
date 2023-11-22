@@ -52,37 +52,31 @@ let sendDataToBot = () => {
     if (form.checkValidity() == false) return;
 
     let json = getJsonData();
-    console.log(json);
     Telegram.WebApp.sendData(json);
     XAVApp.close();
 }
 
 let getJsonData = () => {
 
-    //obtener json con el id de los inputs con su valor de myform
     var data = {};
     var formInventario = document.getElementById("formInventario");
     $(formInventario).find('input')
         .each(function () {
-            let el = $(this);
-
-            switch (el[0].type) {
+            let x = $(this);
+            switch (x[0].type) {
                 case 'checkbox':
-                    data[el[0].id] = el[0].checked
+                    data[x[0].id] = x[0].checked
                     break;
                 case 'number':
-                    data[el[0].id] = el[0].value
+                    data[x[0].id] = x[0].value
                     break;
-                case 'date':
-                    data[el[0].id] = el[0].value
-                    break;    
+                default:
+                    data[x[0].id] = x[0].value
+                    break;
             }
         });
-        if(!data.chkBuenEstado && !data.chkEstadoDañado){
-            alert('Estado de vestiduras incompleto...')
-            return
-        }
-    console.log(data);
+        data['slcEstadoVestidura'] = document.getElementById("slcEstadoVestidura").value
+
 
     let jsonString = JSON.stringify(data);
     return jsonString;
@@ -107,12 +101,11 @@ let cantidadesInput = (idCheck, idInput) => {
 let cargarDatos = (params) => {
     // url prueba = ?cantidad=12&txtLimpiadores=2&chkLimpiadores=true&chkHerramienta=true
     document.getElementById("txtNoEco").textContent = params.get("txtNoEco");
-    document.getElementById("txtResponsable").value = params.get("txtResponsable");
-    document.getElementById("txtFechaAsignasion").value = params.get("txtFechaAsignasion");
+    document.getElementById("txtResponsable").textContent = params.get("txtResponsable");
+    document.getElementById("txtIAVE").textContent = params.get("txtIAVE");
 
     for (const [key, value] of params.entries()) {
         let element = document.getElementById(key)
-        console.log(element);
         let txt
         if (element) {
             switch (element.type) {
@@ -126,10 +119,9 @@ let cargarDatos = (params) => {
                     txt.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
                     txt.removeAttribute('disabled'); // Habilita el campo de entrada
                     break;
-                case 'span':
+                default:
                     document.getElementById(key).value = value
                     break
-
             }
         }
     }

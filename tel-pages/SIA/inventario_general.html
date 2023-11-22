@@ -32,10 +32,14 @@
 									<span class="mr-1">Vehículo:</span>
 									<b><span id="txtNoEco" class="mr-1"></span></b>
 								</div>
-								<div class="col-4 p-0">
-									<span class="mr-1">Asignado a:</span>
+								<div class="col-12 p-0">
+									<span class="mr-1">IAVE:</span>
+									<b><span id="txtIAVE" placeholder="IAVE" class="col-7 mr-1" required></span></b>
 								</div>
-								<input id="txtResponsable" type="text" placeholder="Nombre del responsable" class="form-control col-7 mr-1" required></input>
+								<div class="col-12 p-0">
+									<span class="mr-1">Asignado a:</span>
+									<b><span id="txtResponsable" class="col-7 mr-1" required></span></b>
+								</div>
 								<div class="col-6 p-0">
 									<span class="mr-1">Fecha de asignasión:</span>
 								</div>
@@ -137,13 +141,20 @@
 								<hr class="hr col-11" />
 								<div class="col-12 p-0 ">
 									<span class="mr-1">Estado de vestiduras:</span>
-									<div class="col-9 form-check-inline">
+									<!-- <div class="col-9 form-check-inline">
 										<input class="form-check-input" type="checkbox" name="estado[]" id="chkBuenEstado">
 										<span class="form-check-label mr-1">Buen estado</span>
 									</div>
 									<div class="col-9 form-check-inline">
 										<input class="form-check-input" type="checkbox" name="estado[]" id="chkEstadoDañado">
 										<span class="form-check-label mr-1">Vestiduras dañadas</span>
+									</div> -->
+									<div class="col-12 p-0">
+										<select class="custom-select" name="slcEstadoVestidura" id="slcEstadoVestidura" required>
+											<option value="">--Selecciona una opción--</option>
+											<option value="BUEN ESTADO">Buen estado</option>
+											<option value="VESTIDURA DAÑADA">Vestidura dañada</option>
+										</select>
 									</div>
 								</div>
 							</div>
