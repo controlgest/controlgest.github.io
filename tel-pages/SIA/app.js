@@ -75,7 +75,10 @@ let getJsonData = () => {
                     break;
             }
         });
-        data['slcEstadoVestidura'] = document.getElementById("slcEstadoVestidura").value
+        data.slcEstadoVestidura = document.getElementById("slcEstadoVestidura").value
+        data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent
+        data.txtResponsable = document.getElementById("txtResponsable").textContent
+        console.log(data)
 
 
     let jsonString = JSON.stringify(data);
@@ -102,7 +105,7 @@ let cargarDatos = (params) => {
     // url prueba = ?cantidad=12&txtLimpiadores=2&chkLimpiadores=true&chkHerramienta=true
     document.getElementById("txtNoEco").textContent = params.get("txtNoEco");
     document.getElementById("txtResponsable").textContent = params.get("txtResponsable");
-    document.getElementById("txtIAVE").textContent = params.get("txtIAVE");
+    document.getElementById("txtTarjetaPase").textContent = params.get("txtTarjetaPase");
 
     for (const [key, value] of params.entries()) {
         let element = document.getElementById(key)
