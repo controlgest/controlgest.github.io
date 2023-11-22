@@ -40,10 +40,22 @@
 									<span class="mr-1">Asignado a:</span>
 									<b><span id="txtResponsable" class="col-7 mr-1" required></span></b>
 								</div>
-								<div class="col-6 p-0">
+								
+								<div class="col-12 p-0">
 									<span class="mr-1">Fecha de asignasión:</span>
+									<input id="txtFechaAsignasion" type="date" class="form-control mr-1" required></input>
 								</div>
-								<input id="txtFechaAsignasion" type="date" class="form-control col-5 mr-1" required></input>
+								<div class="col-12 p-0 ">
+									<span class="mr-1">Estatus Operativo:</span>
+									<div class="col-12 p-0">
+										<select class="custom-select" name="slcEstatusOperativo" id="slcEstatusOperativo" required>
+											<option value="">--Selecciona una opción--</option>
+											<option value="FUNCIONA">Funciona</option>
+											<option value="NO FUNCIONA">No funciona</option>
+											<option value="FUNCIONA CON PROBLEMAS TRANSITORIOS">Funciona con problemas transitorios</option>
+										</select>
+									</div>
+								</div>
 								<hr class="hr col-11" />
 								<div class="col-9 form-check-inline">
 									<input class="form-check-input" type="checkbox" name="limpiadores" id="chkLimpiadores" onchange="cantidadesInput('chkLimpiadores','txtLimpiadores')">
@@ -141,14 +153,6 @@
 								<hr class="hr col-11" />
 								<div class="col-12 p-0 ">
 									<span class="mr-1">Estado de vestiduras:</span>
-									<!-- <div class="col-9 form-check-inline">
-										<input class="form-check-input" type="checkbox" name="estado[]" id="chkBuenEstado">
-										<span class="form-check-label mr-1">Buen estado</span>
-									</div>
-									<div class="col-9 form-check-inline">
-										<input class="form-check-input" type="checkbox" name="estado[]" id="chkEstadoDañado">
-										<span class="form-check-label mr-1">Vestiduras dañadas</span>
-									</div> -->
 									<div class="col-12 p-0">
 										<select class="custom-select" name="slcEstadoVestidura" id="slcEstadoVestidura" required>
 											<option value="">--Selecciona una opción--</option>
