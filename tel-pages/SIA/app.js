@@ -75,8 +75,8 @@ let getJsonData = () => {
                     break;
             }
         });
-        data.slcEstadoVestidura = document.getElementById("slcEstadoVestidura").value
-        data.slcEstatusOperativo = document.getElementById("slcEstatusOperativo").value
+        data.cbxEstadoVestidura = document.getElementById("cbxEstadoVestidura").value
+        data.cbxEstatusOperativo = document.getElementById("cbxEstatusOperativo").value
         data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent
         data.txtResponsable = document.getElementById("txtResponsable").textContent
         console.log(data)
