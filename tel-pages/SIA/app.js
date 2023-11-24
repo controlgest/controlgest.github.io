@@ -107,6 +107,20 @@ let cargarDatos = (params) => {
     document.getElementById("txtNoEco").textContent = params.get("txtNoEco");
     document.getElementById("txtResponsable").textContent = params.get("txtResponsable");
     document.getElementById("txtTarjetaPase").textContent = params.get("txtTarjetaPase");
+    let empresa = params.get('imgEmpresa');
+    let logo = document.getElementById('imgLogo')
+    switch (empresa) {
+        case 'RNUM':
+            logo.src = "../../Content/images/RNUM_LOGO.svg"
+            break;
+        case 'TELMEX':
+            logo.src = "../../Content/images/TELMEX_LOGO.svg"
+            break;
+        default:
+            logo.src = "../../Content/images/RNUM_LOGO.svg"
+            break;
+
+    }
 
     for (const [key, value] of params.entries()) {
         let element = document.getElementById(key)
