@@ -75,10 +75,10 @@ let getJsonData = () => {
                     break;
             }
         });
-        data.slcEstadoVestidura = document.getElementById("slcEstadoVestidura").value
-        data.slcEstatusOperativo = document.getElementById("slcEstatusOperativo").value
+        data.cbxEstadoVestidura = document.getElementById("cbxEstadoVestidura").value
+        data.cbxEstatusOperativo = document.getElementById("cbxEstatusOperativo").value
         data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent
-        data.txtResponsable = document.getElementById("txtResponsable").textContent
+        data.txtUsuario = document.getElementById("txtUsuario").textContent
         console.log(data)
 
 
@@ -105,7 +105,7 @@ let cantidadesInput = (idCheck, idInput) => {
 let cargarDatos = (params) => {
     // url prueba = ?cantidad=12&txtLimpiadores=2&chkLimpiadores=true&chkHerramienta=true
     document.getElementById("txtNoEco").textContent = params.get("txtNoEco");
-    document.getElementById("txtResponsable").textContent = params.get("txtResponsable");
+    document.getElementById("txtUsuario").textContent = params.get("txtUsuario");
     document.getElementById("txtTarjetaPase").textContent = params.get("txtTarjetaPase");
     let empresa = params.get('imgEmpresa');
     let logo = document.getElementById('imgLogo')
