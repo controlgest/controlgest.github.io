@@ -57,8 +57,9 @@ let sendDataToBot = () => {
 }
 
 let getJsonData = () => {
-
+    
     var data = {};
+    var selectedOptions = [];
     var formInventario = document.getElementById("formInventario");
     $(formInventario).find('input')
         .each(function () {
@@ -75,11 +76,19 @@ let getJsonData = () => {
                     break;
             }
         });
-        data.cbxEstadoVestidura = document.getElementById("cbxEstadoVestidura").value
-        data.cbxEstatusOperativo = document.getElementById("cbxEstatusOperativo").value
-        data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent
-        data.txtUsuario = document.getElementById("txtUsuario").textContent
-        console.log(data)
+        
+    data.cbxEstadoVestidura = document.getElementById("cbxEstadoVestidura").value
+    data.cbxEstatusOperativo = document.getElementById("cbxEstatusOperativo").value
+    data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent
+    data.txtUsuario = document.getElementById("txtUsuario").textContent
+    let slcEstadoVehiculo = document.getElementById("slcEstadoVehiculo")
+    for (var i = 0; i < slcEstadoVehiculo.options.length(); i++) {
+        if (slcEstadoVehiculo.options[i].selected) {
+            selectedOptions.push(slcEstadoVehiculo.options[i].value);
+        }
+    }
+    data.slcEstadoVehiculo = selectedOptions;
+    console.log(data)
 
 
     let jsonString = JSON.stringify(data);
@@ -136,6 +145,22 @@ let cargarDatos = (params) => {
                     txt.style.display = 'block'; // Muestra el campo de entrada
                     txt.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
                     txt.removeAttribute('disabled'); // Habilita el campo de entrada
+                    break;
+                case 'select-multiple':
+                    let valuesArray = JSON.parse(value);
+
+                    // Restablecer todas las opciones a no seleccionadas
+                    for (let option of element.options) {
+                        option.selected = false;
+                    }
+
+                    // Establecer como seleccionadas las opciones correspondientes
+                    for (let optionValue of valuesArray) {
+                        let option = element.querySelector(`option[value="${optionValue}"]`);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    }
                     break;
                 default:
                     document.getElementById(key).value = value
