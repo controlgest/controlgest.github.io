@@ -59,7 +59,6 @@ let sendDataToBot = () => {
 let getJsonData = () => {
     
     var data = {};
-    var selectedOptions = [];
     var formInventario = document.getElementById("formInventario");
     $(formInventario).find('input')
         .each(function () {
@@ -82,11 +81,14 @@ let getJsonData = () => {
     data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent
     data.txtUsuario = document.getElementById("txtUsuario").textContent
     let slcEstadoVehiculo = document.getElementById("slcEstadoVehiculo")
-    for (var i = 0; i < slcEstadoVehiculo.options.length(); i++) {
-        if (slcEstadoVehiculo.options[i].selected) {
-            selectedOptions.push(slcEstadoVehiculo.options[i].value);
-        }
-    }
+ 
+	var selectedOptions = [];
+	for (const option of slcEstadoVehiculo.options) {
+		if (option.selected) {
+		  selectedOptions.push(option.value);
+		}
+	}
+	
     data.slcEstadoVehiculo = selectedOptions;
 
     let jsonString = JSON.stringify(data);
