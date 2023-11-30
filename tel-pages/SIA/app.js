@@ -88,8 +88,6 @@ let getJsonData = () => {
         }
     }
     data.slcEstadoVehiculo = selectedOptions;
-    console.log(data)
-
 
     let jsonString = JSON.stringify(data);
     return jsonString;
