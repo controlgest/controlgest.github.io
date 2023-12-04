@@ -78,6 +78,7 @@ let getJsonData = () => {
         
     data.cbxEstadoVestidura = document.getElementById("cbxEstadoVestidura").value
     data.cbxEstatusOperativo = document.getElementById("cbxEstatusOperativo").value
+    data.slcImagenCorp = document.getElementById("slcImagenCorp").value
     data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent
     data.txtUsuario = document.getElementById("txtUsuario").textContent
     let slcEstadoVehiculo = document.getElementById("slcEstadoVehiculo")
