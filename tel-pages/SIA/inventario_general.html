@@ -131,10 +131,6 @@
 									<span class="form-check-label mr-1">Calcomania contaminacion</span>
 								</div>
 								<div class="col-9 form-check-inline">
-									<input class="form-check-input" type="checkbox" name="placas" id="chkPlacas">
-									<span class="form-check-label mr-1">Placas</span>
-								</div>
-								<div class="col-9 form-check-inline">
 									<input class="form-check-input" type="checkbox" name="herramienta" id="chkHerramienta" onchange="cantidadesInput('chkHerramienta','txtHerramienta')">
 									<span class="form-check-label mr-1">Herramienta</span>
 								</div>
@@ -142,6 +138,25 @@
 								<div class="col-9 form-check-inline">
 									<input class="form-check-input" type="checkbox" name="adaptacion" id="chkAdaptacion">
 									<span class="form-check-label mr-1">Adaptación</span>
+								</div>
+								<hr class="hr col-11" />
+								<div class="col-9 form-check-inline">
+									<input class="form-check-input" type="checkbox" name="placas" id="chkPlacas" onchange="cbxVigenciaPlacas(this)">
+									<span class="form-check-label mr-1">Placas</span>
+								</div>
+								<div id="divVigPlacas" class="col-12 p-0 control-hidden">
+									<span class="mr-1">Vigencia de placas:</span>
+									<div class="col-12 p-0 ">
+										<select class="custom-select" name="cbxVigenciaPlaca" id="cbxVigenciaPlaca" onchange="cbxVigenciaPlaca_change(event.target,'divVigenciaPlacas')" required>
+											<option value="">--Selecciona una opción--</option>
+											<option value="1">Con vigencia</option>
+											<option value="2">Sin vigencia</option>
+										</select>
+									</div>
+								</div>
+								<div id="divVigenciaPlacas" class="col-12 p-0 control-hidden">
+									<span class="mr-1">Fecha Vigencia:</span>
+									<input type="date" id="txtVigenciaPlacas" placeholder="Placas" name="txtPlacas" class="form-control" required>
 								</div>
 								<hr class="hr col-11" />
 								<div class="col-12 p-0 ">
@@ -165,20 +180,6 @@
 											<option value="2">Dañada</option>
 										</select>
 									</div>
-								</div>
-								<div class="col-12 p-0 ">
-									<span class="mr-1">Vigencia de placas:</span>
-									<div class="col-12 p-0">
-										<select class="custom-select" name="cbxVigenciaPlaca" id="cbxVigenciaPlaca" onchange="cbxVigenciaPlaca_change(event.target,'divVigenciaPlacas')" required>
-											<option value="">--Selecciona una opción--</option>
-											<option value="1">Con vigencia</option>
-											<option value="2">Sin vigencia</option>
-										</select>
-									</div>
-								</div>
-								<div id="divVigenciaPlacas" class="col-12 p-0 control-hidden">
-									<span class="mr-1">Placas:</span>
-									<input type="date" id="txtVigenciaPlacas" placeholder="Placas" name="txtPlacas" class="form-control ">
 								</div>
 								<div class="col-12 p-0 ">
 									<span class="mr-1">Estatus operativo:</span>
@@ -209,7 +210,7 @@
 						</div>
 					</div>
 				<div class="fixed-bottom">
-					<!-- <input type="submit" value="ENVIAR DATOS" class="btn btn-primary btn-lg btn-block" onclick="sendDataToBot()"> -->
+					 <input type="submit" value="ENVIAR DATOS" class="btn btn-primary btn-lg btn-block" onclick="sendDataToBot()"> <!---->
 				</div>
 			</div>
 	</form>

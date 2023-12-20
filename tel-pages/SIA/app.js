@@ -179,6 +179,16 @@ let cargarDatos = (params) => {
     }
 }
 
+let cbxVigenciaPlacas = (me) => {
+    var divVigencia = document.getElementById('divVigPlacas');
+
+   if (me.checked) {
+	   divVigencia.style.display = 'block';
+   } else {
+	  divVigencia.style.display = 'none';
+   }
+}
+
 let cbxVigenciaPlaca_change = (e, idModificar) => {
     console.log(e.value);
     let elementModificar = document.getElementById(idModificar)
