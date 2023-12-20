@@ -65,23 +65,24 @@ let getJsonData = () => {
             let x = $(this);
             switch (x[0].type) {
                 case 'checkbox':
-                    data[x[0].id] = x[0].checked
+                    data[x[0].id] = x[0].checked;
                     break;
                 case 'number':
-                    data[x[0].id] = x[0].value
+                    data[x[0].id] = x[0].value;
                     break;
                 default:
-                    data[x[0].id] = x[0].value
+                    data[x[0].id] = x[0].value;
                     break;
             }
         });
         
-    data.cbxEstadoVestidura = document.getElementById("cbxEstadoVestidura").value
-    data.cbxEstatusOperativo = document.getElementById("cbxEstatusOperativo").value
-    data.slcImagenCorp = document.getElementById("slcImagenCorp").value
-    data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent
-    data.txtUsuario = document.getElementById("txtUsuario").textContent
-    let slcEstadoVehiculo = document.getElementById("slcEstadoVehiculo")
+	data.cbxVigenciaPlaca = document.getElementById("cbxVigenciaPlaca").value;
+    data.cbxEstadoVestidura = document.getElementById("cbxEstadoVestidura").value;
+    data.cbxEstatusOperativo = document.getElementById("cbxEstatusOperativo").value;
+    data.slcImagenCorp = document.getElementById("slcImagenCorp").value;
+    data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent;
+    data.txtUsuario = document.getElementById("txtUsuario").textContent;
+    let slcEstadoVehiculo = document.getElementById("slcEstadoVehiculo");
  
 	var selectedOptions = [];
 	for (const option of slcEstadoVehiculo.options) {
