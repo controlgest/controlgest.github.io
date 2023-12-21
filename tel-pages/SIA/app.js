@@ -96,23 +96,6 @@ let getJsonData = () => {
     let jsonString = JSON.stringify(data);
     return jsonString;
 }
-
-let cantidadesInput = (idCheck, idInput) => {
-    var txt = document.getElementById(idInput);
-    var chk = document.getElementById(idCheck);
-
-    if (chk.checked) {
-        txt.style.display = 'block'; // Muestra el campo de entrada
-        txt.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
-        txt.removeAttribute('disabled'); // Habilita el campo de entrada
-    } else {
-        txt.style.display = 'none';  // Oculta el campo de entrada
-        txt.removeAttribute('required'); // Elimina el atributo requerido del campo de entrada
-        txt.setAttribute('disabled', 'disabled'); // Deshabilita el campo de entrada
-        txt.value = '';
-    }
-}
-
 let cargarDatos = (params) => {
     // url prueba = ?cantidad=12&txtLimpiadores=2&chkLimpiadores=true&chkHerramienta=true
     document.getElementById("txtNoEco").textContent = params.get("txtNoEco");
@@ -180,26 +163,43 @@ let cargarDatos = (params) => {
     }
 }
 
-let cbxVigenciaPlacas = (me) => {
-    var divVigencia = document.getElementById('divVigPlacas');
+let ocultarElemento_change = (me, idElementToChange) => {
+    var el = document.getElementById(idElementToChange);
 
-   if (me.checked) {
-	   divVigencia.style.display = 'block';
-   } else {
-	  divVigencia.style.display = 'none';
+   switch(el.tagName){
+	case 'INPUT':
+	case 'SELECT':
+		if (me.checked) {
+			el.style.display = 'block';
+			el.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
+			el.removeAttribute('disabled'); // Habilita el campo de entrada
+		} else {
+			el.style.display = 'none';
+			el.removeAttribute('required'); // Elimina el atributo requerido del campo de entrada
+			el.setAttribute('disabled', 'disabled'); // Deshabilita el campo de entrada
+			el.value = '';
+		}
+		break;
+	default:
+		if (me.checked) {
+			el.style.display = 'block';
+		} else {
+			el.style.display = 'none';
+		}
+		break;
    }
 }
 
-let cbxVigenciaPlaca_change = (e, idModificar) => {
-    console.log(e.value);
-    let elementModificar = document.getElementById(idModificar)
-    if (e.value == 1) {
-        elementModificar.style.display = 'block';
-        elementModificar.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
-        elementModificar.removeAttribute('disabled'); // Habilita el campo de entrada
-    }else{
-        elementModificar.style.display = 'none';  // Oculta el campo de entrada
-        elementModificar.removeAttribute('required'); // Elimina el atributo requerido del campo de entrada
-        elementModificar.setAttribute('disabled', 'disabled'); // Deshabilita el campo de entrada
+let cbxVigenciaPlaca_change = (me, idElementToChange) => {
+    let el = document.getElementById(idElementToChange)
+    if (me.value == '1') {
+        el.style.display = 'block';
+        el.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
+        el.removeAttribute('disabled'); // Habilita el campo de entrada
+    } else {
+        el.style.display = 'none';  // Oculta el campo de entrada
+        el.removeAttribute('required'); // Elimina el atributo requerido del campo de entrada
+        el.setAttribute('disabled', 'disabled'); // Deshabilita el campo de entrada
+		el.value = '';
     }
 }

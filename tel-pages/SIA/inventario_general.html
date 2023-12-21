@@ -47,7 +47,7 @@
 								</div>
 								<hr class="hr col-11" />
 								<div class="col-9 form-check-inline">
-									<input class="form-check-input" type="checkbox" name="limpiadores" id="chkLimpiadores" onchange="cantidadesInput('chkLimpiadores','txtLimpiadores')">
+									<input class="form-check-input" type="checkbox" name="limpiadores" id="chkLimpiadores" onchange="ocultarElemento_change(this,'txtLimpiadores')">
 									<span class="form-check-label mr-1">Limpiadores</span>
 								</div>
 								<input type="number" id="txtLimpiadores" placeholder="Cant." name="txtLimpiadores" class="form-control control-hidden col-3">
@@ -56,7 +56,7 @@
 									<span class="form-check-label mr-1">Tapon de gasolina</span>
 								</div>
 								<div class="col-9 form-check-inline">
-									<input class="form-check-input" type="checkbox" name="taponesRuedas" id="chkTaponesRuedas" onchange="cantidadesInput('chkTaponesRuedas','txtTaponesRuedas')">
+									<input class="form-check-input" type="checkbox" name="taponesRuedas" id="chkTaponesRuedas" onchange="ocultarElemento_change(this,'txtTaponesRuedas')">
 									<span class="form-check-label mr-1">Tapones de ruedas</span>
 								</div>
 								<input type="number" id="txtTaponesRuedas" placeholder="Cant." name="txtTaponesRuedas" class="form-control control-hidden col-3">
@@ -89,7 +89,7 @@
 									<span class="form-check-label mr-1">Aire acondicionado</span>
 								</div>
 								<div class="col-9 form-check-inline">
-									<input class="form-check-input" type="checkbox" name="asientos" id="chkAsientos" onchange="cantidadesInput('chkAsientos','txtAsientos')">
+									<input class="form-check-input" type="checkbox" name="asientos" id="chkAsientos" onchange="ocultarElemento_change(this,'txtAsientos')">
 									<span class="form-check-label mr-1">Asientos</span>
 								</div>
 								<input type="number" id="txtAsientos" placeholder="Cant." name="txtAsientos" class="form-control control-hidden col-3">
@@ -98,7 +98,7 @@
 									<span class="form-check-label mr-1">Llanta de refeccion</span>
 								</div>
 								<div class="col-9 form-check-inline">
-									<input class="form-check-input" type="checkbox" name="espejoExterior" id="chkEspejoExterior" onchange="cantidadesInput('chkEspejoExterior','txtEspejoExterior')">
+									<input class="form-check-input" type="checkbox" name="espejoExterior" id="chkEspejoExterior" onchange="ocultarElemento_change(this,'txtEspejoExterior')">
 									<span class="form-check-label mr-1">Espejo exterior</span>
 								</div>
 								<input type="number" id="txtEspejoExterior" placeholder="Cant." name="txtEspejoExterior" class="form-control control-hidden col-3">
@@ -131,7 +131,7 @@
 									<span class="form-check-label mr-1">Calcomania contaminacion</span>
 								</div>
 								<div class="col-9 form-check-inline">
-									<input class="form-check-input" type="checkbox" name="herramienta" id="chkHerramienta" onchange="cantidadesInput('chkHerramienta','txtHerramienta')">
+									<input class="form-check-input" type="checkbox" name="herramienta" id="chkHerramienta" onchange="ocultarElemento_change(this,'txtHerramienta')">
 									<span class="form-check-label mr-1">Herramienta</span>
 								</div>
 								<input type="number" id="txtHerramienta" placeholder="Cant." name="txtHerramienta" class="form-control control-hidden col-3">
@@ -141,13 +141,13 @@
 								</div>
 								<hr class="hr col-11" />
 								<div class="col-9 form-check-inline">
-									<input class="form-check-input" type="checkbox" name="placas" id="chkPlacas" onchange="cbxVigenciaPlacas(this)">
+									<input class="form-check-input" type="checkbox" name="placas" id="chkPlacas" onchange="ocultarElemento_change(this, 'divVigPlacas')">
 									<span class="form-check-label mr-1">Placas</span>
 								</div>
 								<div id="divVigPlacas" class="col-12 p-0 control-hidden">
 									<span class="mr-1">Vigencia de placas:</span>
 									<div class="col-12 p-0 ">
-										<select class="custom-select" name="cbxVigenciaPlaca" id="cbxVigenciaPlaca" onchange="cbxVigenciaPlaca_change(event.target,'divVigenciaPlacas')" required>
+										<select class="custom-select" name="cbxVigenciaPlaca" id="cbxVigenciaPlaca" onchange="cbxVigenciaPlaca_change(this,'divVigenciaPlacas')" required>
 											<option value="">--Selecciona una opción--</option>
 											<option value="1">Con vigencia</option>
 											<option value="2">Sin vigencia</option>
