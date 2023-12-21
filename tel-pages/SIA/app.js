@@ -163,8 +163,8 @@ let cargarDatos = (params) => {
     }
 }
 
-let ocultarElemento_change = (me, idElementToChange) => {
-    var el = document.getElementById(idElementToChange);
+let ocultarElemento_change = (me, idElementToToogle) => {
+    var el = document.getElementById(idElementToToogle);
 
    switch(el.tagName){
 	case 'INPUT':
@@ -186,20 +186,47 @@ let ocultarElemento_change = (me, idElementToChange) => {
 		} else {
 			el.style.display = 'none';
 		}
+		
+		if(me.id == 'chkPlacas')
+				chkPlacas_change(me);
 		break;
    }
 }
 
-let cbxVigenciaPlaca_change = (me, idElementToChange) => {
-    let el = document.getElementById(idElementToChange)
-    if (me.value == '1') {
-        el.style.display = 'block';
-        el.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
-        el.removeAttribute('disabled'); // Habilita el campo de entrada
+let chkPlacas_change = (me) => {
+	let divVigPlacas = document.getElementById('divVigPlacas');
+	let divVigenciaPlacas = document.getElementById('divVigenciaPlacas');
+	let cbxVigenciaPlaca = document.getElementById('cbxVigenciaPlaca');
+	let txtVigenciaPlacas = document.getElementById('txtVigenciaPlacas');
+
+	if (me.checked) {
+        divVigPlacas.style.display = 'block';
+        cbxVigenciaPlaca.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
+        cbxVigenciaPlaca.removeAttribute('disabled'); // Habilita el campo de entrada
     } else {
-        el.style.display = 'none';  // Oculta el campo de entrada
-        el.removeAttribute('required'); // Elimina el atributo requerido del campo de entrada
-        el.setAttribute('disabled', 'disabled'); // Deshabilita el campo de entrada
-		el.value = '';
+        divVigPlacas.style.display = 'none';  // Oculta el campo de entrada
+		divVigenciaPlacas.style.display = 'none';
+        cbxVigenciaPlaca.removeAttribute('required'); // Elimina el atributo requerido del campo de entrada
+        cbxVigenciaPlaca.setAttribute('disabled', 'disabled'); // Deshabilita el campo de entrada
+		cbxVigenciaPlaca.value = '';
+		txtVigenciaPlacas.removeAttribute('required'); // Elimina el atributo requerido del campo de entrada
+        txtVigenciaPlacas.setAttribute('disabled', 'disabled'); // Deshabilita el campo de entrada
+		txtVigenciaPlacas.value = '';
+    }
+}
+
+let cbxVigenciaPlaca_change = (me) => {
+    let divVigenciaPlacas = document.getElementById('divVigenciaPlacas');
+	let txtVigenciaPlacas = document.getElementById('txtVigenciaPlacas');
+	
+    if (me.value == '1') {
+        divVigenciaPlacas.style.display = 'block';
+        txtVigenciaPlacas.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
+        txtVigenciaPlacas.removeAttribute('disabled'); // Habilita el campo de entrada
+    } else {
+        divVigenciaPlacas.style.display = 'none';  // Oculta el campo de entrada
+        txtVigenciaPlacas.removeAttribute('required'); // Elimina el atributo requerido del campo de entrada
+        txtVigenciaPlacas.setAttribute('disabled', 'disabled'); // Deshabilita el campo de entrada
+		txtVigenciaPlacas.value = '';
     }
 }
