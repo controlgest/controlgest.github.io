@@ -188,7 +188,7 @@ let ocultarElemento_change = (me, idElementToToogle) => {
 		}
 		
 		if(me.id == 'chkPlacas')
-				chkPlacas_change(me);
+			chkPlacas_change(me);
 		break;
    }
 }
