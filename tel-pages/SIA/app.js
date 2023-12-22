@@ -79,19 +79,19 @@ let getJsonData = () => {
 	data.cbxVigenciaPlaca = document.getElementById("cbxVigenciaPlaca").value;
     data.cbxEstadoVestidura = document.getElementById("cbxEstadoVestidura").value;
     data.cbxEstatusOperativo = document.getElementById("cbxEstatusOperativo").value;
-    data.slcImagenCorp = document.getElementById("slcImagenCorp").value;
+    data.cbxImagenCorp = document.getElementById("cbxImagenCorp").value;
     data.txtTarjetaPase = document.getElementById("txtTarjetaPase").textContent;
     data.txtUsuario = document.getElementById("txtUsuario").textContent;
-    let slcEstadoVehiculo = document.getElementById("slcEstadoVehiculo");
+    let cbxEstadoVehiculo = document.getElementById("cbxEstadoVehiculo");
  
 	var selectedOptions = [];
-	for (const option of slcEstadoVehiculo.options) {
+	for (const option of cbxEstadoVehiculo.options) {
 		if (option.selected) {
 		  selectedOptions.push(option.value);
 		}
 	}
 	
-    data.slcEstadoVehiculo = selectedOptions;
+    data.cbxEstadoVehiculo = selectedOptions;
 
     let jsonString = JSON.stringify(data);
     return jsonString;
@@ -132,7 +132,9 @@ let cargarDatos = (params) => {
                     txt.removeAttribute('disabled'); // Habilita el campo de entrada
                     break;
                 case 'select-multiple':
-                    let valuesArray = JSON.parse(value);
+                    console.log(value);
+                    let valuesArray = (value.split('|'));
+                    console.log(valuesArray);
 
                     // Restablecer todas las opciones a no seleccionadas
                     for (let option of element.options) {
@@ -154,10 +156,21 @@ let cargarDatos = (params) => {
 
             if(key =='txtVigenciaPlacas'){
                 txt = document.getElementById('cbxVigenciaPlaca');
+                document.getElementById('chkPlacas').checked = true;
                 let divVigenciaPlacas = document.getElementById('divVigenciaPlacas');
+                let divVigPlacas = document.getElementById('divVigPlacas');
                 txt.value = 1;
                 divVigenciaPlacas.style.display = 'block'; // Muestra el campo de entrada
                 divVigenciaPlacas.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
+                divVigPlacas.style.display = 'block'; // Muestra el campo de entrada
+                divVigPlacas.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
+            }else if(key =='cbxVigenciaPlaca'){
+                document.getElementById('chkPlacas').checked = true;
+                txt = document.getElementById('cbxVigenciaPlaca');
+                let divVigPlacas = document.getElementById('divVigPlacas');
+                divVigPlacas.style.display = 'block'; // Muestra el campo de entrada
+                divVigPlacas.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
+
             }
         }
     }
