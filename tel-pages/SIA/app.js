@@ -122,19 +122,19 @@ let cargarDatos = (params) => {
         if (element) {
             switch (element.type) {
                 case 'checkbox':
-                    document.getElementById(key).checked = value
+                    document.getElementById(key).checked = value.toLowerCase() == 'true'
                     break;
                 case 'number':
-                    txt = document.getElementById(key)
-                    txt.value = value
-                    txt.style.display = 'block'; // Muestra el campo de entrada
-                    txt.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
-                    txt.removeAttribute('disabled'); // Habilita el campo de entrada
+                    txt = document.getElementById(key, value)
+                    if (value){
+                        txt.value = value
+                        txt.style.display = 'block'; // Muestra el campo de entrada
+                        txt.setAttribute('required', 'required'); // Hace que el campo de entrada sea requerido
+                        txt.removeAttribute('disabled'); // Habilita el campo de entrada
+                    }
                     break;
                 case 'select-multiple':
-                    console.log(value);
                     let valuesArray = (value.split('|'));
-                    console.log(valuesArray);
 
                     // Restablecer todas las opciones a no seleccionadas
                     for (let option of element.options) {
