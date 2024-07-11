@@ -49,18 +49,18 @@ $(document).ready(() => {
     chkManoObra.checked = true
 
     if (folio != null)
-        txtFolio.textContent = folio.toUpperCase()
+        txtFolio.textContent = folio.toUpperCase();
     if (area != null)
-        txtArea.textContent = area.toUpperCase()
+        txtArea.textContent = area.toUpperCase();
     if (cope != null)
-        txtCope.textContent = cope.toUpperCase()
+        txtCope.textContent = cope.toUpperCase();
     if (constructor != null) {
         fetch('./catalogos/catConstructores.json')
             .then(response => response.json())
             .then(data => {
                 data.forEach(item => {
                     if (item.id_cconstructor == idConstructor) {
-                        txtConstructor.textContent = item.constructor
+                        txtConstructor.textContent = item.constructor;
                     }
                 });
             })
@@ -86,23 +86,23 @@ $(document).ready(() => {
                     if (chkManoObra.checked) {
                         if (item.tipo == 'SACRE' && !idsFueraSacre.find(x =>x == idConstructor)) {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item)
+                                insertItemManoDeObraAutocompleteList(item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item)
+                                insertItemManoDeObraAutocompleteList(item);
                             }
                         } else if (item.tipo == 'FUERA_SACRE' && idsFueraSacre.find(x =>x == idConstructor)) {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item)
+                                insertItemManoDeObraAutocompleteList(item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item)
+                                insertItemManoDeObraAutocompleteList(item);
                             }
                         }
                     } else if (!chkManoObra.checked) {
                         if (item.tipo == 'SIATEL' && !idsFueraSacre.find(x =>x == idConstructor)) {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item)
+                                insertItemManoDeObraAutocompleteList(item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item)
+                                insertItemManoDeObraAutocompleteList(item);
                             }
                         }
                     }
@@ -124,7 +124,7 @@ $(document).ready(() => {
         div.classList.add('manoDeObraAutocompleteList');
         div.innerHTML = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
         div.addEventListener('click', () => {
-            inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`
+            inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
             autocompleteListManoObra.innerHTML = '';
         }
         );
@@ -134,22 +134,22 @@ $(document).ready(() => {
 });
 
 let agregarManoObra = () => {
-    const table = document.getElementById('manoDeObraTable')
-    let txtManoObra = document.getElementById('txtManoDeObra').value
-    let txtCantManoObra = document.getElementById('txtCantManoObra').value
+    const table = document.getElementById('manoDeObraTable');
+    let txtManoObra = document.getElementById('txtManoDeObra').value;
+    let txtCantManoObra = document.getElementById('txtCantManoObra').value;
 
     if (txtManoObra == '' || txtCantManoObra == '' || txtManoObra.split(' / ').length != 3) {
-        return
+        return;
     }
 
     let txtManoObraArray = txtManoObra.split(' / ')
-    let clave = txtManoObraArray[0].trim()
+    let clave = txtManoObraArray[0].trim();
 
     for (let i = 0; i < table.rows.length; i++) {
         let row = table.rows[i]
         if (row.cells[0].innerHTML == clave) {
-            alert('La unidad de construcción ya existe en la lista')
-            return
+            alert('La unidad de construcción ya existe en la lista');
+            return;
         }
     }
 
@@ -160,19 +160,19 @@ let agregarManoObra = () => {
         .then(data => {
             data.forEach(item => {
                 if (item.clave_unidad == clave) {
-                    let row = table.insertRow(0)
-                    let cellClave = row.insertCell(0)
-                    let cellDescripcion = row.insertCell(1)
-                    let cellUnidad = row.insertCell(2)
-                    let cellCantidad = row.insertCell(3)
-                    let cellTipo = row.insertCell(4)
-                    let cellEliminar = row.insertCell(5)
+                    let row = table.insertRow(0);
+                    let cellClave = row.insertCell(0);
+                    let cellDescripcion = row.insertCell(1);
+                    let cellUnidad = row.insertCell(2);
+                    let cellCantidad = row.insertCell(3);
+                    let cellTipo = row.insertCell(4);
+                    let cellEliminar = row.insertCell(5);
 
-                    cellClave.innerHTML = item.clave_unidad
-                    cellDescripcion.innerHTML = item.descripcion
-                    cellUnidad.innerHTML = item.unidad
-                    cellTipo.innerHTML = item.tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra'
-                    cellCantidad.innerHTML = txtCantManoObra
+                    cellClave.innerHTML = item.clave_unidad;
+                    cellDescripcion.innerHTML = item.descripcion;
+                    cellUnidad.innerHTML = item.unidad;
+                    cellTipo.innerHTML = item.tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
+                    cellCantidad.innerHTML = txtCantManoObra;
 
                     UCTable.push(
                         {
@@ -186,15 +186,15 @@ let agregarManoObra = () => {
                         }
                     )
 
-                    let btnEliminar = document.createElement('button')
-                    btnEliminar.classList.add('btn')
-                    btnEliminar.classList.add('btn-outline-danger')
-                    btnEliminar.innerHTML = '<i class="fa fa-trash-o"></i>'
+                    let btnEliminar = document.createElement('button');
+                    btnEliminar.classList.add('btn');
+                    btnEliminar.classList.add('btn-outline-danger');
+                    btnEliminar.innerHTML = '<i class="fa fa-trash-o"></i>';
                     btnEliminar.onclick = function () {
-                        let row = this.parentNode.parentNode
-                        row.parentNode.removeChild(row)
+                        let row = this.parentNode.parentNode;
+                        row.parentNode.removeChild(row);
                     }
-                    cellEliminar.appendChild(btnEliminar)
+                    cellEliminar.appendChild(btnEliminar);
                 }
             });
         })
@@ -203,11 +203,11 @@ let agregarManoObra = () => {
 }
 
 let txtCantManoObra_change = (e) => {
-    validaPositivos(e)
+    validaPositivos(e);
 }
 
 let txtCantMateriales_change = (e) => {
-    validaPositivos(e)
+    validaPositivos(e);
 }
 
 let validaPositivos = (e) => {
@@ -229,7 +229,7 @@ let enviarLum = (e) => {
     if (form.checkValidity()) {
         if (UCTable.length <= 0) {
             alert('Debe agregar al menos una unidad de construcción')
-            return
+            return;
         }
 
         let lum = {
@@ -243,17 +243,17 @@ let enviarLum = (e) => {
         Telegram.WebApp.sendData(lum);
         XAVApp.close();
     } else {
-        form.reportValidity()
+        form.reportValidity();
     }
 }
 
 
 
 let chkManoObra_change = (e) => {
-    document.getElementById('txtManoDeObra').value = ''
+    document.getElementById('txtManoDeObra').value = '';
 
 }
 
 let chkMateriales_change = (e) => {
-    document.getElementById('txtManoDeObra').value = ''
+    document.getElementById('txtManoDeObra').value = '';
 }
