@@ -1,24 +1,27 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <title></title>
+	<title></title>
 	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="MobileOptimized" content="176" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="robots" content="noindex,nofollow" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="MobileOptimized" content="176" />
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="robots" content="noindex,nofollow" />
 
-    <link rel="stylesheet" href="../../Content/bootstrap-4.3.1.min.css" />
-    <link rel="stylesheet" href="../../Content/font-awesome-4.7.0.min.css" />
-	
+	<link rel="stylesheet" href="../../Content/bootstrap-4.3.1.min.css" />
+	<link rel="stylesheet" href="../../Content/font-awesome-4.7.0.min.css" />
+
 	<!-- Load the Telegram Library before any other scripts-->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-    <script src="../../Content/js/jquery-3.4.1.min.js"></script>
-    <script src="../../Content/js/bootstrap-4.3.1.min.js"></script>
+	<script src="../../Content/js/jquery-3.4.1.min.js"></script>
+	<script src="../../Content/js/bootstrap-4.3.1.min.js"></script>
 </head>
+
 <body class="" style="visibility: hidden;">
 	<form id="myForm" method="post">
 		<section>
@@ -32,242 +35,589 @@
 						</div>
 						<div class="card-body" id="pnlEmpleados">
 							<div class="form-row">
-								<a href="#" id="lnkAgregarEmpleado" class="btn btn-outline-success" onclick="agregarEmpleado()">
-								  <span class="fa fa-plus">&nbsp;Agregar Empleado</span>
+								<a href="#" id="lnkAgregarEmpleado" class="btn btn-outline-success"
+									onclick="agregarEmpleado()">
+									<span class="fa fa-plus">&nbsp;Agregar Empleado</span>
 								</a>
 							</div><br />
 							<div class="form-row border-bottom border-primary">
-								<div class="form-group col-auto">
+								<div class="form-group col-5">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente1" name="txtExpediente1" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px" required>
+									<input type="number" id="txtExpediente1" name="txtExpediente1" min="0"
+										class="form-control" onchange="validarExpediente(this)" required>
+								</div>
+								<div id="divAsignacion1" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion1" id="slcAsignacion1" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni1" name="txtFechaIni1" class="form-control" onchange="validateRange(this)" style="max-width:215px" required>
+									<input type="datetime-local" id="txtFechaIni1" name="txtFechaIni1"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px"
+										required>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin1" name="txtFechaFin1" class="form-control" onchange="validateRange(this)" style="max-width:215px" required>
+									<input type="datetime-local" id="txtFechaFin1" name="txtFechaFin1"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px"
+										required>
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras1" name="txtTotalHoras1" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras1" name="txtTotalHoras1" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none;" id="pnlEmpleado2">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado2" class="btn btn-outline-danger" onclick="eliminarEmpleado('2')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado2" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('2')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente2" name="txtExpediente2" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente2" name="txtExpediente2" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion2" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion2" id="slcAsignacion2" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni2" name="txtFechaIni2" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni2" name="txtFechaIni2"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin2" name="txtFechaFin2" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin2" name="txtFechaFin2"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras2" name="txtTotalHoras2" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras2" name="txtTotalHoras2" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado3">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado3" class="btn btn-outline-danger" onclick="eliminarEmpleado('3')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado3" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('3')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente3" name="txtExpediente3" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente3" name="txtExpediente3" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion3" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion3" id="slcAsignacion3" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni3" name="txtFechaIni3" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni3" name="txtFechaIni3"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin3" name="txtFechaFin3" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin3" name="txtFechaFin3"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras3" name="txtTotalHoras3" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras3" name="txtTotalHoras3" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado4">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado4" class="btn btn-outline-danger" onclick="eliminarEmpleado('4')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado4" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('4')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente4" name="txtExpediente4" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente4" name="txtExpediente4" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion4" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion4" id="slcAsignacion4" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni4" name="txtFechaIni4" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni4" name="txtFechaIni4"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin4" name="txtFechaFin4" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin4" name="txtFechaFin4"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras4" name="txtTotalHoras4" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras4" name="txtTotalHoras4" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado5">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger" onclick="eliminarEmpleado('5')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('5')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente5" name="txtExpediente5" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente5" name="txtExpediente5" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion5" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion5" id="slcAsignacion5" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni5" name="txtFechaIni5" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni5" name="txtFechaIni5"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin5" name="txtFechaFin5" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin5" name="txtFechaFin5"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras5" name="txtTotalHoras5" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras5" name="txtTotalHoras5" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado6">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger" onclick="eliminarEmpleado('6')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('6')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente6" name="txtExpediente6" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente6" name="txtExpediente6" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion6" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion6" id="slcAsignacion6" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni6" name="txtFechaIni6" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni6" name="txtFechaIni6"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin6" name="txtFechaFin6" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin6" name="txtFechaFin6"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras6" name="txtTotalHoras6" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras6" name="txtTotalHoras6" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado7">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger" onclick="eliminarEmpleado('7')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('7')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente7" name="txtExpediente7" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente7" name="txtExpediente7" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion7" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion7" id="slcAsignacion7" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni7" name="txtFechaIni7" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni7" name="txtFechaIni7"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin7" name="txtFechaFin7" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin7" name="txtFechaFin7"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras7" name="txtTotalHoras7" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras7" name="txtTotalHoras7" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado8">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger" onclick="eliminarEmpleado('8')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('8')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente8" name="txtExpediente8" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente8" name="txtExpediente8" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion8" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion8" id="slcAsignacion8" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni8" name="txtFechaIni8" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni8" name="txtFechaIni8"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin8" name="txtFechaFin8" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin8" name="txtFechaFin8"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras8" name="txtTotalHoras8" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras8" name="txtTotalHoras8" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado9">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger" onclick="eliminarEmpleado('9')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('9')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente9" name="txtExpediente9" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente9" name="txtExpediente9" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion9" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion9" id="slcAsignacion9" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni9" name="txtFechaIni9" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni9" name="txtFechaIni9"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin9" name="txtFechaFin9" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin9" name="txtFechaFin9"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras9" name="txtTotalHoras9" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras9" name="txtTotalHoras9" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado10">
-								<div class="form-group col-auto">
+								<div class="form-group col-12">
 									<br />
-									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger" onclick="eliminarEmpleado('10')">
-									  <span class="fa fa-trash"></span>
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('10')">
+										<span class="fa fa-trash"></span>
 									</a>
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente10" name="txtExpediente10" min="0" class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+									<input type="number" id="txtExpediente10" name="txtExpediente10" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion10" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion10" id="slcAsignacion10" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni10" name="txtFechaIni10" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaIni10" name="txtFechaIni10"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin10" name="txtFechaFin10" class="form-control" onchange="validateRange(this)" style="max-width:215px">
+									<input type="datetime-local" id="txtFechaFin10" name="txtFechaFin10"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Total Horas</span>
-									<input type="text" id="txtTotalHoras10" name="txtTotalHoras10" class="form-control" style="width:80px" disabled></input>
+									<input type="text" id="txtTotalHoras10" name="txtTotalHoras10" class="form-control"
+										style="width:80px" disabled></input>
+								</div>
+							</div>
+							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado11">
+								<div class="form-group col-12">
+									<br />
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('11')">
+										<span class="fa fa-trash"></span>
+									</a>
+								</div>
+								<div class="form-group col-auto">
+									<span>Expediente</span>
+									<input type="number" id="txtExpediente11" name="txtExpediente11" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion11" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion11" id="slcAsignacion11" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Inicio</span>
+									<input type="datetime-local" id="txtFechaIni11" name="txtFechaIni11"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Fin</span>
+									<input type="datetime-local" id="txtFechaFin11" name="txtFechaFin11"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Total Horas</span>
+									<input type="text" id="txtTotalHoras11" name="txtTotalHoras11" class="form-control"
+										style="width:80px" disabled></input>
+								</div>
+							</div>
+							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado12">
+								<div class="form-group col-12">
+									<br />
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('12')">
+										<span class="fa fa-trash"></span>
+									</a>
+								</div>
+								<div class="form-group col-auto">
+									<span>Expediente</span>
+									<input type="number" id="txtExpediente12" name="txtExpediente12" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion12" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion12" id="slcAsignacion12" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Inicio</span>
+									<input type="datetime-local" id="txtFechaIni12" name="txtFechaIni12"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Fin</span>
+									<input type="datetime-local" id="txtFechaFin12" name="txtFechaFin12"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Total Horas</span>
+									<input type="text" id="txtTotalHoras12" name="txtTotalHoras12" class="form-control"
+										style="width:80px" disabled></input>
+								</div>
+							</div>
+							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado13">
+								<div class="form-group col-12">
+									<br />
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('13')">
+										<span class="fa fa-trash"></span>
+									</a>
+								</div>
+								<div class="form-group col-auto">
+									<span>Expediente</span>
+									<input type="number" id="txtExpediente13" name="txtExpediente13" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion13" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion13" id="slcAsignacion13" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Inicio</span>
+									<input type="datetime-local" id="txtFechaIni13" name="txtFechaIni13"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Fin</span>
+									<input type="datetime-local" id="txtFechaFin13" name="txtFechaFin13"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Total Horas</span>
+									<input type="text" id="txtTotalHoras13" name="txtTotalHoras13" class="form-control"
+										style="width:80px" disabled></input>
+								</div>
+							</div>
+							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado14">
+								<div class="form-group col-12">
+									<br />
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('14')">
+										<span class="fa fa-trash"></span>
+									</a>
+								</div>
+								<div class="form-group col-auto">
+									<span>Expediente</span>
+									<input type="number" id="txtExpediente14" name="txtExpediente14" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion14" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion14" id="slcAsignacion14" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Inicio</span>
+									<input type="datetime-local" id="txtFechaIni14" name="txtFechaIni14"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Fin</span>
+									<input type="datetime-local" id="txtFechaFin14" name="txtFechaFin14"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Total Horas</span>
+									<input type="text" id="txtTotalHoras14" name="txtTotalHoras14" class="form-control"
+										style="width:80px" disabled></input>
+								</div>
+							</div>
+							<div class="form-row border-bottom border-primary" style="display: none" id="pnlEmpleado15">
+								<div class="form-group col-12">
+									<br />
+									<a href="#" id="lnkEliminarEmpleado5" class="btn btn-outline-danger"
+										onclick="eliminarEmpleado('15')">
+										<span class="fa fa-trash"></span>
+									</a>
+								</div>
+								<div class="form-group col-auto">
+									<span>Expediente</span>
+									<input type="number" id="txtExpediente15" name="txtExpediente15" min="0"
+										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
+								</div>
+								<div id="divAsignacion15" class="form-group col-7">
+									<span>Tipo Asignación</span>
+									<select name="slcAsignacion15" id="slcAsignacion15" class="form-control">
+										<option value="0">--Selecciona una opcion--</option>
+										<option value="1">Localización Daño</option>
+										<option value="2">Atención del Daño</option>
+										<option value="3">Atención Postería</option>
+										<option value="4">Atención TBA</option>
+									</select>
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Inicio</span>
+									<input type="datetime-local" id="txtFechaIni15" name="txtFechaIni15"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Fecha Fin</span>
+									<input type="datetime-local" id="txtFechaFin15" name="txtFechaFin15"
+										class="form-control" onchange="validateRange(this)" style="max-width:215px">
+								</div>
+								<div class="form-group col-auto">
+									<span>Total Horas</span>
+									<input type="text" id="txtTotalHoras15" name="txtTotalHoras15" class="form-control"
+										style="width:80px" disabled></input>
 								</div>
 							</div>
 						</div>
@@ -281,288 +631,7 @@
 			</div>
 		</section>
 	</form>
-	
-	<script type="application/javascript">
-			<!-- window.Telegram.WebApp.ready(); -->
-            <!-- window.Telegram.WebApp.expand(); -->
-            <!-- // initData is empty object -->
-            <!-- let initData = window.Telegram.WebApp.initData; -->
-             <!-- // initDataUnsafe is empty object,too -->
-            <!-- let initDataUnsafe = window.Telegram.WebApp.initDataUnsafe; -->
-            <!-- window.Telegram.WebApp.MainButton.showProgress() -->
-            <!-- window.Telegram.WebApp.MainButton.setText('submit').show().enable() -->
-            <!-- window.Telegram.WebApp.MainButton.isProgressVisible = "true" -->
-            <!-- //This Event is not working, Why? -->
-            <!-- window.Telegram.WebApp.MainButton.onClick(() => {alert('submitted')}); -->
-			
-			const XAVApp = {
-				initData: Telegram.WebApp.initData || '',
-				initDataUnsafe: Telegram.WebApp.initDataUnsafe || {},
-				MainButton: Telegram.WebApp.MainButton,
-
-				init(options) {
-					document.body.style.visibility = '';
-					Telegram.WebApp.ready();
-					Telegram.WebApp.expand();
-					Telegram.WebApp.MainButton.isProgressVisible = "true";
-					Telegram.WebApp.MainButton.setParams({
-						text: 'ENVIAR DATOS',
-						is_visible: true,
-						is_active: true
-					});
-				},
-				<!-- expand() { -->
-					<!-- Telegram.WebApp.expand(); -->
-				<!-- }, -->
-				close() {
-					Telegram.WebApp.close();
-				}
-			}
-			
-			XAVApp.init();
-			
-			$(document).ready(function () {
-				const params = new URLSearchParams(document.location.search);
-				
-				if(params.size > 0) {
-					cargarEmpleados(params);
-				}
-			
-			});
-
-			
-			XAVApp.MainButton.onClick(() => {
-				var form = document.getElementById("myForm");
-				if(form.checkValidity() == false){
-					form.reportValidity();
-					return;
-				}
-				else{
-					XAVApp.MainButton.showProgress();
-					sendDataToBot();
-				}
-			});
-			
-			function sendDataToBot() {
-				var form = document.getElementById("myForm");
-				if(form.checkValidity() == false)
-					return;
-				let json = getJsonData();
-				Telegram.WebApp.sendData(json);
-				XAVApp.close();
-			}
-			
-			function getJsonData() {
-				var map = new Map();
-				
-				var pnlEmpleados = document.getElementById("pnlEmpleados");
-				 $(pnlEmpleados).find('input') <!-- find('input:text, input:password, input:file, select, textarea') -->
-						.each(function() {
-							var el = $(this);
-							map.set(el[0].id, el[0].value);
-						   
-						});
-				
-				<!-- for (let element of map) { -->
-				  <!-- console.log(element); -->
-				<!-- } -->
-				var data = [];
-				var datos = '';
-				for (let [key, value] of map) {
-				  <!-- console.log(key + " - " + value); -->
-				  if(key.indexOf('Fecha') > 0){
-					let fecha = value != '' ? value : '';
-					datos += '"'+ key +'": "'+ fecha + '",';
-				  }
-				  else {
-					value = value != '' ? value : 0
-					datos += '"'+ key +'": '+ value  + ',';
-				  }
-				  
-				  if(key.indexOf('TotalHoras') > 0) {
-					datos = '{' + datos.substring(0,datos.length-1) + '}';
-					var jsonParse = JSON.parse(datos);
-					data.push(jsonParse);
-					datos = '';
-				  }
-				} 
-
-				<!-- let json = JSON.stringify(Object.fromEntries(map)); -->
-				let json = JSON.stringify(data);
-				return json;
-			}
-			
-			function validarExpediente(me) {
-			//console.log(me.id + ' ' + me.value);
-				var value = me.value * 1;
-				me.value = value;
-				if(value <= 0 || Number.isInteger(value) == false) {
-					me.value = '';
-					return;
-				}
-				
-				var pnlEmpleados = document.getElementById("pnlEmpleados");
-				 $(pnlEmpleados).find('input') <!-- find('input:text, input:password, input:file, select, textarea') -->
-					.each(function() {
-						let el = $(this);
-						if(me.id != el[0].id && el[0].id.indexOf('Expediente') > 0) {
-							let _value = el[0].value * 1;
-							if (_value == value)
-								me.value = '';
-						}
-					   
-					});
-			}
-			
-			function validateRange(me) {
-				//console.log(me.id + ' ' + me.value);
-				var num = (me.id).substring((me.id).length-1);
-				var txtTotalHoras = $('#txtTotalHoras' + num);
-				txtTotalHoras.val('');
-				if(isNaN(Date.parse(me.value))) {
-					me.value = "";
-					return;
-				}
-				
-				
-				var txt1 = $('#txtFechaIni' + num);
-				var txt2 = $('#txtFechaFin' + num);
-				
-				if(txt1.val() == '' || txt2.val() == '')
-					return;
-				var fechaIni = new Date(txt1.val());
-				var fechaFin = new Date(txt2.val());
-				
-				if(fechaIni >= fechaFin) {
-					alert('Fechas no válidas, favor de verificar.');
-					return;
-				}
-		
-				// segundos = milisegundos/1000
-				// minutos = segundos/60
-				// horas = minutos/60
-				// Días = horas/24
-				 
-				const diffInDays = Math.floor((fechaFin - fechaIni) / (1000 * 60 * 60 * 24));
-				const diffInHoras = ((fechaFin - fechaIni) / (1000 * 60 * 60)).toFixed(2);
-				const diffInMinutos = Math.floor((fechaFin - fechaIni) / (1000 * 60));
-				console.log('Días: ' + diffInDays + ' Horas: ' + diffInHoras + ' Minutos: ' + diffInMinutos);
-				
-				txtTotalHoras.val(diffInHoras);
-			}
-			
-			function agregarEmpleado() {
-				var pnl2 = $('#pnlEmpleado2');
-				var pnl3 = $('#pnlEmpleado3');
-				var pnl4 = $('#pnlEmpleado4');
-				var pnl5 = $('#pnlEmpleado5');
-				var pnl6 = $('#pnlEmpleado6');
-				var pnl7 = $('#pnlEmpleado7');
-				var pnl8 = $('#pnlEmpleado8');
-				var pnl9 = $('#pnlEmpleado9');
-				var pnl10 = $('#pnlEmpleado10');
-				
-				if(pnl2.is(":visible") == false) {
-					pnl2.show(500);
-					$('#txtExpediente2').attr("required", "");
-					$('#txtFechaIni2').attr("required", "");
-					$('#txtFechaFin2').attr("required", "");
-				}
-				else if(pnl3.is(":visible") == false) {
-					pnl3.show(500);
-					$('#txtExpediente3').attr("required", "");
-					$('#txtFechaIni3').attr("required", "");
-					$('#txtFechaFin3').attr("required", "");
-				}
-				else if(pnl4.is(":visible") == false) {
-					pnl4.show(500);
-					$('#txtExpediente4').attr("required", "");
-					$('#txtFechaIni4').attr("required", "");
-					$('#txtFechaFin4').attr("required", "");
-				}
-				else if(pnl5.is(":visible") == false) {
-					pnl5.show(500);
-					$('#txtExpediente5').attr("required", "");
-					$('#txtFechaIni5').attr("required", "");
-					$('#txtFechaFin5').attr("required", "");
-				}
-				else if(pnl6.is(":visible") == false) {
-					pnl6.show(500);
-					$('#txtExpediente6').attr("required", "");
-					$('#txtFechaIni6').attr("required", "");
-					$('#txtFechaFin6').attr("required", "");
-				}
-				else if(pnl7.is(":visible") == false) {
-					pnl7.show(500);
-					$('#txtExpediente7').attr("required", "");
-					$('#txtFechaIni7').attr("required", "");
-					$('#txtFechaFin7').attr("required", "");
-				}
-				else if(pnl8.is(":visible") == false) {
-					pnl8.show(500);
-					$('#txtExpediente8').attr("required", "");
-					$('#txtFechaIni8').attr("required", "");
-					$('#txtFechaFin8').attr("required", "");
-				}
-				else if(pnl9.is(":visible") == false) {
-					pnl9.show(500);
-					$('#txtExpediente9').attr("required", "");
-					$('#txtFechaIni9').attr("required", "");
-					$('#txtFechaFin9').attr("required", "");
-				}
-				else if(pnl10.is(":visible") == false) {
-					pnl10.show(500);
-					$('#txtExpediente10').attr("required", "");
-					$('#txtFechaIni10').attr("required", "");
-					$('#txtFechaFin10').attr("required", "");
-				}
-				else {
-					alert('No se pueden agregagar mas empleados. El límite es de 10.\nPara agregar más debe realizar una captura adicional de Tiempo Extra.');
-				}
-					
-			}
-			
-			function eliminarEmpleado(posicion) {
-				let pnl = $('#pnlEmpleado' + posicion);
-				let txtExp = $('#txtExpediente' + posicion);
-				let txtFIni = $('#txtFechaIni' + posicion);
-				let txtFFin = $('#txtFechaFin' + posicion);
-				let txtHrs = $('#txtTotalHoras' + posicion);
-				
-				pnl.hide(500);
-				txtExp.val('');
-				txtExp.removeAttr("required");
-				txtFIni.val('');
-				txtFIni.removeAttr("required");
-				txtFFin.val('');
-				txtFFin.removeAttr("required");
-				txtHrs.val('');
-			}
-			
-			function cargarEmpleados(params) {
-				for (const p of params) {
-			
-					let posicion = p[0].replace(/^\D+/g, '');
-					let values = p[1].split('|');
-					let pnl = $('#pnlEmpleado' + posicion);
-					pnl.show(1000);
-					let txtExp = $('#txtExpediente' + posicion);
-					let txtFIni = $('#txtFechaIni' + posicion);
-					let txtFFin = $('#txtFechaFin' + posicion);
-					let txtHrs = $('#txtTotalHoras' + posicion);
-					txtExp.attr("required", "");
-					txtExp.val(values[0]);	
-					txtFIni.attr("required", "");
-					txtFIni.val(values[1]);
-					txtFFin.attr("required", "");
-					txtFFin.val(values[2]);
-					txtHrs.val(values[3]);
-				  
-				}
-				
-			}
-		
-	</script>
-    
+	<script src="./index.js"></script>
 </body>
+
 </html>
