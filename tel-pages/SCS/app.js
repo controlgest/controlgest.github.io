@@ -1,6 +1,27 @@
 let UCTable = []
+const XAVApp = {
+    initData: Telegram.WebApp.initData || '',
+    initDataUnsafe: Telegram.WebApp.initDataUnsafe || {},
+    MainButton: Telegram.WebApp.MainButton,
 
-document.addEventListener('DOMContentLoaded', () => {
+    init(options) {
+        document.body.style.visibility = '';
+        Telegram.WebApp.ready();
+        Telegram.WebApp.expand();
+        Telegram.WebApp.MainButton.isProgressVisible = "true";
+        Telegram.WebApp.MainButton.setParams({
+            text: 'ENVIAR DATOS',
+            is_visible: true,
+            is_active: true
+        });
+    },
+
+    close() {
+        Telegram.WebApp.close();
+    }
+}
+
+$(document).ready(() => {
 
     document.getElementById('frmLum').addEventListener('submit', function (event) {
         event.preventDefault(); // Previene el comportamiento por defecto del formulario al enviarse
@@ -20,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const tXtDescTrabajo = document.getElementById('tXtDescTrabajo')
 
     // Tomar parámetros de la URL
-    let url = new URL(window.location.href);
-    let folio = url.searchParams.get("pFolio");
-    let area = url.searchParams.get("pArea");
-    let cope = url.searchParams.get("pCope");
-    let idConstructor = url.searchParams.get("pConst");
+    let url = new URLSearchParams(document.location.search);
+    let folio = url.get("pFolio");
+    let area = url.get("pArea");
+    let cope = url.get("pCope");
+    let idConstructor = url.get("pConst");
     chkManoObra.checked = true
 
     if (folio != null)
@@ -196,8 +217,13 @@ let validaPositivos = (e) => {
     }
 }
 
+XAVApp.MainButton.onClick(() => {
+    XAVApp.MainButton.showProgress();
+    enviarLum();
+})
+
 let enviarLum = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
 
     let form = document.getElementById('frmLum');
     if (form.checkValidity()) {
@@ -213,6 +239,9 @@ let enviarLum = (e) => {
             UC: UCTable
         }
         console.log(lum);
+
+        Telegram.WebApp.sendData(lum);
+        XAVApp.close();
     } else {
         form.reportValidity()
     }
@@ -228,4 +257,3 @@ let chkManoObra_change = (e) => {
 let chkMateriales_change = (e) => {
     document.getElementById('txtManoDeObra').value = ''
 }
-
