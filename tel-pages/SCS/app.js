@@ -1,4 +1,5 @@
-let UCTable = []
+let UCTable = [];
+
 const XAVApp = {
     initData: Telegram.WebApp.initData || '',
     initDataUnsafe: Telegram.WebApp.initDataUnsafe || {},
@@ -21,14 +22,33 @@ const XAVApp = {
     }
 }
 
+XAVApp.init();
+
 $(document).ready(() => {
 
-    document.getElementById('frmLum').addEventListener('submit', function (event) {
+	const params = new URLSearchParams(document.location.search);
+    if (params.size > 0) {
+        cargarDatos(params);
+    }
+	
+	document.getElementById('frmLum').addEventListener('submit', function (event) {
         event.preventDefault(); // Previene el comportamiento por defecto del formulario al enviarse
-
-        // Lógica de envío de formulario aquí
-        console.log('Formulario enviado sin borrar datos de la tabla.');
     });
+});
+
+XAVApp.MainButton.onClick(() => {
+	var form = document.getElementById("frmLum");
+    if (form.checkValidity() == false) {
+        form.reportValidity();
+        return;
+    }
+
+	XAVApp.MainButton.showProgress();
+	sendDataToBot();
+    
+});
+
+let cargarDatos = (params) => {
 
     const autocompleteListManoObra = document.getElementById('manoDeObraAutocompleteList');
     const inputManoObra = document.getElementById('txtManoDeObra');
@@ -40,12 +60,10 @@ $(document).ready(() => {
     const tXtDescDanios = document.getElementById('tXtDescDanios')
     const tXtDescTrabajo = document.getElementById('tXtDescTrabajo')
 
-    // Tomar parámetros de la URL
-    let url = new URLSearchParams(document.location.search);
-    let folio = url.get("pFolio");
-    let area = url.get("pArea");
-    let cope = url.get("pCope");
-    let idConstructor = url.get("pConst");
+    let folio = params.get("pFolio");
+    let area = params.get("pArea");
+    let cope = params.get("pCope");
+    let idConstructor = params.get("pConst");
     chkManoObra.checked = true
 
     if (folio != null)
@@ -66,8 +84,9 @@ $(document).ready(() => {
             })
     }
 
-    chkManoObra.ariaChecked = true
-    let idsFueraSacre = [9,11]
+    chkManoObra.ariaChecked = true;
+    let idsFueraSacre = [9,11];
+	
     fetch('./catalogos/cat_lum.json')
         .then(response => response.json())
         .then(data => {
@@ -86,30 +105,28 @@ $(document).ready(() => {
                     if (chkManoObra.checked) {
                         if (item.tipo == 'SACRE' && !idsFueraSacre.find(x =>x == idConstructor)) {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             }
                         } else if (item.tipo == 'FUERA_SACRE' && idsFueraSacre.find(x =>x == idConstructor)) {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             }
                         }
                     } else if (!chkManoObra.checked) {
                         if (item.tipo == 'SIATEL' && !idsFueraSacre.find(x =>x == idConstructor)) {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             }
                         }
                     }
-                }
-                );
-            }
-            );
+                });
+            });
 
             document.addEventListener('click', (e) => {
                 if (e.target !== inputManoObra) {
@@ -118,20 +135,20 @@ $(document).ready(() => {
             });
         })
         .catch(error => console.error('Error fetching the JSON:', error));
+}
 
-    let insertItemManoDeObraAutocompleteList = (item) => {
-        const div = document.createElement('div');
-        div.classList.add('manoDeObraAutocompleteList');
-        div.innerHTML = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
-        div.addEventListener('click', () => {
-            inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
-            autocompleteListManoObra.innerHTML = '';
-        }
-        );
-        autocompleteListManoObra.appendChild(div);
-    }
+let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra,inputManoObra,item) => {
 
-});
+	const div = document.createElement('div');
+	div.classList.add('manoDeObraAutocompleteList');
+	div.innerHTML = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
+	div.addEventListener('click', () => {
+		inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
+		autocompleteListManoObra.innerHTML = '';
+	}
+	);
+	autocompleteListManoObra.appendChild(div);
+}
 
 let agregarManoObra = () => {
     const table = document.getElementById('manoDeObraTable');
@@ -176,13 +193,13 @@ let agregarManoObra = () => {
 
                     UCTable.push(
                         {
-                            idUC: item.id_cumontada,
-                            claveUC: item.clave_unidad,
-                            descUC: item.descripcion,
-                            idUnidad: item.id_cunidad,
-                            tipo: item.tipo,
-                            unidad: item.unidad,
-                            cantidad: cellCantidad.textContent
+                            UC_Idcumontada: item.id_cumontada,
+                            UC_Cantidad: cellCantidad.textContent,
+                            UC_Clave: item.clave_unidad,
+                            UC_Unidad: item.unidad,
+                            UC_Desc: item.descripcion,
+                            //idUnidad: item.id_cunidad, no se requiere
+                            UC_Tipo: item.tipo
                         }
                     )
 
@@ -217,37 +234,25 @@ let validaPositivos = (e) => {
     }
 }
 
-XAVApp.MainButton.onClick(() => {
-    XAVApp.MainButton.showProgress();
-    enviarLum();
-})
+let sendDataToBot = () => {
 
-let enviarLum = (e) => {
-    //e.preventDefault();
+	if (UCTable.length <= 0) {
+		alert('Debe agregar al menos una unidad de construcción')
+		return;
+	}
 
-    let form = document.getElementById('frmLum');
-    if (form.checkValidity()) {
-        if (UCTable.length <= 0) {
-            alert('Debe agregar al menos una unidad de construcción')
-            return;
-        }
-
-        let lum = {
-            tipo: slcTipoLum.value,
-            descDaños: tXtDescDanios.value,
-            descTrabajos: tXtDescTrabajo.value,
-            UC: UCTable
-        }
-        console.log(lum);
-
-        Telegram.WebApp.sendData(lum);
-        XAVApp.close();
-    } else {
-        form.reportValidity();
+    let data = {
+        LumTipo: slcTipoLum.value,
+        LumDescDanios: tXtDescDanios.value,
+        LumDescTrabajos: tXtDescTrabajo.value,
+        ListaUC: UCTable
     }
+    let jsonString = JSON.stringify(data);
+	//console.log(data);
+
+	Telegram.WebApp.sendData(lum);
+	XAVApp.close();
 }
-
-
 
 let chkManoObra_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
