@@ -250,7 +250,7 @@ let sendDataToBot = () => {
     let jsonString = JSON.stringify(data);
 	//console.log(data);
 
-	Telegram.WebApp.sendData(lum);
+    Telegram.WebApp.sendData(jsonString);
 	XAVApp.close();
 }
 
