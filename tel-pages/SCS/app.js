@@ -212,11 +212,12 @@ let agregarManoObra = () => {
                         row.parentNode.removeChild(row);
                     }
                     cellEliminar.appendChild(btnEliminar);
+                    document.getElementById('txtManoDeObra').value = '';
+                    document.getElementById('txtCantManoObra').value = '';
                 }
             });
         })
         .catch(error => console.error('Error fetching the JSON:', error))
-
 }
 
 let txtCantManoObra_change = (e) => {
@@ -256,9 +257,10 @@ let sendDataToBot = () => {
 
 let chkManoObra_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
-
+    document.getElementById('txtCantManoObra').value = '';
 }
 
 let chkMateriales_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
+    document.getElementById('txtCantManoObra').value = '';
 }
