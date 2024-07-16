@@ -37,15 +37,7 @@ $(document).ready(() => {
 });
 
 XAVApp.MainButton.onClick(() => {
-	var form = document.getElementById("frmLum");
-    if (form.checkValidity() == false) {
-        form.reportValidity();
-        return;
-    }
-
-	XAVApp.MainButton.showProgress();
-	sendDataToBot();
-    
+    sendDataToBot();
 });
 
 let cargarDatos = (params) => {
@@ -150,16 +142,25 @@ let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra,inputManoOb
 	autocompleteListManoObra.appendChild(div);
 }
 
-let agregarManoObra = () => {
-    const table = document.getElementById('manoDeObraTable');
-    let txtManoObra = document.getElementById('txtManoDeObra').value;
-    let txtCantManoObra = document.getElementById('txtCantManoObra').value;
+let agregarUC = () => {
+    let txtManoObra = document.getElementById('txtManoDeObra');
+    let txtCantManoObra = document.getElementById('txtCantManoObra');
 
-    if (txtManoObra == '' || txtCantManoObra == '' || txtManoObra.split(' / ').length != 3) {
+    txtManoObra.required = true;
+    txtCantManoObra.required = true;
+
+    var form = document.getElementById("frmLum");
+    if (form.checkValidity() == false) {
+        form.reportValidity();
         return;
     }
 
-    let txtManoObraArray = txtManoObra.split(' / ')
+    const table = document.getElementById('manoDeObraTable');
+
+    if (txtManoObra.value == '' || txtCantManoObra.value == '' || txtManoObra.value.split(' / ').length != 3)
+        return;
+
+    let txtManoObraArray = txtManoObra.value.split(' / ')
     let clave = txtManoObraArray[0].trim();
 
     for (let i = 0; i < table.rows.length; i++) {
@@ -189,7 +190,7 @@ let agregarManoObra = () => {
                     cellDescripcion.innerHTML = item.descripcion;
                     cellUnidad.innerHTML = item.unidad;
                     cellTipo.innerHTML = item.tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
-                    cellCantidad.innerHTML = txtCantManoObra;
+                    cellCantidad.innerHTML = txtCantManoObra.value;
 
                     UCTable.push(
                         {
@@ -207,9 +208,11 @@ let agregarManoObra = () => {
                     btnEliminar.classList.add('btn');
                     btnEliminar.classList.add('btn-outline-danger');
                     btnEliminar.innerHTML = '<i class="fa fa-trash-o"></i>';
+                    btnEliminar.catalogo = item.clave_unidad;
                     btnEliminar.onclick = function () {
                         let row = this.parentNode.parentNode;
                         row.parentNode.removeChild(row);
+                        UCTable = removeArrayUC(UCTable, this.catalogo);
                     }
                     cellEliminar.appendChild(btnEliminar);
                     document.getElementById('txtManoDeObra').value = '';
@@ -236,11 +239,20 @@ let validaPositivos = (e) => {
 }
 
 let sendDataToBot = () => {
+    var form = document.getElementById("frmLum");
 
-	if (UCTable.length <= 0) {
-		alert('Debe agregar al menos una unidad de construcción')
-		return;
-	}
+    if (UCTable.length <= 0) {
+        alert('Debe agregar al menos una unidad de construcción')
+        return;
+    }
+
+    document.getElementById('txtManoDeObra').required = false;
+    document.getElementById('txtCantManoObra').required = false;
+
+    if (form.checkValidity() == false) {
+        form.reportValidity();
+        return;
+    }
 
     let data = {
         LumTipo: slcTipoLum.value,
@@ -251,6 +263,7 @@ let sendDataToBot = () => {
     let jsonString = JSON.stringify(data);
 	//console.log(data);
 
+    XAVApp.MainButton.showProgress();
     Telegram.WebApp.sendData(jsonString);
 	XAVApp.close();
 }
@@ -263,4 +276,13 @@ let chkManoObra_change = (e) => {
 let chkMateriales_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
     document.getElementById('txtCantManoObra').value = '';
+}
+
+
+let removeArrayUC = (array, obj) => {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].UC_Clave === obj)
+            array.splice(i, 1);
+    }
+    return array;
 }
