@@ -37,7 +37,10 @@ $(document).ready(() => {
 });
 
 XAVApp.MainButton.onClick(() => {
-    sendDataToBot();
+    //hacer una confirmacion antes enviar
+    if (confirm("¿Está seguro de enviar los datos, ya no se podrán modificar?")) {
+        sendDataToBot();
+    }
 });
 
 let cargarDatos = (params) => {
