@@ -29,14 +29,10 @@
             <img src="../../Content/images/RNUM_LOGO.svg" style="height: 60PX;" alt="Logo">
             <h4 class="ml-2">LUM</h4>
         </div>
-        <div class="col-6 col-lg-3 align-items-center" >
-            <span>Tipo LUM</span>
-            <select id="slcTipoLum" required class="form-control">
-                <option value="">Seleccionar</option>
-                <option value="Montaje">Montaje</option>
-                <option value="Desmontaje">Desmontaje</option>
-                <option value="Canalizacion">Canalización</option>
-            </select>
+        <div class="col-6 col-lg-3">
+            <span><b>Tipo LUM </b></span><br />
+            <span id="txtTipoLum"></span>
+        </div>
         </div>
     </div>
     
@@ -66,7 +62,7 @@
                     <div class="row col-12 flex-row">
                         <div class="col-12 col-lg-6 p-0">
                             <label for="descDanios">Descripción detallada de daños</label>
-                            <textarea name="descDanios" id="tXtDescDanios" class="form-control " placeholder="Descripción detallada de daños" required ></textarea>
+                            <textarea name="descDanios" id="txtDescDanios" class="form-control " placeholder="Descripción detallada de daños" required ></textarea>
                         </div>
                         <div class="col-12 col-lg-6 p-0">
                             <label for="descTrabajo">Descripción de trabajo realizado</label>

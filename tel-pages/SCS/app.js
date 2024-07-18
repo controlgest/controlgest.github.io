@@ -25,7 +25,6 @@ const XAVApp = {
 XAVApp.init();
 
 $(document).ready(() => {
-
 	const params = new URLSearchParams(document.location.search);
     if (params.size > 0) {
         cargarDatos(params);
@@ -37,36 +36,32 @@ $(document).ready(() => {
 });
 
 XAVApp.MainButton.onClick(() => {
-    //hacer una confirmacion antes enviar
     if (confirm("¿Está seguro de enviar los datos, ya no se podrán modificar?")) {
         sendDataToBot();
     }
 });
 
 let cargarDatos = (params) => {
-
-    const autocompleteListManoObra = document.getElementById('manoDeObraAutocompleteList');
+    const txtTipoLum = document.getElementById('txtTipoLum');
     const inputManoObra = document.getElementById('txtManoDeObra');
-    const txtFolio = document.getElementById('txtFolio')
-    const txtArea = document.getElementById('txtArea')
-    const txtCope = document.getElementById('txtCope')
-    const chkManoObra = document.getElementById('chkManoObra')
-    const slcTipoLum = document.getElementById('slcTipoLum')
-    const tXtDescDanios = document.getElementById('tXtDescDanios')
-    const tXtDescTrabajo = document.getElementById('tXtDescTrabajo')
+    const autocompleteListManoObra = document.getElementById('manoDeObraAutocompleteList');
+    const txtFolio = document.getElementById('txtFolio');
+    const txtArea = document.getElementById('txtArea');
+    const txtCope = document.getElementById('txtCope');
+    const chkManoObra = document.getElementById('chkManoObra');
 
     let folio = params.get("pFolio");
     let area = params.get("pArea");
     let cope = params.get("pCope");
     let idConstructor = params.get("pConst");
-    chkManoObra.checked = true
+    let tipoLUM = params.get("pTipoLum");
 
-    if (folio != null)
-        txtFolio.textContent = folio.toUpperCase();
-    if (area != null)
-        txtArea.textContent = area.toUpperCase();
-    if (cope != null)
-        txtCope.textContent = cope.toUpperCase();
+    txtTipoLum.textContent = tipoLUM.toUpperCase();
+    chkManoObra.checked = true;
+    txtFolio.textContent = folio.toUpperCase();
+    txtArea.textContent = area.toUpperCase();
+    txtCope.textContent = cope.toUpperCase();
+    
     if (constructor != null) {
         fetch('./catalogos/catConstructores.json')
             .then(response => response.json())
@@ -76,7 +71,7 @@ let cargarDatos = (params) => {
                         txtConstructor.textContent = item.constructor;
                     }
                 });
-            })
+            });
     }
 
     chkManoObra.ariaChecked = true;
@@ -257,10 +252,12 @@ let sendDataToBot = () => {
         return;
     }
 
+    const txtDescDanios = document.getElementById('txtDescDanios');
+    const txtDescTrabajo = document.getElementById('txtDescTrabajo');
+
     let data = {
-        LumTipo: slcTipoLum.value,
-        LumDescDanios: tXtDescDanios.value,
-        LumDescTrabajos: tXtDescTrabajo.value,
+        LumDescDanios: txtDescDanios.value,
+        LumDescTrabajos: txtDescTrabajo.value,
         ListaUC: UCTable
     }
     let jsonString = JSON.stringify(data);
