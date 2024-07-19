@@ -9,17 +9,6 @@ const XAVApp = {
         document.body.style.visibility = '';
         Telegram.WebApp.ready();
         Telegram.WebApp.expand();
-        Telegram.WebApp.showConfirm = function (message, callback) {
-            WebApp.showPopup({
-                message: message,
-                buttons: [
-                    { type: 'ok', id: 'ok' },
-                    { type: 'cancel' }
-                ]
-            }, callback ? function (button_id) {
-                callback(button_id == 'ok');
-            } : null);
-        };
         Telegram.WebApp.MainButton.isProgressVisible = "true";
         Telegram.WebApp.MainButton.setParams({
             text: 'ENVIAR DATOS',
