@@ -9,6 +9,17 @@ const XAVApp = {
         document.body.style.visibility = '';
         Telegram.WebApp.ready();
         Telegram.WebApp.expand();
+        Telegram.WebApp.showConfirm = function (message, callback) {
+            WebApp.showPopup({
+                message: message,
+                buttons: [
+                    { type: 'ok', id: 'ok' },
+                    { type: 'cancel' }
+                ]
+            }, callback ? function (button_id) {
+                callback(button_id == 'ok');
+            } : null);
+        };
         Telegram.WebApp.MainButton.isProgressVisible = "true";
         Telegram.WebApp.MainButton.setParams({
             text: 'ENVIAR DATOS',
@@ -36,10 +47,15 @@ $(document).ready(() => {
 });
 
 XAVApp.MainButton.onClick(() => {
-    if (confirm("¿Está seguro de enviar los datos, ya no se podrán modificar?")) {
-        sendDataToBot();
-    }
+    Telegram.WebApp.showConfirm("¿Está seguro de enviar los datos, ya no se podrán modificar?", confirmarEnvio);
+    //if (confirm("¿Está seguro de enviar los datos, ya no se podrán modificar?")) {
+    //    sendDataToBot();
+    //}
 });
+
+let confirmarEnvio = (data) => {
+    alert(data);
+}
 
 let cargarDatos = (params) => {
     const txtTipoLum = document.getElementById('txtTipoLum');
