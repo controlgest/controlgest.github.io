@@ -36,16 +36,13 @@ $(document).ready(() => {
 });
 
 XAVApp.MainButton.onClick(() => {
-    Telegram.WebApp.showAlert("hola");
-    Telegram.WebApp.showConfirm("¿Está seguro de enviar los datos, ya no se podrán modificar?", confirmarEnvio);
-    //if (confirm("¿Está seguro de enviar los datos, ya no se podrán modificar?")) {
-    //    sendDataToBot();
-    //}
+    //Telegram.WebApp.showAlert("hola");
+    //Telegram.WebApp.showConfirm("¿Está seguro de enviar los datos, ya no se podrán modificar?", confirmarEnvio);
+    if (confirm("¿Está seguro de enviar los datos, ya no se podrán modificar?")) {
+        //sendDataToBot();
+        alert('Hola xxx');
+    }
 });
-
-let confirmarEnvio = (data) => {
-    Telegram.WebApp.showAlert(data);
-}
 
 let cargarDatos = (params) => {
     const txtTipoLum = document.getElementById('txtTipoLum');
@@ -246,7 +243,7 @@ let sendDataToBot = () => {
     var form = document.getElementById("frmLum");
 
     if (UCTable.length <= 0) {
-        alert('Debe agregar al menos una unidad de construcción')
+        alert('Debe agregar al menos una unidad de construcción');
         return;
     }
 
