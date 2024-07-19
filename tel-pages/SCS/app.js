@@ -36,11 +36,8 @@ $(document).ready(() => {
 });
 
 XAVApp.MainButton.onClick(() => {
-    //Telegram.WebApp.showAlert("hola");
-    //Telegram.WebApp.showConfirm("¿Está seguro de enviar los datos, ya no se podrán modificar?", confirmarEnvio);
     if (confirm("¿Está seguro de enviar los datos, ya no se podrán modificar?")) {
-        //sendDataToBot();
-        alert('Hola xxx');
+        sendDataToBot();
     }
 });
 
