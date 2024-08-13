@@ -1,68 +1,38 @@
-[
+ [
 	{
 		"id_cconstructor" : 1,
 		"constructor" : "CARSO",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
+		"sacre" : 1,
+		"estatus" : 1
 	},
 	{
 		"id_cconstructor" : 2,
 		"constructor" : "PC INDUSTRIAL",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
+		"sacre" : 1,
+		"estatus" : 1
 	},
 	{
 		"id_cconstructor" : 3,
-		"constructor" : "COPE",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
+		"constructor" : "CYCSA",
+		"sacre" : 1,
+		"estatus" : 1
 	},
 	{
 		"id_cconstructor" : 4,
-		"constructor" : "UNE INTEGRADORA",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
-	},
-	{
-		"id_cconstructor" : 5,
-		"constructor" : "CONNECT AND REACH",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
+		"constructor" : "CTBR",
+		"sacre" : 1,
+		"estatus" : 1
 	},
 	{
 		"id_cconstructor" : 6,
-		"constructor" : "CYCSA",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
+		"constructor" : "ENLACE DIGITAL",
+		"sacre" : 0,
+		"estatus" : 1
 	},
 	{
 		"id_cconstructor" : 7,
-		"constructor" : "CTBR",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
-	},
-	{
-		"id_cconstructor" : 9,
-		"constructor" : "TECNOLOGIA EN MANTENIMIENTO CHAVEZ TREJO S.A. DE C.V.",
-		"tipo_solicitud" : "FUERA_SACRE",
-		"activo" : 1
-	},
-	{
-		"id_cconstructor" : 11,
-		"constructor" : "ENLACE DIGITAL",
-		"tipo_solicitud" : "FUERA_SACRE",
-		"activo" : 1
-	},
-	{
-		"id_cconstructor" : 12,
-		"constructor" : "MIZTON CONSTRUCCIONES S.A. DE C.V.",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
-	},
-	{
-		"id_cconstructor" : 14,
-		"constructor" : "GLOBAL SERVICES PROVIDERS S.A. DE C.V.",
-		"tipo_solicitud" : "SACRE|FUERA_SACRE",
-		"activo" : 1
+		"constructor" : "HTM (HELICOM)",
+		"sacre" : 1,
+		"estatus" : 1
 	}
 ]

@@ -75,7 +75,7 @@ let cargarDatos = (params) => {
     }
 
     chkManoObra.ariaChecked = true;
-    let idsFueraSacre = [9,11];
+    let idsFueraSacre = [6];
 	
     fetch('./catalogos/cat_lum.json')
         .then(response => response.json())
