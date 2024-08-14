@@ -107,11 +107,11 @@ let cargarDatos = (params) => {
                             }
                         }
                     } else if (!chkManoObra.checked) {
-                        if (item.tipo == 'SIATEL' && !idsFueraSacre.find(x =>x == idConstructor)) {
+                        if (item.tipo == 'SIATEL') {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             }
                         }
                     }
