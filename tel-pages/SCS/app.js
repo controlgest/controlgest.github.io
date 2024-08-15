@@ -55,6 +55,7 @@ let cargarDatos = (params) => {
     let cope = params.get("pCope");
     let idConstructor = params.get("pConst");
     let tipoLUM = params.get("pTipoLum");
+    let constructorSacre = params.get("pSacre");
 
     txtTipoLum.textContent = tipoLUM.toUpperCase();
     chkManoObra.checked = true;
@@ -75,7 +76,6 @@ let cargarDatos = (params) => {
     }
 
     chkManoObra.ariaChecked = true;
-    let idsFueraSacre = [6];
 	
     fetch('./catalogos/cat_lum.json')
         .then(response => response.json())
@@ -93,13 +93,13 @@ let cargarDatos = (params) => {
                     //check mano de obra == true, tipo: sacre y si constructor es Enlace Digital tipo:Fuera de sacre
                     //check materiales == true, tipo: siatel
                     if (chkManoObra.checked) {
-                        if (item.tipo == 'SACRE' && !idsFueraSacre.find(x =>x == idConstructor)) {
+                        if (item.tipo == 'SACRE' && constructorSacre == "True") {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             }
-                        } else if (item.tipo == 'FUERA_SACRE' && idsFueraSacre.find(x =>x == idConstructor)) {
+                        } else if (item.tipo == 'FUERA_SACRE' && constructorSacre == "False") {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
