@@ -25,12 +25,12 @@ const XAVApp = {
 XAVApp.init();
 
 $(document).ready(() => {
-	const params = new URLSearchParams(document.location.search);
+    const params = new URLSearchParams(document.location.search);
     if (params.size > 0) {
         cargarDatos(params);
     }
-	
-	document.getElementById('frmLum').addEventListener('submit', function (event) {
+
+    document.getElementById('frmLum').addEventListener('submit', function (event) {
         event.preventDefault(); // Previene el comportamiento por defecto del formulario al enviarse
     });
 });
@@ -62,7 +62,7 @@ let cargarDatos = (params) => {
     txtFolio.textContent = folio.toUpperCase();
     txtArea.textContent = area.toUpperCase();
     txtCope.textContent = cope.toUpperCase();
-    
+
     if (constructor != null) {
         fetch('./catalogos/catConstructores.json')
             .then(response => response.json())
@@ -76,7 +76,7 @@ let cargarDatos = (params) => {
     }
 
     chkManoObra.ariaChecked = true;
-	
+
     fetch('./catalogos/cat_lum.json')
         .then(response => response.json())
         .then(data => {
@@ -95,15 +95,15 @@ let cargarDatos = (params) => {
                     if (chkManoObra.checked) {
                         if (item.tipo == 'SACRE' && constructorSacre == "True") {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             }
                         } else if (item.tipo == 'FUERA_SACRE' && constructorSacre == "False") {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra,inputManoObra,item);
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             }
                         }
                     } else if (!chkManoObra.checked) {
@@ -127,17 +127,40 @@ let cargarDatos = (params) => {
         .catch(error => console.error('Error fetching the JSON:', error));
 }
 
-let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra,inputManoObra,item) => {
+let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra, inputManoObra, item) => {
 
-	const div = document.createElement('div');
-	div.classList.add('manoDeObraAutocompleteList');
-	div.innerHTML = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
-	div.addEventListener('click', () => {
-		inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
-		autocompleteListManoObra.innerHTML = '';
-	}
-	);
-	autocompleteListManoObra.appendChild(div);
+    const div = document.createElement('div');
+    div.classList.add('manoDeObraAutocompleteList');
+    div.innerHTML = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
+    div.addEventListener('click', () => {
+        inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
+        autocompleteListManoObra.innerHTML = '';
+    }
+    );
+    autocompleteListManoObra.appendChild(div);
+}
+
+let validarCantidad = (item, cantidad) => {
+    let msg = "";
+
+    if (item.clave_unidad.includes("FCEFP5") && !(cantidad >= 1 && cantidad <= 13)) { // 1 a 13 fusiones
+        txtCantManoObra.value == ''
+        msg = "Para " + `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}` + "\nSólo se permite capturar la cantidad de 1 a 13 fusiones, intenta nuevamente.";
+        alert(msg);
+        return false;
+    } else if (item.clave_unidad.includes("FCEFP6") && !(cantidad >= 14 && cantidad <= 50)) { // 14 a 50 fusiones
+        txtCantManoObra.value == ''
+        msg = "Para " + `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}` + "\nSólo se permite capturar la cantidad de 14 a 50 fusiones, intenta nuevamente.";
+        alert(msg);
+        return false;
+    } else if (item.clave_unidad.includes("FCEFP7") && !(cantidad >= 51)) { // > 51 fusiones
+        txtCantManoObra.value == ''
+        msg = "Para " + `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}` + "\nSólo se permite capturar la cantidad de 51 fusiones en adelante, intenta nuevamente.";
+        alert(msg);
+        return false;
+    }
+
+    return true;
 }
 
 let agregarUC = () => {
@@ -176,6 +199,9 @@ let agregarUC = () => {
         .then(data => {
             data.forEach(item => {
                 if (item.clave_unidad == clave) {
+                    if (!validarCantidad(item, txtCantManoObra.value)) {
+                        return
+                    }
                     let row = table.insertRow(0);
                     let cellClave = row.insertCell(0);
                     let cellDescripcion = row.insertCell(1);
@@ -261,11 +287,11 @@ let sendDataToBot = () => {
         ListaUC: UCTable
     }
     let jsonString = JSON.stringify(data);
-	//console.log(data);
+    //console.log(data);
 
     XAVApp.MainButton.showProgress();
     Telegram.WebApp.sendData(jsonString);
-	XAVApp.close();
+    XAVApp.close();
 }
 
 let chkManoObra_change = (e) => {
