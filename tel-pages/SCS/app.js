@@ -216,7 +216,7 @@ let agregarUC = () => {
                     cellUnidad.innerHTML = item.unidad;
                     cellTipo.innerHTML = item.tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
                     cellCantidad.innerHTML = txtCantManoObra.value;
-                    cellJornada.innerHTML = $("#slcJornada option:selected").text();
+                    cellJornada.innerHTML = item.tipo == 'SIATEL'?'':$("#slcJornada option:selected").text();
 
                     UCTable.push(
                         {
@@ -227,7 +227,7 @@ let agregarUC = () => {
                             UC_Desc: item.descripcion,
                             //idUnidad: item.id_cunidad, no se requiere
                             UC_Tipo: item.tipo,
-                            UC_Jornada:slcJornada.value
+                            UC_Jornada:item.tipo == 'SIATEL'?'':slcJornada.value
                         }
                     )
 
@@ -300,7 +300,7 @@ let sendDataToBot = () => {
         ListaUC: UCTable
     }
     let jsonString = JSON.stringify(data);
-    // console.log(data);
+     console.log(data);
 
     XAVApp.MainButton.showProgress();
     Telegram.WebApp.sendData(jsonString);
