@@ -300,7 +300,7 @@ let sendDataToBot = () => {
         ListaUC: UCTable
     }
     let jsonString = JSON.stringify(data);
-     console.log(data);
+     //console.log(data);
 
     XAVApp.MainButton.showProgress();
     Telegram.WebApp.sendData(jsonString);
