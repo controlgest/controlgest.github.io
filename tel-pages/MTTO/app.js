@@ -208,6 +208,8 @@ let agregarUC = () => {
                     let cellUnidad = row.insertCell(2);
                     let cellCantidad = row.insertCell(3);
                     let cellTipo = row.insertCell(4);
+                    // let cellJornada = row.insertCell(5)
+                    // let cellEliminar = row.insertCell(6);
                     let cellEliminar = row.insertCell(5);
 
                     cellClave.innerHTML = item.clave_unidad;
@@ -215,6 +217,7 @@ let agregarUC = () => {
                     cellUnidad.innerHTML = item.unidad;
                     cellTipo.innerHTML = item.tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
                     cellCantidad.innerHTML = txtCantManoObra.value;
+                    // cellJornada.innerHTML = $("#slcJornada option:selected").text();
 
                     UCTable.push(
                         {
@@ -225,6 +228,7 @@ let agregarUC = () => {
                             UC_Desc: item.descripcion,
                             //idUnidad: item.id_cunidad, no se requiere
                             UC_Tipo: item.tipo
+                            // UC_Jornada:slcJornada.value
                         }
                     )
 
@@ -270,6 +274,14 @@ let sendDataToBot = () => {
         return;
     }
 
+    // let txtFechaInicio = document.getElementById('txtFechaInicio');
+    // let txtFechaFin = document.getElementById('txtFechaFin');
+
+    // if (txtFechaInicio.value > txtFechaFin.value) {
+    //     alert('La fecha de fin debe ser mayor a la fecha de inicio');
+    //     return;
+    // }
+
     document.getElementById('txtManoDeObra').required = false;
     document.getElementById('txtCantManoObra').required = false;
 
@@ -284,10 +296,12 @@ let sendDataToBot = () => {
     let data = {
         LumDescDanios: txtDescDanios.value,
         LumDescTrabajos: txtDescTrabajo.value,
+        // LumFechaIni:txtFechaInicio.value,
+        // LumFechaFin:txtFechaFin.value,
         ListaUC: UCTable
     }
     let jsonString = JSON.stringify(data);
-    //console.log(data);
+    // console.log(data);
 
     XAVApp.MainButton.showProgress();
     Telegram.WebApp.sendData(jsonString);
@@ -297,11 +311,17 @@ let sendDataToBot = () => {
 let chkManoObra_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
     document.getElementById('txtCantManoObra').value = '';
+    // let slcJornada = document.getElementById('slcJornada');
+    // slcJornada.disabled = false;
 }
 
 let chkMateriales_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
     document.getElementById('txtCantManoObra').value = '';
+    // let slcJornada = document.getElementById('slcJornada');
+
+    // slcJornada.disabled = true;
+    // slcJornada.value = 'NOR';
 }
 
 

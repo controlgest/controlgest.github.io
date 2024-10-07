@@ -60,13 +60,27 @@
                     <hr class="col-12 p-0">
                         
                     <div class="row col-12 flex-row">
+                        <div class="col-12 p-0 my-2">
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <label for="txtFechaInicio">Fecha inicio de reparación</label>
+                                    <input type="datetime-local" class="form-control" id="txtFechaInicio" required>
+                                </div>
+                                <div class="col-6">
+                                    <label for="txtFechaFin">Fecha término de reparación</label>
+                                    <input type="datetime-local" class="form-control" id="txtFechaFin" required>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-12 col-lg-6 p-0">
                             <label for="descDanios">Descripción detallada de daños</label>
-                            <textarea name="descDanios" id="txtDescDanios" class="form-control " placeholder="Descripción detallada de daños" required ></textarea>
+                            <textarea name="descDanios" id="txtDescDanios" class="form-control "
+                                placeholder="Descripción detallada de daños" required></textarea>
                         </div>
                         <div class="col-12 col-lg-6 p-0">
                             <label for="descTrabajo">Descripción de trabajo realizado</label>
-                            <textarea name="descTrabajo" id="txtDescTrabajo" class="form-control" placeholder="Descripción de trabajo realizado" required></textarea>
+                            <textarea name="descTrabajo" id="txtDescTrabajo" class="form-control"
+                                placeholder="Descripción de trabajo realizado" required></textarea>
                         </div>
                     </div>
                 </div>
@@ -89,14 +103,21 @@
                         </div>
                         <div  class="card-body  p-0 overflow-scroll-x">
                             <div class="mt-3 form-row col-12 flex-0">
-                                <div class="p-0 col-9">
+                                <div class="p-0 col-12 mb-2">
                                     <label for="txtManoDeObra">Unidad Construcción</label>
                                     <input type="text"  class="form-control" id="txtManoDeObra" placeholder="Unidad Construcción" required>
                                     <div id="manoDeObraAutocompleteList" class="autocomplete-items"></div>
                                 </div>
-                                <div class="p-0 col-3">
+                                <div class="p-0 col-6">
                                     <label for="txtCantManoObra">Cantidad</label>
                                     <input type="number" placeholder="Cant." min="0" pattern="[0-9]" id="txtCantManoObra" onkeyup="txtCantManoObra_change(event)" class="form-control" required>
+                                </div>
+                                <div class="p-0 col-6">
+                                    <label for="slcJornada" >Jornada</label>
+                                    <select class="form-control" aria-placeholder="Jornada" required id="slcJornada">
+                                        <option value="NOR">NORMAL</option>
+                                        <option value="NOC">NOCTURNA</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class=" col-12 flex-0 form-row">
@@ -112,6 +133,7 @@
                                             <th>Unidad</th>
                                             <th>Cantidad</th>
                                             <th>Tipo</th>
+                                            <th>Jornada</th>
                                             <th>Acción</th>
                                         </tr>
                                     </thead>
@@ -129,7 +151,7 @@
 
             </div>
         </div>
-        <!--<button class="btn btn-primary" id="enviar" onclick="sendDataToBot()">Enviar</button>-->
+        <!-- <button class="btn btn-primary" id="enviar" onclick="sendDataToBot()">Enviar</button> -->
     </form>
 	<script type="text/javascript" src='app.js'></script>
 </body>
