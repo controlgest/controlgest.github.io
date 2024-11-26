@@ -51778,5 +51778,38 @@
 		"tipo" : "SIATEL",
 		"precio_unitario" : 49.92,
 		"tipo_costeo" : "MATERIALES"
+	},
+	{
+		"id_cumontada" : 5742,
+		"clave_unidad" : "FEAB30",
+		"descripcion" : "Exc.c\/maquinaria s\/inst.de 0.01-2.0 m A\/B  ",
+		"id_cunidad" : 3,
+		"unidad":"M3",
+		"tipo" : "SACRE",
+		"precio_unitario" : 20.97,
+		"estatus" : 1,
+		"tipo_costeo" : "MANO OBRA SACRE"
+	},
+	{
+		"id_cumontada" : 5743,
+		"clave_unidad" : "FECIFR",
+		"descripcion" : "FLETE DE RETROEXCAVADORA  EN DERECHO DE VIA",
+		"id_cunidad" : 15,
+		"unidad":"EVE",
+		"tipo" : "SACRE",
+		"precio_unitario" : 9615.07,
+		"estatus" : 1,
+		"tipo_costeo" : "MANO OBRA SACRE"
+	},
+	{
+		"id_cumontada" : 5744,
+		"clave_unidad" : "FEOA50",
+		"descripcion" : "Relleno con producto de la excavación",
+		"id_cunidad" : 3,
+		"unidad":"M3",
+		"tipo" : "SACRE",
+		"precio_unitario" : 88.83,
+		"estatus" : 1,
+		"tipo_costeo" : "MANO OBRA SACRE"
 	}
 ]
