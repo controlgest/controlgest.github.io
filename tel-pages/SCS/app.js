@@ -224,7 +224,7 @@ let agregarUC = () => {
                             UC_Cantidad: cellCantidad.textContent,
                             UC_Clave: item.clave_unidad,
                             UC_Unidad: item.unidad,
-                            UC_Desc: item.descripcion,
+                            UC_Desc: '',//item.descripcion,
                             //idUnidad: item.id_cunidad, no se requiere
                             UC_Tipo: item.tipo,
                             UC_Jornada:item.tipo == 'SIATEL'?'':slcJornada.value
@@ -300,7 +300,7 @@ let sendDataToBot = () => {
         ListaUC: UCTable
     }
     let jsonString = JSON.stringify(data);
-     //console.log(data);
+    //  console.log(data);   
 
     XAVApp.MainButton.showProgress();
     Telegram.WebApp.sendData(jsonString);
