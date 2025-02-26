@@ -1,0 +1,38 @@
+ [
+	{
+		"id_cconstructor" : 1,
+		"constructor" : "CARSO",
+		"sacre" : 1,
+		"estatus" : 1
+	},
+	{
+		"id_cconstructor" : 2,
+		"constructor" : "PC INDUSTRIAL",
+		"sacre" : 1,
+		"estatus" : 1
+	},
+	{
+		"id_cconstructor" : 3,
+		"constructor" : "CYCSA",
+		"sacre" : 1,
+		"estatus" : 1
+	},
+	{
+		"id_cconstructor" : 4,
+		"constructor" : "CTBR",
+		"sacre" : 1,
+		"estatus" : 1
+	},
+	{
+		"id_cconstructor" : 6,
+		"constructor" : "ENLACE DIGITAL",
+		"sacre" : 0,
+		"estatus" : 1
+	},
+	{
+		"id_cconstructor" : 7,
+		"constructor" : "HTM (HELICOM)",
+		"sacre" : 1,
+		"estatus" : 1
+	}
+]

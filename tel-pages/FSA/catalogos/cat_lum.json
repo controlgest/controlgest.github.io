@@ -1,0 +1,54 @@
+[
+	{
+		"ucs_id" : 1,
+		"ucs_clave_unidad" : "N24\/0-100",
+		"ucs_descripcion" : "Construcción de Terminal Óptica en rango de 0-100 mts. de cable instalado",
+		"ucs_id_cunidad" : 56,
+		"ucs_tipo" : "MANO OBRA FUERA SACRE",
+		"ucs_precio_unitario" : 9747.75,
+		"ucs_estatus" : 1,
+		"ucs_tipo_costeo" : "FUERA_SACRE",
+		"ucs_agrupador" : "OTROS",
+		"ucs_observaciones" : null,
+		"unidad" : "TER"
+	},
+	{
+		"ucs_id" : 2,
+		"ucs_clave_unidad" : "N24\/101-299",
+		"ucs_descripcion" : "Construcción de Terminal Óptica en rango de 101-299 mts. de cable instalado",
+		"ucs_id_cunidad" : 56,
+		"ucs_tipo" : "MANO OBRA FUERA SACRE",
+		"ucs_precio_unitario" : 10888.48,
+		"ucs_estatus" : 1,
+		"ucs_tipo_costeo" : "FUERA_SACRE",
+		"ucs_agrupador" : "OTROS",
+		"ucs_observaciones" : null,
+		"unidad" : "TER"
+	},
+	{
+		"ucs_id" : 3,
+		"ucs_clave_unidad" : "N24\/300-500",
+		"ucs_descripcion" : "Construcción de Terminal Óptica en rango de 300-500 mts. de cable instalado",
+		"ucs_id_cunidad" : 56,
+		"ucs_tipo" : "MANO OBRA FUERA SACRE",
+		"ucs_precio_unitario" : 15578.64,
+		"ucs_estatus" : 1,
+		"ucs_tipo_costeo" : "FUERA_SACRE",
+		"ucs_agrupador" : "OTROS",
+		"ucs_observaciones" : null,
+		"unidad" : "TER"
+	},
+	{
+		"ucs_id" : 4,
+		"ucs_clave_unidad" : "N24\/PLUSVALIA",
+		"ucs_descripcion" : "Plusvalía por construcción adicional de 50 metros de cable de fibra óptica para cuando la logitud a instalar supera los 500 metros",
+		"ucs_id_cunidad" : 57,
+		"ucs_tipo" : "MANO OBRA FUERA SACRE",
+		"ucs_precio_unitario" : 1752.60,
+		"ucs_estatus" : 1,
+		"ucs_tipo_costeo" : "FUERA_SACRE",
+		"ucs_agrupador" : "OTROS",
+		"ucs_observaciones" : null,
+		"unidad" : "TRAMO"
+	}
+]
