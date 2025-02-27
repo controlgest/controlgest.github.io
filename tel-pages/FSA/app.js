@@ -1,4 +1,4 @@
-//?pConst=6&pDistrito=sadf456&pTerminal=45678d&pArea=leon&pCope=cope2
+//?pConst=6&pDistrito=sadf456&pTerminal=45678d&pArea=leon&pCope=cope2&pTipoLum=P24
 let UCTable = [];
 
 const XAVApp = {
@@ -51,18 +51,21 @@ let cargarDatos = (params) => {
     const txtTerminal = document.getElementById('txtTerminal');
     const chkManoObra = document.getElementById('chkManoObra');
     const slcTipoRed = document.getElementById('slcTipoRed');
+    const txtTipoLum = document.getElementById('txtTipoLum');
 
     let area = params.get("pArea");
     let cope = params.get("pCope");
     let distrito = params.get("pDistrito");
     let terminal = params.get("pTerminal");
     let idConstructor = params.get("pConst");
+    let tipoLum = params.get("pTipoLum");
 
     chkManoObra.checked = true;
     txtArea.textContent = area.toUpperCase();
     txtCope.textContent = cope.toUpperCase();
     txtDistrito.textContent = distrito.toUpperCase();
     txtTerminal.textContent = terminal.toUpperCase();
+    txtTipoLum.textContent = tipoLum.toUpperCase();
 
     if (constructor != null) {
         fetch('./catalogos/catConstructores.json')
@@ -94,18 +97,18 @@ let cargarDatos = (params) => {
                     //check mano de obra == true, tipo: sacre y si constructor es Enlace Digital tipo:Fuera de sacre
                     //check materiales == true, tipo: siatel
                     if (chkManoObra.checked) {
-                        if (item.ucs_tipo_costeo == 'FUERA_SACRE') {
-                            if (item.ucs_clave_unidad.toLowerCase().includes(value)) {
+                        if (item.tipo == 'FUERA_SACRE') {
+                            if (item.clave_unidad.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                            } else if (item.ucs_descripcion.toLowerCase().includes(value)) {
+                            } else if (item.descripcion.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             }
                         }
                     } else if (!chkManoObra.checked) {
-                        if (item.ucs_tipo_costeo == 'SIATEL') {
-                            if (item.ucs_clave_unidad.toLowerCase().includes(value)) {
+                        if (item.tipo == 'SIATEL') {
+                            if (item.clave_unidad.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                            } else if (item.ucs_descripcion.toLowerCase().includes(value)) {
+                            } else if (item.descripcion.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             }
                         }
@@ -126,9 +129,9 @@ let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra, inputManoO
 
     const div = document.createElement('div');
     div.classList.add('manoDeObraAutocompleteList');
-    div.innerHTML = `${item.ucs_clave_unidad} / ${item.ucs_descripcion} / ${item.unidad}`;
+    div.innerHTML = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
     div.addEventListener('click', () => {
-        inputManoObra.value = `${item.ucs_clave_unidad} / ${item.ucs_descripcion} / ${item.unidad}`;
+        inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
         autocompleteListManoObra.innerHTML = '';
     }
     );
@@ -171,7 +174,7 @@ let agregarUC = () => {
         .then(response => response.json())
         .then(data => {
             data.forEach(item => {
-                if (item.ucs_clave_unidad == clave) {
+                if (item.clave_unidad == clave) {
 
                     let row = table.insertRow(0);
                     let cellClave = row.insertCell(0);
@@ -182,22 +185,22 @@ let agregarUC = () => {
                     let cellTipoRed = row.insertCell(5)
                     let cellEliminar = row.insertCell(6);
 
-                    cellClave.innerHTML = item.ucs_clave_unidad;
-                    cellDescripcion.innerHTML = item.ucs_descripcion;
+                    cellClave.innerHTML = item.clave_unidad;
+                    cellDescripcion.innerHTML = item.descripcion;
                     cellUnidad.innerHTML = item.unidad;
-                    cellTipo.innerHTML = item.ucs_tipo_costeo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
+                    cellTipo.innerHTML = item.tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
                     cellTipoRed.innerHTML = slcTipoRed.value;
                     cellCantidad.innerHTML = txtCantManoObra.value;
 
                     UCTable.push(
                         {
-                            UC_Idcumontada: item.ucs_id,
+                            UC_Idcumontada: item.id_cumontada,
                             UC_Cantidad: cellCantidad.textContent,
-                            UC_Clave: item.ucs_clave_unidad,
+                            UC_Clave: item.clave_unidad,
                             UC_Unidad: item.unidad,
-                            //UC_Desc: '',//item.ucs_descripcion,
+                            //UC_Desc: '',//item.descripcion,
                             //idUnidad: item.id_cunidad, no se requiere
-                            UC_Tipo: item.ucs_tipo_costeo,
+                            UC_Tipo: item.tipo,
                             UC_TipoRed:slcTipoRed.value
                         }
                     )
@@ -206,7 +209,7 @@ let agregarUC = () => {
                     btnEliminar.classList.add('btn');
                     btnEliminar.classList.add('btn-outline-danger');
                     btnEliminar.innerHTML = '<i class="fa fa-trash-o"></i>';
-                    btnEliminar.catalogo = item.ucs_clave_unidad;
+                    btnEliminar.catalogo = item.clave_unidad;
                     btnEliminar.onclick = function () {
                         let row = this.parentNode.parentNode;
                         row.parentNode.removeChild(row);
