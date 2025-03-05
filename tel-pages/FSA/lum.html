@@ -112,15 +112,22 @@
                                     <input type="text"  class="form-control" id="txtManoDeObra" placeholder="Unidad Construcción" required>
                                     <div id="manoDeObraAutocompleteList" class="autocomplete-items"></div>
                                 </div>
-                                <div class="p-0 col-6">
+                                <div class="p-0 col">
                                     <label for="txtCantManoObra">Cantidad</label>
                                     <input type="number" placeholder="Cant." min="0" pattern="[0-9]" id="txtCantManoObra" onkeyup="txtCantManoObra_change(event)" class="form-control" required>
                                 </div>
                                 <div class="p-0 col-6">
                                     <label for="slcTipoRed" >Tipo red</label>
-                                    <select class="form-control" aria-placeholder="Tipo de red" required id="slcTipoRed">
+                                    <select class="form-control" aria-placeholder="Tipo de red" onchange="slcTipoRed_change(event)" required id="slcTipoRed">
                                         <option value="PRINCIPAL">PRINCIPAL</option>
                                         <option value="SECUNDARIA">SECUNDARIA</option>
+                                    </select>
+                                </div>
+                                <div id="divCableUtilizado" hidden="True" class="p-0 col-auto mb-2">
+                                    <label for="slcCableUtilizado">¿Se utilizó cable?</label>
+                                    <select class="form-control" id="slcCableUtilizado">
+                                        <option value="false">NO</option>
+                                        <option value="true">SI</option>
                                     </select>
                                 </div>
                             </div>

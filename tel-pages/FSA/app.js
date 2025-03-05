@@ -52,6 +52,8 @@ let cargarDatos = (params) => {
     const chkManoObra = document.getElementById('chkManoObra');
     const slcTipoRed = document.getElementById('slcTipoRed');
     const txtTipoLum = document.getElementById('txtTipoLum');
+    const divCableUtilizado = document.getElementById('divCableUtilizado');
+    const slcCableUtilizado = document.getElementById('slcCableUtilizado');
 
     let area = params.get("pArea");
     let cope = params.get("pCope");
@@ -133,9 +135,23 @@ let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra, inputManoO
     div.addEventListener('click', () => {
         inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
         autocompleteListManoObra.innerHTML = '';
-    }
-    );
+        txtCantManoObra.disabled = false;
+        divCableUtilizado.hidden = true;
+        if (item && item.tipo == 'FUERA_SACRE') {
+            // SI NO ES PLUSVALIA SE DESHABILITA EL CAMPO DE CANTIDAD Y SE PONE 1 POR DEFECTO
+            if (item.clave_unidad != "N24/PLUSVALIA") {
+                txtCantManoObra.value = 1;
+                txtCantManoObra.disabled = true;
+            }
+
+            // SI ES RANGO DE 0 A 100 METROS EN RED SECUNDARIA SE MUESTRA EL CAMPO CABLE UTILIZADO
+            if (item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA") {
+                divCableUtilizado.hidden = false;
+            }
+        }
+    });
     autocompleteListManoObra.appendChild(div);
+    
 }
 
 let agregarUC = () => {
@@ -175,7 +191,9 @@ let agregarUC = () => {
         .then(data => {
             data.forEach(item => {
                 if (item.clave_unidad == clave) {
-
+                    if (!validarCantidad(item, txtCantManoObra.value)) {
+                        return
+                    }
                     let row = table.insertRow(0);
                     let cellClave = row.insertCell(0);
                     let cellDescripcion = row.insertCell(1);
@@ -200,6 +218,7 @@ let agregarUC = () => {
                             UC_Unidad: item.unidad,
                             //UC_Desc: '',//item.descripcion,
                             //idUnidad: item.id_cunidad, no se requiere
+                            UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" ?(slcCableUtilizado.value === "true"):"",
                             UC_Tipo: item.tipo,
                             UC_TipoRed:slcTipoRed.value
                         }
@@ -218,7 +237,7 @@ let agregarUC = () => {
                     cellEliminar.appendChild(btnEliminar);
                     txtManoObra.value = '';
                     txtCantManoObra.value = '';
-                    // slcTipoRed.value = '';
+                    divCableUtilizado.hidden = true;
                 }
             });
         })
@@ -304,4 +323,39 @@ let removeArrayUC = (array, obj) => {
             array.splice(i, 1);
     }
     return array;
+}
+
+let validarCantidad = (item, cantidad) => {
+    let msg = "";
+    switch (item.tipo) {
+        case 'SIATEL':
+
+            break;
+        case 'FUERA_SACRE':
+            if (item.clave_unidad == "N24/PLUSVALIA" && (cantidad > 9 || cantidad < 1)) { // 1 a 13 fusiones
+                msg = "Para " + `${item.clave_unidad}` + "\nSólo se permite capturar la cantidad de 1 a 9, intenta nuevamente.";
+                alert(msg);
+                return false;
+            }
+
+            if(slcTipoRed.value == 'SECUNDARIA'){
+                if (item.clave_unidad != "N24/PLUSVALIA") { // 1 a 13 fusiones
+                    cantidad = 1;
+                    txtCantManoObra.enabled = false;
+                    return true;
+                }
+            }
+        break;
+    }
+    return true;
+}
+
+let slcTipoRed_change = (e) => {
+    const divCableUtilizado = document.getElementById('divCableUtilizado');
+    const txtManoObra = document.getElementById('txtManoDeObra');
+    if (e.target.value == "SECUNDARIA" && txtManoObra.value.includes("N24/0-100")) {
+        divCableUtilizado.hidden = false;
+    } else {
+        divCableUtilizado.hidden = true;
+    }
 }
