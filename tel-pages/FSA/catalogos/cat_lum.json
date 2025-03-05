@@ -986,7 +986,7 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 0.00,
+		"precio_unitario" : 19.88,
 		"tipo_costeo" : "MATERIALES"
 	},
 	{
@@ -996,7 +996,7 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 0.00,
+		"precio_unitario" : 112.73,
 		"tipo_costeo" : "MATERIALES"
 	},
 	{
