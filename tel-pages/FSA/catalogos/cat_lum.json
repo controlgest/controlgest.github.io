@@ -1,5 +1,35 @@
 [
 	{
+		"id_cumontada" : 2777,
+		"clave_unidad" : "1000361",
+		"descripcion" : "POSTE DE MADERA 7.6 M. 25 FT",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2012.00,
+		"tipo_costeo" : "MATERIALES"
+	},
+	{
+		"id_cumontada" : 2786,
+		"clave_unidad" : "1000371",
+		"descripcion" : "ANCLA P\/REMATE ACERO INOXIDABLE",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 167.00,
+		"tipo_costeo" : "MATERIALES"
+	},
+	{
+		"id_cumontada" : 2787,
+		"clave_unidad" : "1000372",
+		"descripcion" : "ANCLA P\/REMATE",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 55.00,
+		"tipo_costeo" : "MATERIALES"
+	},
+	{
 		"id_cumontada" : 2797,
 		"clave_unidad" : "1000386",
 		"descripcion" : "CRUCERO P\/CABLE MENSAJERO",
@@ -7,6 +37,16 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 23.00,
+		"tipo_costeo" : "MATERIALES"
+	},
+	{
+		"id_cumontada" : 2804,
+		"clave_unidad" : "1000394",
+		"descripcion" : "ESCALON DE FIERRO P\/POSTE DE MADERA",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 22.00,
 		"tipo_costeo" : "MATERIALES"
 	},
 	{
