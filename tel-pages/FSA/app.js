@@ -92,7 +92,7 @@ let  cargarDatos =async (params) => {
                 });
             });
 
-            slcAlmacen.hidden = await slcAlmacen.length > 0?false:true;
+            divAlmacen.hidden = await slcAlmacen.length > 1?false:true;
     }
 
 
