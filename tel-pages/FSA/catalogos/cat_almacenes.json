@@ -1,0 +1,63 @@
+
+[
+    {
+        "nombre": "TIJUANA",
+        "almacen": "CIT0",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "HERMOSILLO",
+        "almacen": "CIT1",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "LA PAZ",
+        "almacen": "CIT2",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "CHIHUAHUA",
+        "almacen": "CIT3",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "MONTERREY",
+        "almacen": "CIT4",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "GUADALAJARA",
+        "almacen": "CIT5",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "QUERETARO",
+        "almacen": "CIT6",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "MERIDA",
+        "almacen": "CIT8",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "XHALA",
+        "almacen": "CIT79",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "TLAXCALA",
+        "almacen": "CITA",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "IEMSA",
+        "almacen": "CITC",
+        "constructor": "CARSO"
+    },
+    {
+        "nombre": "COLTONGO",
+        "almacen": "CITO",
+        "constructor": "CARSO"
+    }
+]

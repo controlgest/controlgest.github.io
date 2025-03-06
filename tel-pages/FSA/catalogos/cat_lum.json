@@ -7,7 +7,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 2012.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS"
 	},
 	{
 		"id_cumontada" : 2786,
@@ -17,7 +18,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 167.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS"
 	},
 	{
 		"id_cumontada" : 2787,
@@ -27,7 +29,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 55.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS"
 	},
 	{
 		"id_cumontada" : 2797,
@@ -37,7 +40,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 23.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 2804,
@@ -47,7 +51,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 22.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS"
 	},
 	{
 		"id_cumontada" : 2815,
@@ -57,7 +62,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 72.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 2817,
@@ -67,7 +73,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 12.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 2882,
@@ -77,7 +84,8 @@
 		"unidad" : "ROL",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 553.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 2916,
@@ -87,7 +95,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 3.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 2925,
@@ -97,7 +106,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 8.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 2957,
@@ -107,7 +117,8 @@
 		"unidad" : "BTE",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 111.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 2958,
@@ -117,7 +128,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 2969,
@@ -127,7 +139,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 381.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 2993,
@@ -137,7 +150,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 12.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3033,
@@ -147,7 +161,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 2.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3034,
@@ -157,7 +172,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 4.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3037,
@@ -167,7 +183,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3051,
@@ -177,7 +194,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 12.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 3052,
@@ -187,7 +205,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 13.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 3487,
@@ -197,7 +216,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 6.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 3566,
@@ -207,7 +227,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3567,
@@ -217,7 +238,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3568,
@@ -227,7 +249,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3569,
@@ -237,7 +260,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3570,
@@ -247,7 +271,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3571,
@@ -257,7 +282,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3572,
@@ -267,7 +293,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3573,
@@ -277,7 +304,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3574,
@@ -287,7 +315,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3576,
@@ -297,7 +326,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3577,
@@ -307,7 +337,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3578,
@@ -317,7 +348,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3579,
@@ -327,7 +359,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3580,
@@ -337,7 +370,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3581,
@@ -347,7 +381,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3582,
@@ -357,7 +392,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3583,
@@ -367,7 +403,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3584,
@@ -377,7 +414,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3585,
@@ -387,7 +425,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3586,
@@ -397,7 +436,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3587,
@@ -407,7 +447,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3588,
@@ -417,7 +458,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3590,
@@ -427,7 +469,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3591,
@@ -437,7 +480,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3592,
@@ -447,7 +491,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3593,
@@ -457,7 +502,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3594,
@@ -467,7 +513,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3595,
@@ -477,7 +524,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3596,
@@ -487,7 +535,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3597,
@@ -497,7 +546,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3598,
@@ -507,7 +557,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3599,
@@ -517,7 +568,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3600,
@@ -527,7 +579,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3601,
@@ -537,7 +590,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3602,
@@ -547,7 +601,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3766,
@@ -557,7 +612,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 236.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 3768,
@@ -567,7 +623,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 489.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 3798,
@@ -577,7 +634,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 87.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 3820,
@@ -587,7 +645,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 6.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4074,
@@ -597,7 +656,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1798.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4075,
@@ -607,7 +667,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 656.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4076,
@@ -617,7 +678,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 2261.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4079,
@@ -627,7 +689,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 186.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4080,
@@ -637,7 +700,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1795.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4095,
@@ -647,7 +711,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1674.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4117,
@@ -657,7 +722,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 12.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4123,
@@ -667,7 +733,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 3424.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4129,
@@ -677,7 +744,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1857.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4130,
@@ -687,7 +755,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 477.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4135,
@@ -697,7 +766,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 376.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4136,
@@ -707,7 +777,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1017.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4146,
@@ -717,7 +788,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 214.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4147,
@@ -727,7 +799,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 326.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4149,
@@ -737,7 +810,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 212.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4162,
@@ -747,7 +821,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 457.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4165,
@@ -757,7 +832,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 6.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4166,
@@ -767,7 +843,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 6.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4211,
@@ -777,7 +854,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 59.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4212,
@@ -787,7 +865,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 30.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4225,
@@ -797,7 +876,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 16.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4240,
@@ -807,7 +887,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 597.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4241,
@@ -817,7 +898,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 725.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4376,
@@ -827,7 +909,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1904.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4378,
@@ -837,7 +920,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 114.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4379,
@@ -847,7 +931,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 127.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4500,
@@ -857,7 +942,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 115.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4501,
@@ -867,7 +953,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 497.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 4504,
@@ -877,7 +964,8 @@
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 1975.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 4644,
@@ -887,7 +975,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 9.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4645,
@@ -897,7 +986,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 9.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4646,
@@ -907,7 +997,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 11.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4647,
@@ -917,7 +1008,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 12.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4650,
@@ -927,7 +1019,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 13.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4651,
@@ -937,7 +1030,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 14.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4652,
@@ -947,7 +1041,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 14.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4653,
@@ -957,7 +1052,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 16.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4657,
@@ -967,7 +1063,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 18.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 4662,
@@ -977,7 +1074,8 @@
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 20.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 5778,
@@ -986,8 +1084,9 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 19.88,
-		"tipo_costeo" : "MATERIALES"
+		"precio_unitario" : 0.00,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "ESTRATEGICO"
 	},
 	{
 		"id_cumontada" : 5782,
@@ -996,8 +1095,9 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 112.73,
-		"tipo_costeo" : "MATERIALES"
+		"precio_unitario" : 0.00,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
 	},
 	{
 		"id_cumontada" : 5784,
@@ -1007,7 +1107,8 @@
 		"unidad" : "BSA",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 0.00,
-		"tipo_costeo" : "MATERIALES"
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO"
 	},
 	{
 		"id_cumontada" : 5785,
@@ -1017,7 +1118,8 @@
 		"unidad" : "TER",
 		"tipo" : "FUERA_SACRE",
 		"precio_unitario" : 9747.75,
-		"tipo_costeo" : "MANO OBRA FUERA SACRE"
+		"tipo_costeo" : "MANO OBRA FUERA SACRE",
+		"agrupador" : "OTROS"
 	},
 	{
 		"id_cumontada" : 5786,
@@ -1027,7 +1129,8 @@
 		"unidad" : "TER",
 		"tipo" : "FUERA_SACRE",
 		"precio_unitario" : 10888.48,
-		"tipo_costeo" : "MANO OBRA FUERA SACRE"
+		"tipo_costeo" : "MANO OBRA FUERA SACRE",
+		"agrupador" : "OTROS"
 	},
 	{
 		"id_cumontada" : 5787,
@@ -1037,7 +1140,8 @@
 		"unidad" : "TER",
 		"tipo" : "FUERA_SACRE",
 		"precio_unitario" : 15578.64,
-		"tipo_costeo" : "MANO OBRA FUERA SACRE"
+		"tipo_costeo" : "MANO OBRA FUERA SACRE",
+		"agrupador" : "OTROS"
 	},
 	{
 		"id_cumontada" : 5788,
@@ -1047,6 +1151,7 @@
 		"unidad" : "TRAMO",
 		"tipo" : "FUERA_SACRE",
 		"precio_unitario" : 1752.60,
-		"tipo_costeo" : "MANO OBRA FUERA SACRE"
+		"tipo_costeo" : "MANO OBRA FUERA SACRE",
+		"agrupador" : "OTROS"
 	}
 ]

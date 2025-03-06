@@ -66,13 +66,17 @@
                     <div class="row col-12 flex-row">
                         <div class="col-12 p-0 my-2">
                             <div class="form-row">
-                                <div class="col-6">
+                                <div class="col">
                                     <label for="txtFechaInicio">Fecha inicio</label>
                                     <input type="datetime-local" class="form-control" id="txtFechaInicio" required>
                                 </div>
-                                <div class="col-6">
+                                <div class="col">
                                     <label for="txtFechaFin">Fecha término</label>
                                     <input type="datetime-local" class="form-control" id="txtFechaFin" required>
+                                </div>
+                                <div class="col-md col-sm-12">
+                                    <label for="slcAlmacen">Almacén</label>
+                                    <select class="form-control" id="slcAlmacen" required></select>
                                 </div>
                             </div>
                         </div>
@@ -136,6 +140,7 @@
                                     onclick="agregarUC()">Agregar</button>
                             </div>
                             <div class="table mt-1 col-12 flex-0 form-row">
+                                <span id="alertaCable" hidden="true" class="alert alert-dark w-100 p-2"><b>*</b>No es posible agregar cable debido a que se agregó mano de obra "N24/0-100" sin cable utilizado</span>
                                 <table class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>

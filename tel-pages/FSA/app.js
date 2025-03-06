@@ -42,7 +42,7 @@ XAVApp.MainButton.onClick(() => {
     }
 });
 
-let cargarDatos = (params) => {
+let  cargarDatos =async (params) => {
     const inputManoObra = document.getElementById('txtManoDeObra');
     const autocompleteListManoObra = document.getElementById('manoDeObraAutocompleteList');
     const txtArea = document.getElementById('txtArea');
@@ -54,6 +54,8 @@ let cargarDatos = (params) => {
     const txtTipoLum = document.getElementById('txtTipoLum');
     const divCableUtilizado = document.getElementById('divCableUtilizado');
     const slcCableUtilizado = document.getElementById('slcCableUtilizado');
+    const slcAlmacen = document.getElementById('slcAlmacen');
+    const txtConstructor = document.getElementById('txtConstructor');
 
     let area = params.get("pArea");
     let cope = params.get("pCope");
@@ -69,17 +71,30 @@ let cargarDatos = (params) => {
     txtTerminal.textContent = terminal.toUpperCase();
     txtTipoLum.textContent = tipoLum.toUpperCase();
 
-    if (constructor != null) {
-        fetch('./catalogos/catConstructores.json')
+    let constructor = null;
+
+    if (idConstructor != null) {
+        await fetch('./catalogos/catConstructores.json')
             .then(response => response.json())
             .then(data => {
+                constructor = data.find(item => item.id_cconstructor == idConstructor);
+                txtConstructor.textContent = constructor.constructor;
+            });
+
+        await fetch('./catalogos/cat_almacenes.json')
+            .then(response => response.json())
+            .then(data => {
+                slcAlmacen.innerHTML = '<option value="">Seleccione un almacén</option>';
                 data.forEach(item => {
-                    if (item.id_cconstructor == idConstructor) {
-                        txtConstructor.textContent = item.constructor;
+                    if (item.constructor == constructor.constructor) {
+                        slcAlmacen.innerHTML += `<option value="${item.almacen}">${item.almacen} - ${item.nombre}</option>`;
                     }
                 });
             });
+
+            slcAlmacen.hidden = await slcAlmacen.length > 0?false:true;
     }
+
 
     chkManoObra.ariaChecked = true;
 
@@ -158,6 +173,9 @@ let agregarUC = () => {
     let txtManoObra = document.getElementById('txtManoDeObra');
     let txtCantManoObra = document.getElementById('txtCantManoObra');
     let slcTipoRed = document.getElementById('slcTipoRed');
+    let alertaCable = document.getElementById('alertaCable');
+    let slcCableUtilizado = document.getElementById('slcCableUtilizado');
+    let divCableUtilizado = document.getElementById('divCableUtilizado');
 
     txtManoObra.required = true;
     txtCantManoObra.required = true;
@@ -178,70 +196,97 @@ let agregarUC = () => {
 
     for (let i = 0; i < table.rows.length; i++) {
         let row = table.rows[i]
-        if (row.cells[0].innerHTML == clave) {
-            alert('La unidad de construcción ya existe en la lista');
+        if (row.cells[0].innerHTML == clave && row.cells[5].innerHTML == slcTipoRed.value) {
+            alert('La unidad de construcción ya existe en la lista con el mismo tipo de red');
             return;
         }
     }
 
-    fetch(
-        './catalogos/cat_lum.json'
-    )
+    fetch('./catalogos/cat_lum.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(item => {
                 if (item.clave_unidad == clave) {
                     if (!validarCantidad(item, txtCantManoObra.value)) {
-                        return
+                        return;
                     }
-                    let row = table.insertRow(0);
-                    let cellClave = row.insertCell(0);
-                    let cellDescripcion = row.insertCell(1);
-                    let cellUnidad = row.insertCell(2);
-                    let cellCantidad = row.insertCell(3);
-                    let cellTipo = row.insertCell(4);
-                    let cellTipoRed = row.insertCell(5)
-                    let cellEliminar = row.insertCell(6);
 
-                    cellClave.innerHTML = item.clave_unidad;
-                    cellDescripcion.innerHTML = item.descripcion;
-                    cellUnidad.innerHTML = item.unidad;
-                    cellTipo.innerHTML = item.tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
-                    cellTipoRed.innerHTML = slcTipoRed.value;
-                    cellCantidad.innerHTML = txtCantManoObra.value;
+                    if (item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" && slcCableUtilizado.value === "false") {
+                        alertaCable.hidden = false;
+                        console.log("alertaCable", alertaCable.hidden);
+                        
 
-                    UCTable.push(
-                        {
-                            UC_Idcumontada: item.id_cumontada,
-                            UC_Cantidad: cellCantidad.textContent,
-                            UC_Clave: item.clave_unidad,
-                            UC_Unidad: item.unidad,
-                            //UC_Desc: '',//item.descripcion,
-                            //idUnidad: item.id_cunidad, no se requiere
-                            UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" ?(slcCableUtilizado.value === "true"):"",
-                            UC_Tipo: item.tipo,
-                            UC_TipoRed:slcTipoRed.value
-                        }
-                    )
-
-                    let btnEliminar = document.createElement('button');
-                    btnEliminar.classList.add('btn');
-                    btnEliminar.classList.add('btn-outline-danger');
-                    btnEliminar.innerHTML = '<i class="fa fa-trash-o"></i>';
-                    btnEliminar.catalogo = item.clave_unidad;
-                    btnEliminar.onclick = function () {
-                        let row = this.parentNode.parentNode;
-                        row.parentNode.removeChild(row);
-                        UCTable = removeArrayUC(UCTable, this.catalogo);
+                        // SI YA HABÍAN AGREGADO CABLE en material de tipo de red secundaria Y SE QUITA EL CABLE, SE ELIMINA LA FILA
+                        UCTable = removeArrayUC({ array: UCTable, coincidencia: "CABLE", agrupador: "ESTRATEGICO" });
+                        actualizarTabla(table, UCTable);
                     }
-                    cellEliminar.appendChild(btnEliminar);
+
+                    if (item.agrupador == "ESTRATEGICO" && slcTipoRed.value == "SECUNDARIA" && item.descripcion.toUpperCase().includes("CABLE") && alertaCable.hidden == false) {
+                        alert('No es posible agregar cable debido a que se agregó mano de obra "N24/0-100" sin cable utilizado.');
+                        return;
+                    }
+
+                    UCTable.push({
+                        UC_Idcumontada: item.id_cumontada,
+                        UC_Cantidad: txtCantManoObra.value,
+                        UC_Clave: item.clave_unidad,
+                        UC_Desc: item.descripcion,
+                        UC_Unidad: item.unidad,
+                        UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" ? (slcCableUtilizado.value === "true") : "",
+                        UC_Tipo: item.tipo,
+                        UC_TipoRed: slcTipoRed.value,
+                        UC_Agrupador: item.agrupador
+                    });
+
+                    actualizarTabla(table, UCTable);
+
                     txtManoObra.value = '';
                     txtCantManoObra.value = '';
                     divCableUtilizado.hidden = true;
+                    console.log(UCTable);
                 }
             });
         })
-        .catch(error => console.error('Error fetching the JSON:', error))
+        .catch(error => console.error('Error fetching the JSON:', error));
+}
+
+let actualizarTabla = (table, data) => {
+    // Eliminar todas las filas de la tabla
+    while (table.rows.length > 0) {
+        table.deleteRow(0);
+    }
+
+    // Agregar las filas actualizadas
+    data.forEach(item => {
+        let row = table.insertRow();
+        let cellClave = row.insertCell(0);
+        let cellDescripcion = row.insertCell(1);
+        let cellUnidad = row.insertCell(2);
+        let cellCantidad = row.insertCell(3);
+        let cellTipo = row.insertCell(4);
+        let cellTipoRed = row.insertCell(5);
+        let cellEliminar = row.insertCell(6);
+
+        cellClave.innerHTML = item.UC_Clave;
+        cellDescripcion.innerHTML = item.UC_Desc;
+        cellUnidad.innerHTML = item.UC_Unidad;
+        cellCantidad.innerHTML = item.UC_Cantidad;
+        cellTipo.innerHTML = item.UC_Tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
+        cellTipoRed.innerHTML = item.UC_TipoRed;
+
+        let btnEliminar = document.createElement('button');
+        btnEliminar.classList.add('btn');
+        btnEliminar.classList.add('btn-outline-danger');
+        btnEliminar.innerHTML = '<i class="fa fa-trash-o"></i>';
+        btnEliminar.catalogo = item.UC_Clave;
+        btnEliminar.onclick = function () {
+            let row = this.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            UCTable = removeArrayUC({ array: UCTable, clave: item.UC_Clave, tipoRed: item.UC_TipoRed });
+            actualizarTabla(table, UCTable);
+        }
+        cellEliminar.appendChild(btnEliminar);
+    });
 }
 
 let txtCantManoObra_change = (e) => {
@@ -283,14 +328,13 @@ let sendDataToBot = () => {
         return;
     }
 
-    // const txtDescDanios = document.getElementById('txtDescDanios');
     const txtDescTrabajo = document.getElementById('txtDescTrabajo');
 
     let data = {
-        // LumDescDanios: txtDescDanios.value,
         DescTrabajos: txtDescTrabajo.value,
-        FechaIni:txtFechaInicio.value,
-        FechaFin:txtFechaFin.value,
+        FechaIni: txtFechaInicio.value,
+        FechaFin: txtFechaFin.value,
+        Constructor_almacen: slcAlmacen.value,
         ListaUC: UCTable
     }
     let jsonString = JSON.stringify(data);
@@ -304,23 +348,34 @@ let sendDataToBot = () => {
 let chkManoObra_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
     document.getElementById('txtCantManoObra').value = '';
-    //let slcJornada = document.getElementById('slcJornada');
-    //slcJornada.disabled = false;
 }
 
 let chkMateriales_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
     document.getElementById('txtCantManoObra').value = '';
-    //let slcJornada = document.getElementById('slcJornada');
-
-   // slcJornada.disabled = true;
-    //slcJornada.value = 'NOR';
 }
 
-let removeArrayUC = (array, obj) => {
-    for (var i = 0; i < array.length; i++) {
-        if (array[i].UC_Clave === obj)
-            array.splice(i, 1);
+let removeArrayUC = ({ array, clave = "", coincidencia = "", agrupador = "",tipoRed="" }) => {
+
+    // Eliminar elementos que coincidan con la clave y el tipo de red
+    if (clave !== "" && tipoRed !== "") {
+        
+        console.log(clave,  slcTipoRed.value);
+        array = array.filter(item => item.UC_Clave !== clave || item.UC_TipoRed !== tipoRed);
+        // Validar si se debe ocultar la alerta de cable
+        if (!array.some(item => item.UC_Clave === "N24/0-100" && item.UC_TipoRed === "SECUNDARIA")) {
+            alertaCable.hidden = true;
+            console.log("alertaCable", alertaCable.hidden);
+
+        }
+    }
+
+    // Eliminar elementos que coincidan con la coincidencia y el agrupador
+    if (coincidencia !== "" && agrupador !== "") {
+        array = array.filter(item => 
+            !item.UC_Desc.toUpperCase().includes(coincidencia.toUpperCase()) || 
+            item.UC_Agrupador.toUpperCase() !== agrupador.toUpperCase()
+        );
     }
     return array;
 }
