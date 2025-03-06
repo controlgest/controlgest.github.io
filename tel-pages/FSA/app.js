@@ -87,7 +87,7 @@ let  cargarDatos =async (params) => {
                 slcAlmacen.innerHTML = '<option value="">Seleccione un almacén</option>';
                 data.forEach(item => {
                     if (item.constructor == constructor.constructor) {
-                        slcAlmacen.innerHTML += `<option value="${item.almacen}">${item.almacen} - ${item.nombre}</option>`;
+                        slcAlmacen.innerHTML += `<option value="${item.almacen} - ${item.nombre}">${item.almacen} - ${item.nombre}</option>`;
                     }
                 });
             });
