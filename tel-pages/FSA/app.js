@@ -222,7 +222,7 @@ let agregarUC = () => {
                     }
 
                     if (item.agrupador == "ESTRATEGICO" && slcTipoRed.value == "SECUNDARIA" && item.descripcion.toUpperCase().includes("CABLE") && alertaCable.hidden == false) {
-                        alert('No es posible agregar cable debido a que se agregó mano de obra "N24/0-100" sin cable utilizado.');
+                        alert('No es posible agregar cables en red secundaria por que se indicó que no se utilizó cable en "N24/0-100".');
                         return;
                     }
 
