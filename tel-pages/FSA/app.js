@@ -1,4 +1,4 @@
-//?pConst=6&pDistrito=sadf456&pTerminal=45678d&pArea=leon&pCope=cope2&pTipoLum=P24
+//?pConst=6&pDistrito=sadf456&pTerminal=45678d&pArea=leon&pCope=cope2&pTipoLum=P24&pFIni=2025-02-03%2011:35&pFFin=2025-03-13%2017:35
 let UCTable = [];
 
 const XAVApp = {
@@ -56,6 +56,8 @@ let  cargarDatos =async (params) => {
     const slcCableUtilizado = document.getElementById('slcCableUtilizado');
     const slcAlmacen = document.getElementById('slcAlmacen');
     const txtConstructor = document.getElementById('txtConstructor');
+    let txtFechaInicio = document.getElementById('txtFechaInicio');
+    let txtFechaFin = document.getElementById('txtFechaFin');
 
     let area = params.get("pArea");
     let cope = params.get("pCope");
@@ -63,6 +65,8 @@ let  cargarDatos =async (params) => {
     let terminal = params.get("pTerminal");
     let idConstructor = params.get("pConst");
     let tipoLum = params.get("pTipoLum");
+    let fechaIni = params.get("pFIni");
+    let fechaFin = params.get("pFFin");
 
     chkManoObra.checked = true;
     txtArea.textContent = area.toUpperCase();
@@ -70,6 +74,11 @@ let  cargarDatos =async (params) => {
     txtDistrito.textContent = distrito.toUpperCase();
     txtTerminal.textContent = terminal.toUpperCase();
     txtTipoLum.textContent = tipoLum.toUpperCase();
+    //fechas en formato yyyy-MM-dd HH:mm 
+    txtFechaInicio.value = fechaIni;
+    txtFechaFin.value = fechaFin;
+    console.log(fechaIni, fechaFin);
+    
 
     let constructor = null;
 
