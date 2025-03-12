@@ -1078,13 +1078,46 @@
 		"agrupador" : "ESTRATEGICO"
 	},
 	{
+		"id_cumontada" : 4917,
+		"clave_unidad" : "1052740",
+		"descripcion" : "DIVISOR  ÓPTICO 1:2 (SPLITTER)",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 182.00,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
+	},
+	{
+		"id_cumontada" : 4977,
+		"clave_unidad" : "1048563",
+		"descripcion" : "KIT SOP MET INST CIE LUCIERNA PARED\/PSTE",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 241.00,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
+	},
+	{
+		"id_cumontada" : 5763,
+		"clave_unidad" : "1052739",
+		"descripcion" : "CAJA TERMINAL OPTICA 1 SPLITTER 1:16",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 871.00,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO"
+	},
+	{
 		"id_cumontada" : 5778,
 		"clave_unidad" : "1035386",
 		"descripcion" : "CABLE CON 12 FO TIPO IOAN-R (RISER)",
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 0.00,
+		"precio_unitario" : 19.88,
 		"tipo_costeo" : "MATERIALES",
 		"agrupador" : "ESTRATEGICO"
 	},
@@ -1095,7 +1128,7 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 0.00,
+		"precio_unitario" : 112.73,
 		"tipo_costeo" : "MATERIALES",
 		"agrupador" : "BASICO"
 	},
