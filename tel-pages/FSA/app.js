@@ -92,7 +92,7 @@ let  cargarDatos =async (params) => {
 
         await fetch('./catalogos/cat_almacenes.json')
             .then(response => response.json())
-            .then(data => {
+            .then(data => {                
                 slcAlmacen.innerHTML = '<option value="">Seleccione un almacén</option>';
                 data.forEach(item => {
                     if (item.constructor == constructor.constructor) {
@@ -102,6 +102,7 @@ let  cargarDatos =async (params) => {
             });
 
             divAlmacen.hidden = await slcAlmacen.length > 1?false:true;
+            slcAlmacen.required = await slcAlmacen.length > 1?true:false;
     }
 
 
@@ -239,7 +240,7 @@ let agregarUC = () => {
                         UC_Idcumontada: item.id_cumontada,
                         UC_Cantidad: txtCantManoObra.value,
                         UC_Clave: item.clave_unidad,
-                        UC_Desc: item.descripcion,
+                        //UC_Desc: item.descripcion,
                         UC_Unidad: item.unidad,
                         UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" ? (slcCableUtilizado.value === "true") : "",
                         UC_Tipo: item.tipo,
