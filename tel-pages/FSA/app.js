@@ -240,7 +240,7 @@ let agregarUC = () => {
                         UC_Idcumontada: item.id_cumontada,
                         UC_Cantidad: txtCantManoObra.value,
                         UC_Clave: item.clave_unidad,
-                        //UC_Desc: item.descripcion,
+                        UC_Desc: item.descripcion,
                         UC_Unidad: item.unidad,
                         UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" ? (slcCableUtilizado.value === "true") : "",
                         UC_Tipo: item.tipo,
