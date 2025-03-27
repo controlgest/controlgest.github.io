@@ -1182,9 +1182,20 @@
 		"descripcion" : "Plusvalía por construcción adicional de 50 metros de cable de fibra óptica para cuando la logitud a instalar supera los 500 metros",
 		"id_cunidad" : 57,
 		"unidad" : "TRAMO",
-		"tipo" : "FUERA_SACRE",
-		"precio_unitario" : 1752.60,
-		"tipo_costeo" : "MANO OBRA FUERA SACRE",
-		"agrupador" : "OTROS"
+		"tipo": "FUERA_SACRE",
+		"precio_unitario": 1752.60,
+		"tipo_costeo": "MANO OBRA FUERA SACRE",
+		"agrupador": "OTROS"
+	},
+	{
+		"id_cumontada": 3785,
+		"clave_unidad": "1028954",
+		"descripcion": "MANGA TERMOC 2.5MM DCX60MM L PROT E",
+		"id_cunidad": 4,
+		"unidad": "PZA",
+		"tipo": "SIATEL",
+		"precio_unitario": 2.00,
+		"tipo_costeo": "MATERIALES",
+		"agrupador": "BASICO"
 	}
 ]
