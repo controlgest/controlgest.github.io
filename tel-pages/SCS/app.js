@@ -222,11 +222,6 @@ let agregarUC = () => {
                         {
                             UC_Idcumontada: item.id_cumontada,
                             UC_Cantidad: cellCantidad.textContent,
-                            UC_Clave: item.clave_unidad,
-                            UC_Unidad: item.unidad,
-                            UC_Desc: '',//item.descripcion,
-                            //idUnidad: item.id_cunidad, no se requiere
-                            UC_Tipo: item.tipo,
                             UC_Jornada:item.tipo == 'SIATEL'?'':slcJornada.value
                         }
                     )
