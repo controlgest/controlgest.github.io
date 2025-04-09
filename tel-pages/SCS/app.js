@@ -202,6 +202,10 @@ let agregarUC = () => {
                     if (!validarCantidad(item, txtCantManoObra.value)) {
                         return
                     }
+                    if(!txtCantManoObra.value){
+                        return
+                    }
+
                     let row = table.insertRow(0);
                     let cellClave = row.insertCell(0);
                     let cellDescripcion = row.insertCell(1);
