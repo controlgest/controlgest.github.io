@@ -234,11 +234,11 @@ let agregarUC = () => {
                     btnEliminar.classList.add('btn');
                     btnEliminar.classList.add('btn-outline-danger');
                     btnEliminar.innerHTML = '<i class="fa fa-trash-o"></i>';
-                    btnEliminar.catalogo = item.clave_unidad;
-                    btnEliminar.onclick = function () {
+                    btnEliminar.id_cumontada = item.id_cumontada;
+                    btnEliminar.onclick = function() {
                         let row = this.parentNode.parentNode;
                         row.parentNode.removeChild(row);
-                        UCTable = removeArrayUC(UCTable, this.catalogo);
+                        UCTable = removeArrayUC(UCTable, this.id_cumontada);
                     }
                     cellEliminar.appendChild(btnEliminar);
                     document.getElementById('txtManoDeObra').value = '';
@@ -323,8 +323,8 @@ let chkMateriales_change = (e) => {
 }
 
 let removeArrayUC = (array, obj) => {
-    for (var i = 0; i < array.length; i++) {
-        if (array[i].UC_Clave === obj)
+    for (let i = 0; i < array.length; i++) {        
+        if (array[i].UC_Idcumontada === obj)
             array.splice(i, 1);
     }
     return array;
