@@ -1,0 +1,56 @@
+[
+	{
+		"asg_id" : 1,
+		"asg_tipo" : "Localización Daño",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	},
+	{
+		"asg_id" : 2,
+		"asg_tipo" : "Atención del Daño",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	},
+	{
+		"asg_id" : 3,
+		"asg_tipo" : "Atención Postería",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	},
+	{
+		"asg_id" : 4,
+		"asg_tipo" : "Atención TBA",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	},
+	{
+		"asg_id" : 5,
+		"asg_tipo" : "Traslado",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	},
+	{
+		"asg_id" : 6,
+		"asg_tipo" : "Espera Material",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	},
+	{
+		"asg_id" : 7,
+		"asg_tipo" : "Espera Patrulla",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	},
+	{
+		"asg_id" : 8,
+		"asg_tipo" : "Cierre evento Centros Nac. y\/o C.M.",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	},
+	{
+		"asg_id" : 9,
+		"asg_tipo" : "Apertura Pozo Sellado",
+		"asg_motivo_id" : 3,
+		"asg_activo" : 1
+	}
+]
