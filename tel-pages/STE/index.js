@@ -36,122 +36,14 @@ const XAVApp = {
 
 XAVApp.init();
 
-$(document).ready(function () {
+$(document).ready( async function () {
     const params = new URLSearchParams(document.location.search);
+    
     if (params.size > 0) {
-        cargarEmpleados(params);
+        await cargarSlcTipoAsignacion(params);
+        await cargarEmpleados(params);
     }
 
-    let motivo = params.get("pMotivo");
-    console.log('motivo: ' + motivo);
-
-    let select1 = $('#slcAsignacion1');
-    let select2 = $('#slcAsignacion2');
-    let select3 = $('#slcAsignacion3');
-    let select4 = $('#slcAsignacion4');
-    let select5 = $('#slcAsignacion5');
-    let select6 = $('#slcAsignacion6');
-    let select7 = $('#slcAsignacion7');
-    let select8 = $('#slcAsignacion8');
-    let select9 = $('#slcAsignacion9');
-    let select10 = $('#slcAsignacion10');
-    let select11 = $('#slcAsignacion11');
-    let select12 = $('#slcAsignacion12');
-    let select13 = $('#slcAsignacion13');
-    let select14 = $('#slcAsignacion14');
-    let select15 = $('#slcAsignacion15');
-
-    if (motivo != 3) {
-        $('#divAsignacion1').css("display", "none");
-        $('#divAsignacion2').css("display", "none");
-        $('#divAsignacion3').css("display", "none");
-        $('#divAsignacion4').css("display", "none");
-        $('#divAsignacion5').css("display", "none");
-        $('#divAsignacion6').css("display", "none");
-        $('#divAsignacion7').css("display", "none");
-        $('#divAsignacion8').css("display", "none");
-        $('#divAsignacion9').css("display", "none");
-        $('#divAsignacion10').css("display", "none");
-        $('#divAsignacion11').css("display", "none");
-        $('#divAsignacion12').css("display", "none");
-        $('#divAsignacion13').css("display", "none");
-        $('#divAsignacion14').css("display", "none");
-        $('#divAsignacion15').css("display", "none");
-    }
-    else {
-
-        fetch('./Catalogos/Asignaciones.json')
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(item => {
-                    switch (item.asg_motivo_id) {
-                        case 3:
-                            select1.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select2.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select3.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select4.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select5.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select6.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select7.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select8.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select9.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select10.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select11.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select12.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select13.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select14.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            select15.append($('<option>', {
-                                value: item.asg_id,
-                                text: item.asg_tipo
-                            }));
-                            break;
-                    }
-                });
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
-    }
 
 });
 
@@ -400,31 +292,157 @@ function eliminarEmpleado(posicion) {
     txtHrs.val('');
 }
 
-function cargarEmpleados(params) {
-    let motivoTE = params.get('motivoTE')
+ function cargarEmpleados(params) {
+     let motivoTE = params.get('pMotivo');
+     
     for (const p of params) {
         //e1=1914823|{fechaIni}|{fechaFin}|{emp.Emp_total_horas}
-        let posicion = p[0].replace(/^\D+/g, '');
-        let values = p[1].split('|');
-        let pnl = $('#pnlEmpleado' + posicion);
-        pnl.show(1000);
-        let txtExp = $('#txtExpediente' + posicion);
-        let txtFIni = $('#txtFechaIni' + posicion);
-        let txtFFin = $('#txtFechaFin' + posicion);
-        let txtHrs = $('#txtTotalHoras' + posicion);
-        let divAsignacion = $('#divAsignacion' + posicion);
-        txtExp.attr("required", "");
-        txtExp.val(values[0]);
-        txtFIni.attr("required", "");
-        txtFIni.val(values[1]);
-        txtFFin.attr("required", "");
-        txtFFin.val(values[2]);
-        txtHrs.val(values[3]);
-        if (motivoTE != 1){
-            //ocultar Tipo de asignación si el tipo no es Siniestro 
-            divAsignacion.css("display", "none");
+        if (p[0] != "pMotivo") {
+        
+            let posicion = p[0].replace(/^\D+/g, '');
+            let values = p[1].split('|');
+            let pnl = $('#pnlEmpleado' + posicion);
+            pnl.show(1000);
+            let txtExp = $('#txtExpediente' + posicion);
+            let txtFIni = $('#txtFechaIni' + posicion);
+            let txtFFin = $('#txtFechaFin' + posicion);
+            let txtHrs = $('#txtTotalHoras' + posicion);
+            let divAsignacion = $('#divAsignacion' + posicion);
+            txtExp.attr("required", "");
+            txtExp.val(values[0]);
+            txtFIni.attr("required", "");
+            txtFIni.val(values[1]);
+            txtFFin.attr("required", "");
+            txtFFin.val(values[2]);
+            txtHrs.val(values[3]);
+
+
+            if (motivoTE != 3) {
+                //ocultar Tipo de asignación si el tipo no es Siniestro 
+                divAsignacion.css("display", "none");
+            }
+            else {        
+                divAsignacion.css("display", "block");
+                let slcAsignacion = $('#slcAsignacion' + posicion);
+                slcAsignacion.val(values[4]);                 
+            }
         }
 
+    }
+
+}
+
+let  cargarSlcTipoAsignacion = async (params) => {
+    
+    let motivo = params.get("pMotivo");
+    
+
+    let select1 = $('#slcAsignacion1');
+    let select2 = $('#slcAsignacion2');
+    let select3 = $('#slcAsignacion3');
+    let select4 = $('#slcAsignacion4');
+    let select5 = $('#slcAsignacion5');
+    let select6 = $('#slcAsignacion6');
+    let select7 = $('#slcAsignacion7');
+    let select8 = $('#slcAsignacion8');
+    let select9 = $('#slcAsignacion9');
+    let select10 = $('#slcAsignacion10');
+    let select11 = $('#slcAsignacion11');
+    let select12 = $('#slcAsignacion12');
+    let select13 = $('#slcAsignacion13');
+    let select14 = $('#slcAsignacion14');
+    let select15 = $('#slcAsignacion15');
+
+    if (motivo != 3) { //SOLO SE MUESTRA ASIGNACIONES PARA SINIESTROS
+        await $('#divAsignacion1').css("display", "none");
+        await $('#divAsignacion2').css("display", "none");
+        await $('#divAsignacion3').css("display", "none");
+        await $('#divAsignacion4').css("display", "none");
+        await $('#divAsignacion5').css("display", "none");
+        await $('#divAsignacion6').css("display", "none");
+        await $('#divAsignacion7').css("display", "none");
+        await $('#divAsignacion8').css("display", "none");
+        await $('#divAsignacion9').css("display", "none");
+        await $('#divAsignacion10').css("display", "none");
+        await $('#divAsignacion11').css("display", "none");
+        await $('#divAsignacion12').css("display", "none");
+        await $('#divAsignacion13').css("display", "none");
+        await $('#divAsignacion14').css("display", "none");
+        await $('#divAsignacion15').css("display", "none");
+    }
+    else {
+
+        await fetch('./Catalogos/Asignaciones.json')
+            .then(response => response.json())
+            .then(async data => {
+                await data.forEach(item => {
+                    switch (item.asg_motivo_id) {
+                        case 3:
+                            select1.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select2.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select3.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select4.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select5.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select6.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select7.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select8.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select9.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select10.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select11.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select12.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select13.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select14.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            select15.append($('<option>', {
+                                value: item.asg_id,
+                                text: item.asg_tipo
+                            }));
+                            break;
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
     }
 
 }
