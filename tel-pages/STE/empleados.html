@@ -43,12 +43,12 @@
 							<div class="form-row border-bottom border-primary">
 								<div class="form-group col-5">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente1" name="txtExpediente1" min="0"
+									<input type="number" id="txtExpediente_1" name="txtExpediente_1" min="0" 
 										class="form-control" onchange="validarExpediente(this)" required>
 								</div>
 								<div id="divAsignacion1" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion1" id="slcAsignacion1" class="form-control">
+									<select name="slcAsignacion_1" id="slcAsignacion_1" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -58,13 +58,13 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni1" name="txtFechaIni1"
+									<input type="datetime-local" id="txtFechaIni_1" name="txtFechaIni_1"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px"
 										required>
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin1" name="txtFechaFin1"
+									<input type="datetime-local" id="txtFechaFin_1" name="txtFechaFin_1"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px"
 										required>
 								</div>
@@ -84,12 +84,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente2" name="txtExpediente2" min="0"
+									<input type="number" id="txtExpediente_2" name="txtExpediente_2" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion2" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion2" id="slcAsignacion2" class="form-control">
+									<select name="slcAsignacion_2" id="slcAsignacion_2" class="form-control" required onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -99,12 +99,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni2" name="txtFechaIni2"
+									<input type="datetime-local" id="txtFechaIni_2" name="txtFechaIni_2"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin2" name="txtFechaFin2"
+									<input type="datetime-local" id="txtFechaFin_2" name="txtFechaFin_2"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -123,12 +123,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente3" name="txtExpediente3" min="0"
+									<input type="number" id="txtExpediente_3" name="txtExpediente_3" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion3" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion3" id="slcAsignacion3" class="form-control">
+									<select name="slcAsignacion_3" id="slcAsignacion_3" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -138,12 +138,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni3" name="txtFechaIni3"
+									<input type="datetime-local" id="txtFechaIni_3" name="txtFechaIni_3"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin3" name="txtFechaFin3"
+									<input type="datetime-local" id="txtFechaFin_3" name="txtFechaFin_3"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -162,12 +162,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente4" name="txtExpediente4" min="0"
+									<input type="number" id="txtExpediente_4" name="txtExpediente_4" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion4" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion4" id="slcAsignacion4" class="form-control">
+									<select name="slcAsignacion_4" id="slcAsignacion_4" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -177,12 +177,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni4" name="txtFechaIni4"
+									<input type="datetime-local" id="txtFechaIni_4" name="txtFechaIni_4"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin4" name="txtFechaFin4"
+									<input type="datetime-local" id="txtFechaFin_4" name="txtFechaFin_4"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -201,12 +201,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente5" name="txtExpediente5" min="0"
+									<input type="number" id="txtExpediente_5" name="txtExpediente_5" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion5" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion5" id="slcAsignacion5" class="form-control">
+									<select name="slcAsignacion_5" id="slcAsignacion_5" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -216,12 +216,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni5" name="txtFechaIni5"
+									<input type="datetime-local" id="txtFechaIni_5" name="txtFechaIni_5"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin5" name="txtFechaFin5"
+									<input type="datetime-local" id="txtFechaFin_5" name="txtFechaFin_5"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -240,12 +240,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente6" name="txtExpediente6" min="0"
+									<input type="number" id="txtExpediente_6" name="txtExpediente_6" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion6" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion6" id="slcAsignacion6" class="form-control">
+									<select name="slcAsignacion_6" id="slcAsignacion_6" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -255,12 +255,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni6" name="txtFechaIni6"
+									<input type="datetime-local" id="txtFechaIni_6" name="txtFechaIni_6"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin6" name="txtFechaFin6"
+									<input type="datetime-local" id="txtFechaFin_6" name="txtFechaFin_6"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -279,12 +279,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente7" name="txtExpediente7" min="0"
+									<input type="number" id="txtExpediente_7" name="txtExpediente_7" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion7" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion7" id="slcAsignacion7" class="form-control">
+									<select name="slcAsignacion_7" id="slcAsignacion_7" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -294,12 +294,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni7" name="txtFechaIni7"
+									<input type="datetime-local" id="txtFechaIni_7" name="txtFechaIni_7"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin7" name="txtFechaFin7"
+									<input type="datetime-local" id="txtFechaFin_7" name="txtFechaFin_7"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -318,12 +318,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente8" name="txtExpediente8" min="0"
+									<input type="number" id="txtExpediente_8" name="txtExpediente_8" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion8" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion8" id="slcAsignacion8" class="form-control">
+									<select name="slcAsignacion_8" id="slcAsignacion_8" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -333,12 +333,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni8" name="txtFechaIni8"
+									<input type="datetime-local" id="txtFechaIni_8" name="txtFechaIni_8"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin8" name="txtFechaFin8"
+									<input type="datetime-local" id="txtFechaFin_8" name="txtFechaFin_8"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -357,12 +357,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente9" name="txtExpediente9" min="0"
+									<input type="number" id="txtExpediente_9" name="txtExpediente_9" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion9" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion9" id="slcAsignacion9" class="form-control">
+									<select name="slcAsignacion_9" id="slcAsignacion_9" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -372,12 +372,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni9" name="txtFechaIni9"
+									<input type="datetime-local" id="txtFechaIni_9" name="txtFechaIni_9"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin9" name="txtFechaFin9"
+									<input type="datetime-local" id="txtFechaFin_9" name="txtFechaFin_9"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -396,12 +396,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente10" name="txtExpediente10" min="0"
+									<input type="number" id="txtExpediente_10" name="txtExpediente_10" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion10" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion10" id="slcAsignacion10" class="form-control">
+									<select name="slcAsignacion_10" id="slcAsignacion_10" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -411,12 +411,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni10" name="txtFechaIni10"
+									<input type="datetime-local" id="txtFechaIni1_0" name="txtFechaIni1_0"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin10" name="txtFechaFin10"
+									<input type="datetime-local" id="txtFechaFin1_0" name="txtFechaFin1_0"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -435,12 +435,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente11" name="txtExpediente11" min="0"
+									<input type="number" id="txtExpediente_11" name="txtExpediente_11" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion11" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion11" id="slcAsignacion11" class="form-control">
+									<select name="slcAsignacion_11" id="slcAsignacion_11" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -450,12 +450,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni11" name="txtFechaIni11"
+									<input type="datetime-local" id="txtFechaIni1_1" name="txtFechaIni1_1"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin11" name="txtFechaFin11"
+									<input type="datetime-local" id="txtFechaFin1_1" name="txtFechaFin1_1"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -474,12 +474,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente12" name="txtExpediente12" min="0"
+									<input type="number" id="txtExpediente_12" name="txtExpediente_12" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion12" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion12" id="slcAsignacion12" class="form-control">
+									<select name="slcAsignacion_12" id="slcAsignacion_12" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -489,12 +489,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni12" name="txtFechaIni12"
+									<input type="datetime-local" id="txtFechaIni1_2" name="txtFechaIni1_2"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin12" name="txtFechaFin12"
+									<input type="datetime-local" id="txtFechaFin1_2" name="txtFechaFin1_2"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -513,12 +513,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente13" name="txtExpediente13" min="0"
+									<input type="number" id="txtExpediente_13" name="txtExpediente_13" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion13" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion13" id="slcAsignacion13" class="form-control">
+									<select name="slcAsignacion_13" id="slcAsignacion_13" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -528,12 +528,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni13" name="txtFechaIni13"
+									<input type="datetime-local" id="txtFechaIni1_3" name="txtFechaIni1_3"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin13" name="txtFechaFin13"
+									<input type="datetime-local" id="txtFechaFin1_3" name="txtFechaFin1_3"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -552,12 +552,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente14" name="txtExpediente14" min="0"
+									<input type="number" id="txtExpediente_14" name="txtExpediente_14" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion14" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion14" id="slcAsignacion14" class="form-control">
+									<select name="slcAsignacion_14" id="slcAsignacion_14" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -567,12 +567,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni14" name="txtFechaIni14"
+									<input type="datetime-local" id="txtFechaIni1_4" name="txtFechaIni1_4"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin14" name="txtFechaFin14"
+									<input type="datetime-local" id="txtFechaFin1_4" name="txtFechaFin1_4"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
@@ -591,12 +591,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Expediente</span>
-									<input type="number" id="txtExpediente15" name="txtExpediente15" min="0"
+									<input type="number" id="txtExpediente_15" name="txtExpediente_15" min="0" 
 										class="form-control" onchange="validarExpediente(this)" style="max-width:120px">
 								</div>
 								<div id="divAsignacion15" class="form-group col-7">
 									<span>Tipo Asignación</span>
-									<select name="slcAsignacion15" id="slcAsignacion15" class="form-control">
+									<select name="slcAsignacion_15" id="slcAsignacion_15" class="form-control" require onchange="validarAsignacion(this)">
 										<option value="0">--Selecciona una opcion--</option>
 										<!-- <option value="1">Localización Daño</option>
 										<option value="2">Atención del Daño</option>
@@ -606,12 +606,12 @@
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Inicio</span>
-									<input type="datetime-local" id="txtFechaIni15" name="txtFechaIni15"
+									<input type="datetime-local" id="txtFechaIni1_5" name="txtFechaIni1_5"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
 									<span>Fecha Fin</span>
-									<input type="datetime-local" id="txtFechaFin15" name="txtFechaFin15"
+									<input type="datetime-local" id="txtFechaFin1_5" name="txtFechaFin1_5"
 										class="form-control" onchange="validateRange(this)" style="max-width:215px">
 								</div>
 								<div class="form-group col-auto">
