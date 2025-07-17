@@ -1,3 +1,5 @@
+//?pConst=6&pDistrito=sadf456&pSacre=False&pFolio=45678d&pArea=leon&pCope=cope2&pTipoLum=desmontaje&pFIni=2025-02-03%2011:35&pFFin=2025-03-13%2017:35
+
 let UCTable = [];
 
 const XAVApp = {
@@ -99,7 +101,13 @@ let cargarDatos = (params) => {
                             } else if (item.descripcion.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             }
-                        } else if (item.tipo == 'FUERA_SACRE' && constructorSacre == "False") {
+                        } else if (item.tipo == 'FUERA_SACRE' && constructorSacre == "False" && item.cur_id_constructor == 3 && idConstructor == 3) { // 
+                            if (item.clave_unidad.toLowerCase().includes(value)) {
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                            } else if (item.descripcion.toLowerCase().includes(value)) {
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                            }
+                        } else if (item.tipo == 'FUERA_SACRE' && constructorSacre == "False" && idConstructor != 3) {
                             if (item.clave_unidad.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
