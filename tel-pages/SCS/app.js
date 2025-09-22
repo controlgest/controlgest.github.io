@@ -107,7 +107,13 @@ let cargarDatos = (params) => {
                             } else if (item.descripcion.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             }
-                        } else if (item.tipo == 'FUERA_SACRE' && constructorSacre == "False" && idConstructor != 3) {
+                        } else if (item.tipo == 'FUERA_SACRE' && constructorSacre == "False" && item.cur_id_constructor == 7 && idConstructor == 7) { // 
+                            if (item.clave_unidad.toLowerCase().includes(value)) {
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                            } else if (item.descripcion.toLowerCase().includes(value)) {
+                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                            }
+                        } else if (item.tipo == 'FUERA_SACRE' && constructorSacre == "False" && item.cur_id_constructor != 3 && item.cur_id_constructor != 7) { //
                             if (item.clave_unidad.toLowerCase().includes(value)) {
                                 insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
                             } else if (item.descripcion.toLowerCase().includes(value)) {
