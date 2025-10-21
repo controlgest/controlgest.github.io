@@ -59553,18 +59553,6 @@
 		"precio_unitario" : 30.95,
 		"tipo_costeo" : "MANO OBRA FUERA SACRE",
 		"agrupador" : "OTROS",
-		"cur_id_constructor" : 3
-	},
-	{
-		"id_cumontada" : 5457,
-		"clave_unidad" : "FDS078",
-		"descripcion" : "INVESTIGACION DE ABONADO",
-		"id_cunidad" : 29,
-		"unidad" : "PAR",
-		"tipo" : "FUERA_SACRE",
-		"precio_unitario" : 30.95,
-		"tipo_costeo" : "MANO OBRA FUERA SACRE",
-		"agrupador" : "OTROS",
 		"cur_id_constructor" : 7
 	},
 	{
@@ -61978,18 +61966,6 @@
 		"tipo_costeo" : "MANO OBRA FUERA SACRE",
 		"agrupador" : "OTROS",
 		"cur_id_constructor" : 7
-	},
-	{
-		"id_cumontada" : 5585,
-		"clave_unidad" : "FDS206",
-		"descripcion" : "NUMERAR PARES",
-		"id_cunidad" : 29,
-		"unidad" : "PAR",
-		"tipo" : "FUERA_SACRE",
-		"precio_unitario" : 1.21,
-		"tipo_costeo" : "MANO OBRA FUERA SACRE",
-		"agrupador" : "OTROS",
-		"cur_id_constructor" : 3
 	},
 	{
 		"id_cumontada" : 5585,
