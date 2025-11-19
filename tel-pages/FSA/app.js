@@ -50,14 +50,16 @@ let  cargarDatos =async (params) => {
     const txtDistrito = document.getElementById('txtDistrito');
     const txtTerminal = document.getElementById('txtTerminal');
     const chkManoObra = document.getElementById('chkManoObra');
+    const chkMateriales = document.getElementById('chkMateriales');
+    const chkMatPreconectorizado = document.getElementById('chkMatPreconectorizado');
     const slcTipoRed = document.getElementById('slcTipoRed');
     const txtTipoLum = document.getElementById('txtTipoLum');
     const divCableUtilizado = document.getElementById('divCableUtilizado');
     const slcCableUtilizado = document.getElementById('slcCableUtilizado');
     const slcAlmacen = document.getElementById('slcAlmacen');
     const txtConstructor = document.getElementById('txtConstructor');
-    let txtFechaInicio = document.getElementById('txtFechaInicio');
-    let txtFechaFin = document.getElementById('txtFechaFin');
+    // let txtFechaInicio = document.getElementById('txtFechaInicio');
+    // let txtFechaFin = document.getElementById('txtFechaFin');
 
     let area = params.get("pArea");
     let cope = params.get("pCope");
@@ -65,91 +67,79 @@ let  cargarDatos =async (params) => {
     let terminal = params.get("pTerminal");
     let idConstructor = params.get("pConst");
     let tipoLum = params.get("pTipoLum");
-    let fechaIni = params.get("pFIni");
-    let fechaFin = params.get("pFFin");
+    // let fechaIni = params.get("pFIni");
+    // let fechaFin = params.get("pFFin");
 
     chkManoObra.checked = true;
     txtArea.textContent = area.toUpperCase();
     txtCope.textContent = cope.toUpperCase();
     txtDistrito.textContent = distrito.toUpperCase();
-    txtTerminal.textContent = terminal.toUpperCase();
+    // txtTerminal.textContent = terminal.toUpperCase();
     txtTipoLum.textContent = tipoLum.toUpperCase();
     //fechas en formato yyyy-MM-dd HH:mm 
-    txtFechaInicio.value = fechaIni;
-    txtFechaFin.value = fechaFin;
-    console.log(fechaIni, fechaFin);
-    
+    // txtFechaInicio.value = fechaIni;
+    // txtFechaFin.value = fechaFin;
 
     let constructor = null;
 
     if (idConstructor != null) {
+        
         await fetch('./catalogos/catConstructores.json')
-            .then(response => response.json())
-            .then(data => {
-                constructor = data.find(item => item.id_cconstructor == idConstructor);
-                txtConstructor.textContent = constructor.constructor;
-            });
-
+        .then(response => response.json())
+        .then(data => {
+            constructor = data.find(item => item.id_cconstructor == idConstructor);
+            txtConstructor.textContent = constructor.constructor;
+        });
+        
         await fetch('./catalogos/cat_almacenes.json')
             .then(response => response.json())
-            .then(data => {                
+            .then(data => {   
+                             
                 slcAlmacen.innerHTML = '<option value="">Seleccione un almacén</option>';
-                data.forEach(item => {
-                    if (item.constructor == constructor.constructor) {
+                for(let item of data){                    
+                    if(item.constructor == constructor.constructor){
                         slcAlmacen.innerHTML += `<option value="${item.almacen} - ${item.nombre}">${item.almacen} - ${item.nombre}</option>`;
                     }
-                });
+                }                
             });
 
             divAlmacen.hidden = await slcAlmacen.length > 1?false:true;
             slcAlmacen.required = await slcAlmacen.length > 1?true:false;
-    }
+
+            //slcTerminal se llena con e parametro pTerminal que venen esparado por comas
+            let terminales = terminal.split(',');
+            
+            const slcTerminal = document.getElementById('slcTerminal');
+            slcTerminal.innerHTML = '<option value="">Seleccione una opción</option>';
+            terminales.forEach(item => {
+                slcTerminal.innerHTML += `<option value="${item.split('_')[0]}">${item.split('_')[0]}</option>`;
+            });
+
+            // agregar a divCoordenadas input para lat y long para cada una de las terminales
+            const divCoordenadas = document.getElementById('divCoordenadas');
+            divCoordenadas.innerHTML = '';
+            terminales.forEach(item => {    
+                divCoordenadas.innerHTML += `
+                <div class="form-row col-md-6 col-12 mb-2 ">
+                    <div class="col-12 p-0">
+                        <label class="m-0" for="txtLat_${item.split('_')[0]}"><b>Terminal ${item.split('_')[0]}:</b></label>
+                        <label> <b>Fecha Inicio:</b> ${item.split('_')[1]} - <b>Fecha Fin:</b> ${item.split('_')[2]}</label>
+                    </div>
+                    <div class="col-6 p-0 pr-2">    
+                        <input type="text" id="txtLat_${item.split('_')[0]}" class="form-control" placeholder="Latitud de Terminal ${item.split('_')[0]}" required>
+                    </div>
+                    <div class="col-6 p-0 pl-2">    
+                        <input type="text" id="txtLong_${item.split('_')[0]}" class="form-control" placeholder="Longitud de Terminal ${item.split('_')[0]}" required>
+                    </div>
+                </div>
+                `;
+            });
+        }
 
 
     chkManoObra.ariaChecked = true;
 
-    fetch('./catalogos/cat_lum.json')
-        .then(response => response.json())
-        .then(data => {
-            inputManoObra.addEventListener('input', () => {
-                const value = inputManoObra.value.toLowerCase();
-                autocompleteListManoObra.innerHTML = '';
-
-                if (!value) {
-                    return false;
-                }
-
-                data.forEach(item => {
-
-                    //check mano de obra == true, tipo: sacre y si constructor es Enlace Digital tipo:Fuera de sacre
-                    //check materiales == true, tipo: siatel
-                    if (chkManoObra.checked) {
-                        if (item.tipo == 'FUERA_SACRE') {
-                            if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                            } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                            }
-                        }
-                    } else if (!chkManoObra.checked) {
-                        if (item.tipo == 'SIATEL') {
-                            if (item.clave_unidad.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                            } else if (item.descripcion.toLowerCase().includes(value)) {
-                                insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                            }
-                        }
-                    }
-                });
-            });
-
-            document.addEventListener('click', (e) => {
-                if (e.target !== inputManoObra) {
-                    autocompleteListManoObra.innerHTML = '';
-                }
-            });
-        })
-        .catch(error => console.error('Error fetching the JSON:', error));
+    
 }
 
 let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra, inputManoObra, item) => {
@@ -186,6 +176,7 @@ let agregarUC = () => {
     let alertaCable = document.getElementById('alertaCable');
     let slcCableUtilizado = document.getElementById('slcCableUtilizado');
     let divCableUtilizado = document.getElementById('divCableUtilizado');
+    let slcTerminal = document.getElementById('slcTerminal');
 
     txtManoObra.required = true;
     txtCantManoObra.required = true;
@@ -206,8 +197,8 @@ let agregarUC = () => {
 
     for (let i = 0; i < table.rows.length; i++) {
         let row = table.rows[i]
-        if (row.cells[0].innerHTML == clave && row.cells[5].innerHTML == slcTipoRed.value) {
-            alert('La unidad de construcción ya existe en la lista con el mismo tipo de red');
+        if (row.cells[0].innerHTML == clave && row.cells[5].innerHTML == slcTipoRed.value && row.cells[6].innerHTML == slcTerminal.value) {
+            alert('La unidad de construcción ya existe en la lista con el mismo tipo de red y terminal.');
             return;
         }
     }
@@ -222,9 +213,7 @@ let agregarUC = () => {
                     }
 
                     if (item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" && slcCableUtilizado.value === "false") {
-                        alertaCable.hidden = false;
-                        console.log("alertaCable", alertaCable.hidden);
-                        
+                        alertaCable.hidden = false;                        
 
                         // SI YA HABÍAN AGREGADO CABLE en material de tipo de red secundaria Y SE QUITA EL CABLE, SE ELIMINA LA FILA
                         UCTable = removeArrayUC({ array: UCTable, coincidencia: "CABLE", agrupador: "ESTRATEGICO" });
@@ -245,7 +234,8 @@ let agregarUC = () => {
                         UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" ? (slcCableUtilizado.value === "true") : "",
                         UC_Tipo: item.tipo,
                         UC_TipoRed: slcTipoRed.value,
-                        UC_Agrupador: item.agrupador
+                        UC_Agrupador: item.agrupador,
+                        UC_Terminal: document.getElementById('slcTerminal').value
                     });
 
                     actualizarTabla(table, UCTable);
@@ -253,7 +243,7 @@ let agregarUC = () => {
                     txtManoObra.value = '';
                     txtCantManoObra.value = '';
                     divCableUtilizado.hidden = true;
-                    console.log(UCTable);
+                    // console.log(UCTable);
                 }
             });
         })
@@ -275,7 +265,8 @@ let actualizarTabla = (table, data) => {
         let cellCantidad = row.insertCell(3);
         let cellTipo = row.insertCell(4);
         let cellTipoRed = row.insertCell(5);
-        let cellEliminar = row.insertCell(6);
+        let cellTerminal = row.insertCell(6);
+        let cellEliminar = row.insertCell(7);
 
         cellClave.innerHTML = item.UC_Clave;
         cellDescripcion.innerHTML = item.UC_Desc;
@@ -283,6 +274,7 @@ let actualizarTabla = (table, data) => {
         cellCantidad.innerHTML = item.UC_Cantidad;
         cellTipo.innerHTML = item.UC_Tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
         cellTipoRed.innerHTML = item.UC_TipoRed;
+        cellTerminal.innerHTML = item.UC_Terminal;
 
         let btnEliminar = document.createElement('button');
         btnEliminar.classList.add('btn');
@@ -301,11 +293,14 @@ let actualizarTabla = (table, data) => {
 
 let txtCantManoObra_change = (e) => {
     validaPositivos(e);
+    slcTipoRed_change(e);
 }
 
 let txtCantMateriales_change = (e) => {
     validaPositivos(e);
+    slcTipoRed_change(e);
 }
+
 
 let validaPositivos = (e) => {
     let valor = e.target.value;
@@ -322,13 +317,13 @@ let sendDataToBot = () => {
         return;
     }
 
-    let txtFechaInicio = document.getElementById('txtFechaInicio');
-    let txtFechaFin = document.getElementById('txtFechaFin');
+    // let txtFechaInicio = document.getElementById('txtFechaInicio');
+    // let txtFechaFin = document.getElementById('txtFechaFin');
 
-    if (txtFechaInicio.value > txtFechaFin.value) {
-        alert('La fecha de fin debe ser mayor a la fecha de inicio');
-        return;
-    }
+    // if (txtFechaInicio.value > txtFechaFin.value) {
+    //     alert('La fecha de fin debe ser mayor a la fecha de inicio');
+    //     return;
+    // }
 
     document.getElementById('txtManoDeObra').required = false;
     document.getElementById('txtCantManoObra').required = false;
@@ -339,16 +334,42 @@ let sendDataToBot = () => {
     }
 
     const txtDescTrabajo = document.getElementById('txtDescTrabajo');
+    
+    UCTable = UCTable.map(item => {
+        item.UC_TipoRed = item.UC_TipoRed == "PRINCIPAL"?"P":item.UC_TipoRed == "SECUNDARIA"?"S":"";
+        delete item.UC_Desc;
+        delete item.UC_Unidad;
+        delete item.UC_Tipo;
+        delete item.UC_Agrupador;
+        delete item.UC_Clave;
+        return item;
+    });
 
+    let coordenadas = [];
     let data = {
         DescTrabajos: txtDescTrabajo.value,
-        FechaIni: txtFechaInicio.value,
-        FechaFin: txtFechaFin.value,
+        // FechaIni: txtFechaInicio.value,
+        // FechaFin: txtFechaFin.value,
         Constructor_almacen: slcAlmacen.value,
-        ListaUC: UCTable
+        ListaUC: UCTable,
+         CoordenadasTerminales: (() => {
+            // Recolectar todos los inputs de latitud (ids: txtLat_<terminal>) y obtener su lon correspondiente
+            const latInputs = document.querySelectorAll('[id^="txtLat_"]');
+            latInputs.forEach(latEl => {
+                const terminalId = latEl.id.substring('txtLat_'.length);
+                const longEl = document.getElementById(`txtLong_${terminalId}`);
+                coordenadas.push({
+                    terminal: terminalId,
+                    latitud: latEl.value || '',
+                    longitud: longEl ? longEl.value || '' : ''
+                });
+            });
+            return coordenadas;
+        })()
     }
+
     let jsonString = JSON.stringify(data);
-      console.log(data);   
+    console.log(data);
 
     XAVApp.MainButton.showProgress();
     Telegram.WebApp.sendData(jsonString);
@@ -364,6 +385,17 @@ let chkMateriales_change = (e) => {
     document.getElementById('txtManoDeObra').value = '';
     document.getElementById('txtCantManoObra').value = '';
 }
+
+let chkMatPreconectorizado_change = (e) => {
+    document.getElementById('txtManoDeObra').value = '';
+    document.getElementById('txtCantManoObra').value = '';
+}
+
+// let chkMatPreconectorizado_change = (e) => {
+//     validaPositivos(e);
+//     slcTipoRed_change(e);
+// }
+
 
 let removeArrayUC = ({ array, clave = "", coincidencia = "", agrupador = "",tipoRed="" }) => {
 
@@ -416,6 +448,72 @@ let validarCantidad = (item, cantidad) => {
 }
 
 let slcTipoRed_change = (e) => {
+    const inputManoObra = document.getElementById('txtManoDeObra');
+    const autocompleteListManoObra = document.getElementById('manoDeObraAutocompleteList');
+
+    fetch('./catalogos/cat_lum.json')
+    .then(response => response.json())
+    .then(data => {
+        inputManoObra.addEventListener('input', () => {
+            const value = inputManoObra.value.toLowerCase();
+            autocompleteListManoObra.innerHTML = '';
+            // let tipoRed = ''
+            // switch (slcTipoRed.value) {
+            //     case 'SEC_H':
+            //         tipoRed = 'PRECONECTORIZADO_HUAWEI';
+            //         break;
+            //     case 'SEC_Z':
+            //         tipoRed = 'PRECONECTORIZADO_ZTE';
+            //         break;
+            //     case 'SEC_F':
+            //         tipoRed = 'PRECONECTORIZADO_FIBERHOME';
+            //         break;  
+            // }
+
+            if (!value) {
+                return false;
+            }
+
+            data.forEach(item => {
+
+                //check mano de obra == true, tipo: sacre y si constructor es Enlace Digital tipo:Fuera de sacre
+                //check materiales == true, tipo: siatel
+                if (chkManoObra.checked) {
+                    if (item.tipo == 'FUERA_SACRE') {
+                        if (item.clave_unidad.toLowerCase().includes(value)) {
+                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                        } else if (item.descripcion.toLowerCase().includes(value)) {
+                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                        }
+                    }
+                } else if (chkMateriales.checked) {
+                    if (item.tipo == 'SIATEL' && item.agrupador != 'PRECONECTORIZADOS') {
+                        if (item.clave_unidad.toLowerCase().includes(value)) {
+                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                        } else if (item.descripcion.toLowerCase().includes(value)) {
+                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                        }
+                    }
+                }  else if (chkMatPreconectorizado.checked ) {
+                    if (item.tipo == 'SIATEL' && item.agrupador == 'PRECONECTORIZADOS') {
+                        if ((item.clave_unidad.toLowerCase().includes(value))) {
+                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                        } else if (item.descripcion.toLowerCase().includes(value)) {
+                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                        }
+                    }
+                }
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target !== inputManoObra) {
+                autocompleteListManoObra.innerHTML = '';
+            }
+        });
+    })
+    .catch(error => console.error('Error fetching the JSON:', error));
+
     const divCableUtilizado = document.getElementById('divCableUtilizado');
     const txtManoObra = document.getElementById('txtManoDeObra');
     if (e.target.value == "SECUNDARIA" && txtManoObra.value.includes("N24/0-100")) {

@@ -1,14 +1,339 @@
 [
 	{
+		"id_cumontada" : 2131,
+		"clave_unidad" : "FACA02",
+		"descripcion" : "COLOCACION DE CHAROLA ADICIONAL AL KIT ORIGINAL",
+		"id_cunidad" : 18,
+		"unidad" : "JGO",
+		"tipo" : "SACRE",
+		"precio_unitario" : 4.43,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2132,
+		"clave_unidad" : "FACA03",
+		"descripcion" : "SUM\/COLO.ETIQ.TIPO BANDERA CABLE F.O.AUTOSOPORTADO",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 6.46,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2133,
+		"clave_unidad" : "FACA04",
+		"descripcion" : "SUM\/COL.ETIQ.46X59 EN POSTE CON CABLE DE F.O.",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 5.71,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2138,
+		"clave_unidad" : "FACA31",
+		"descripcion" : "CIERRE EMP.FIBRA 1E\/2S HASTA 36 F.O. EN TOTAL",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 212.45,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2169,
+		"clave_unidad" : "FAFTOH",
+		"descripcion" : "COLOC.DE TERMINAL OPTICA (FTTH) EN POSTE",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 100.86,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2190,
+		"clave_unidad" : "FAIAE1",
+		"descripcion" : "INSTALACION CABLE EN AEREO DE CLASE 1.",
+		"id_cunidad" : 23,
+		"unidad" : "ML",
+		"tipo" : "SACRE",
+		"precio_unitario" : 8.83,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2217,
+		"clave_unidad" : "FAPS25",
+		"descripcion" : "POSTE MADERA  7.6 MTS. 25 EN TERRENO  A\/B",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 570.96,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2234,
+		"clave_unidad" : "FARSSN",
+		"descripcion" : "RETENIDA SIMPLE NORMAL CON ANCLA TERRENO  A\/B",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 464.43,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2235,
+		"clave_unidad" : "FARSST",
+		"descripcion" : "RETENIDA SIMPLE TROPIC.CON ANCLA TERRENO A\/B",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 464.43,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2270,
+		"clave_unidad" : "FCCA02",
+		"descripcion" : "COLOCACION DE CHAROLA ADICIONAL AL KIT ORIGINAL",
+		"id_cunidad" : 18,
+		"unidad" : "JGO",
+		"tipo" : "SACRE",
+		"precio_unitario" : 4.43,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2273,
+		"clave_unidad" : "FCCA05",
+		"descripcion" : "SUM.HERRAJE PARA CIERRE DE FO EN POSTE CFE",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2281,
+		"clave_unidad" : "FCCS01",
+		"descripcion" : "INTERVENCION A CIERRE.(ABRIR PREP\/SALIDA CERRAR)",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 222.76,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2283,
+		"clave_unidad" : "FCCS03",
+		"descripcion" : "COLOC.DIV.1:8 FOSC B6 P-F EN CIERRE FOSC",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 4.43,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2285,
+		"clave_unidad" : "FCCS05",
+		"descripcion" : "INST.KIT MULTIPUERTO EN CIERRE DE FO",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 11.62,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2312,
+		"clave_unidad" : "FCCTED",
+		"descripcion" : "COL.CAJA EMPALME DE TRANS.DE CAB.EXT.A INTER. FTTH",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 109.89,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2313,
+		"clave_unidad" : "FCCX00",
+		"descripcion" : "SUM\/COL.CINTA GEL EN2 CAB.DE FOEN 1PUERTO DECIERRE",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 3.59,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2354,
+		"clave_unidad" : "FCFTOH",
+		"descripcion" : "COLOC.DE TERMINAL OPTICA (FTTH) EN POZO",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 25.86,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2363,
+		"clave_unidad" : "FCI007",
+		"descripcion" : "INSTALACION DE CRUCERO NORMAL (FTTH)",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 182.57,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2368,
+		"clave_unidad" : "FCI013",
+		"descripcion" : "INSTALACION DE 1 DUCTO DE POLIETILENO (FLEXODUCTO)",
+		"id_cunidad" : 23,
+		"unidad" : "ML",
+		"tipo" : "SACRE",
+		"precio_unitario" : 3.87,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2380,
+		"clave_unidad" : "FCI026",
+		"descripcion" : "SUMINISTRO Y COLOCACIÓN DE SOPORTES",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 23.98,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2396,
+		"clave_unidad" : "FCITP1",
+		"descripcion" : "INSTALACION CABLE F.O. CLASE 1 EN DUCTO DE PVC",
+		"id_cunidad" : 23,
+		"unidad" : "ML",
+		"tipo" : "SACRE",
+		"precio_unitario" : 5.09,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2442,
+		"clave_unidad" : "FCTOIN",
+		"descripcion" : "COLOC.TERM.OPT.EN EDIF.POR DERIVACION (FTTH)",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 34.86,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2446,
+		"clave_unidad" : "FCTSMP",
+		"descripcion" : "SUST.SOPOR.MINIPOSTE TIPO DOMO POR CIRCULAR (FTTH)",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 17.4,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
 		"id_cumontada" : 2777,
 		"clave_unidad" : "1000361",
 		"descripcion" : "POSTE DE MADERA 7.6 M. 25 FT",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 2012.00,
+		"precio_unitario" : 2012.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "OTROS"
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2778,
+		"clave_unidad" : "1000362",
+		"descripcion" : "POSTE DE MADERA 9.2 M. 30 FT",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2375.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2779,
+		"clave_unidad" : "1000363",
+		"descripcion" : "POSTE DE MADERA 10.7 M. 35 FT",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2422.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2780,
+		"clave_unidad" : "1000364",
+		"descripcion" : "POSTE DE MADERA 12.2 M. 40 FT",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 3982.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2781,
+		"clave_unidad" : "1000365",
+		"descripcion" : "POSTE DE MADERA 13.7 M. 45 FT",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 4667.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2786,
@@ -17,9 +342,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 167.00,
+		"precio_unitario" : 167.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "OTROS"
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2787,
@@ -28,9 +354,34 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 55.00,
+		"precio_unitario" : 55.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "OTROS"
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2790,
+		"clave_unidad" : "1000377",
+		"descripcion" : "ARGOLLA P\/CORDON DE ACOMETIDA",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2793,
+		"clave_unidad" : "1000381",
+		"descripcion" : "CADENA P\/DISTRIBUCION",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 15.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2797,
@@ -39,9 +390,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 23.00,
+		"precio_unitario" : 23.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2804,
@@ -50,9 +402,22 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 22.00,
+		"precio_unitario" : 22.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "OTROS"
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2810,
+		"clave_unidad" : "1000403",
+		"descripcion" : "GRAPAS PARA ALAMBRE TIERRA",
+		"id_cunidad" : 19,
+		"unidad" : "KG",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 42.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2815,
@@ -61,9 +426,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 72.00,
+		"precio_unitario" : 72.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2817,
@@ -72,9 +438,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 12.00,
+		"precio_unitario" : 12.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2882,
@@ -83,9 +450,10 @@
 		"id_cunidad" : 48,
 		"unidad" : "ROL",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 553.00,
+		"precio_unitario" : 553.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2916,
@@ -94,9 +462,22 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 3.00,
+		"precio_unitario" : 3.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2920,
+		"clave_unidad" : "1000665",
+		"descripcion" : "TUBO POLIETILENO ALTA DENSIDAD DIV. VIAS",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 10.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2925,
@@ -105,9 +486,22 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 8.00,
+		"precio_unitario" : 8.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2952,
+		"clave_unidad" : "1000730",
+		"descripcion" : "CLAVO GALVANIZADO CABEZA PLANA 25 M",
+		"id_cunidad" : 19,
+		"unidad" : "KG",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 53.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2957,
@@ -116,9 +510,10 @@
 		"id_cunidad" : 44,
 		"unidad" : "BTE",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 111.00,
+		"precio_unitario" : 111.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2958,
@@ -127,20 +522,58 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2959,
+		"clave_unidad" : "1000751",
+		"descripcion" : "GRAPA PARA CABLE MEDIANA",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 1.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2967,
+		"clave_unidad" : "1000762",
+		"descripcion" : "CIERRE 3M 24 FIBRAS OPTICAS JGO. BASICO",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2935.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 2968,
+		"clave_unidad" : "1000763",
+		"descripcion" : "JUEGO DERIVACION 12 F. O. P\/CIERRE 3M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 991.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2969,
 		"clave_unidad" : "1000765",
-		"descripcion" : "ORGANIZADOR EMPALMES 12 F.O. P\/CIER",
+		"descripcion" : "ORGANIZADOR EMPALMES 12 F.O. P\/CIERRE 3M",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 381.00,
+		"precio_unitario" : 381.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 2993,
@@ -149,9 +582,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 12.00,
+		"precio_unitario" : 12.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3033,
@@ -160,9 +594,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 2.00,
+		"precio_unitario" : 2.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3034,
@@ -171,9 +606,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 4.00,
+		"precio_unitario" : 4.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3037,
@@ -182,31 +618,46 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3051,
 		"clave_unidad" : "1000966",
-		"descripcion" : "CABLE ACERO PARA GUIA Y RETENIDA DE",
+		"descripcion" : "CABLE ACERO PARA GUIA Y RETENIDA DE 3T",
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 12.00,
+		"precio_unitario" : 12.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3052,
 		"clave_unidad" : "1000967",
-		"descripcion" : "CABLE ACERO 3.17 MM 1\/8 FORRO PLAS",
+		"descripcion" : "CABLE ACERO 3.17 MM 1\/8\" FORRO PLASTICO",
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 13.00,
+		"precio_unitario" : 13.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 3483,
+		"clave_unidad" : "1010244",
+		"descripcion" : "FLEJE DE ACERO INOXIDABLE 16 x 0.76",
+		"id_cunidad" : 48,
+		"unidad" : "ROL",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 406.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3487,
@@ -215,9 +666,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 6.00,
+		"precio_unitario" : 6.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3566,
@@ -226,9 +678,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3567,
@@ -237,9 +690,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3568,
@@ -248,9 +702,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3569,
@@ -259,9 +714,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3570,
@@ -270,9 +726,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3571,
@@ -281,9 +738,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3572,
@@ -292,9 +750,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3573,
@@ -303,9 +762,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3574,
@@ -314,9 +774,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3576,
@@ -325,9 +786,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3577,
@@ -336,9 +798,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3578,
@@ -347,9 +810,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3579,
@@ -358,9 +822,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3580,
@@ -369,9 +834,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3581,
@@ -380,9 +846,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3582,
@@ -391,9 +858,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3583,
@@ -402,9 +870,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3584,
@@ -413,9 +882,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3585,
@@ -424,9 +894,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3586,
@@ -435,9 +906,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3587,
@@ -446,9 +918,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3588,
@@ -457,9 +930,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3590,
@@ -468,9 +942,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3591,
@@ -479,9 +954,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3592,
@@ -490,9 +966,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3593,
@@ -501,9 +978,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3594,
@@ -512,9 +990,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3595,
@@ -523,9 +1002,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3596,
@@ -534,9 +1014,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3597,
@@ -545,9 +1026,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3598,
@@ -556,9 +1038,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3599,
@@ -567,9 +1050,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3600,
@@ -578,9 +1062,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3601,
@@ -589,9 +1074,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3602,
@@ -600,9 +1086,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1.00,
+		"precio_unitario" : 1.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3766,
@@ -611,20 +1098,46 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 236.00,
+		"precio_unitario" : 236.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3768,
 		"clave_unidad" : "1028665",
-		"descripcion" : "KIT P\/INST CIERRE FOSC SE400\/450 EN",
+		"descripcion" : "KIT P\/INST CIERRE FOSC SE400\/450 EN POST",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 489.00,
+		"precio_unitario" : 489.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 3776,
+		"clave_unidad" : "1028772",
+		"descripcion" : "CIERRE EMPALME 24 F.O. 2178-S",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2104.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 3785,
+		"clave_unidad" : "1028954",
+		"descripcion" : "MANGA TERMOC 2.5MM DCX60MM L PROT E",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3798,
@@ -633,9 +1146,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 87.00,
+		"precio_unitario" : 87.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 3820,
@@ -644,9 +1158,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 6.00,
+		"precio_unitario" : 6.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4074,
@@ -655,20 +1170,22 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1798.00,
+		"precio_unitario" : 1798.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4075,
 		"clave_unidad" : "1034256",
-		"descripcion" : "DIVISOR 1:8 FOSC 450 B6-P-F (SPLITT",
+		"descripcion" : "DIVISOR 1:8 FOSC 450 B6-P-F (SPLITTER)",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 656.00,
+		"precio_unitario" : 656.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4076,
@@ -677,9 +1194,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 2261.00,
+		"precio_unitario" : 2261.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4079,
@@ -688,42 +1206,94 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 186.00,
+		"precio_unitario" : 186.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4080,
 		"clave_unidad" : "1034325",
-		"descripcion" : "CIERRE DE EMPALME FOSC 350C C\/1CHAR",
+		"descripcion" : "CIERRE DE EMPALME FOSC 350C C\/1CHAROLA",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1795.00,
+		"precio_unitario" : 1795.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4095,
 		"clave_unidad" : "1034611",
-		"descripcion" : "CAJA TERMINAL OPTICA AEREA 1X8\/SCUP",
+		"descripcion" : "CAJA TERMINAL OPTICA AEREA 1X8\/SCUPC",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1674.00,
+		"precio_unitario" : 1674.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4112,
+		"clave_unidad" : "1034992",
+		"descripcion" : "HEBILLA PARA FLEJE METALICO 5\/8",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 3.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4117,
 		"clave_unidad" : "1035385",
-		"descripcion" : "CABLE CON 6 FO TIPO IOAN-R (RISER)",
+		"descripcion" : "CABLE CON 6 FO TIPO IOAN-R",
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 12.00,
+		"precio_unitario" : 12.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4118,
+		"clave_unidad" : "1035387",
+		"descripcion" : "CABLE 48 F.O PRECONECTO CON\/SCUPC 70M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 23141.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4119,
+		"clave_unidad" : "1035388",
+		"descripcion" : "CABLE 48 F.O PRECONECTO CON\/SCUPC 110M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 29431.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4120,
+		"clave_unidad" : "1035389",
+		"descripcion" : "CABLE 48 F.O PRECONECTO CON\/SCUPC 150M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 36381.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4123,
@@ -732,97 +1302,142 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 3424.00,
+		"precio_unitario" : 3424.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4125,
+		"clave_unidad" : "1035453",
+		"descripcion" : "CABLE 96 F.O PRECONECTO CON\/SCUPC 70M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 44265.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4126,
+		"clave_unidad" : "1035454",
+		"descripcion" : "CABLE 96 F.O PRECONECTO CON\/SCUPC 110M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 61853.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4127,
+		"clave_unidad" : "1035455",
+		"descripcion" : "CABLE 96 F.O PRECONECTO CON\/SCUPC 150M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 56975.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4129,
 		"clave_unidad" : "1035458",
-		"descripcion" : "CAJA TER\/OPT EDIF C\/SPLITTER 1X8 SC",
+		"descripcion" : "CAJA TER\/OPT EDIF C\/SPLITTER 1X8 SC\/UPC",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1857.00,
+		"precio_unitario" : 1857.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4130,
 		"clave_unidad" : "1035460",
-		"descripcion" : "CAJA DE TRANSICI?N DE CABLE OPTICOS",
+		"descripcion" : "CAJA DE TRANSICIÓN DE CABLE OPTICOS",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 477.00,
+		"precio_unitario" : 477.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4135,
 		"clave_unidad" : "1035781",
-		"descripcion" : "PLATIN MINIPOST INST OCUL P\/TERM OP",
+		"descripcion" : "PLATIN MINIPOST INST OCUL P\/TERM OP OFDC",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 376.00,
+		"precio_unitario" : 376.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4136,
 		"clave_unidad" : "1035782",
-		"descripcion" : "DOMO MINIPOST INST OCULT P\/TERM OPT",
+		"descripcion" : "DOMO MINIPOST INST OCULT P\/TERM OPT OFDC",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1017.00,
+		"precio_unitario" : 1017.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4146,
 		"clave_unidad" : "1035909",
-		"descripcion" : "JGO REINT P\/1CABLE FO P\/CIERRE FOSC",
+		"descripcion" : "JGO REINT P\/1CABLE FO P\/CIERRE FOSC 350C",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 214.00,
+		"precio_unitario" : 214.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4147,
 		"clave_unidad" : "1035950",
-		"descripcion" : "CAJA TRANSICION HASTA 6 FIBRAS OPTI",
+		"descripcion" : "CAJA TRANSICION HASTA 6 FIBRAS OPTICAS",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 326.00,
+		"precio_unitario" : 326.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4149,
 		"clave_unidad" : "1036117",
-		"descripcion" : "JGO REINT P\/1CABLE FO P\/CIERRE FOSC",
+		"descripcion" : "JGO REINT P\/1CABLE FO P\/CIERRE FOSC450BS",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 212.00,
+		"precio_unitario" : 212.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4162,
 		"clave_unidad" : "1036472",
-		"descripcion" : "KIT P\/INST CIERRE FOSC 350 C EN POS",
+		"descripcion" : "KIT P\/INST CIERRE FOSC 350 C EN POSTE",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 457.00,
+		"precio_unitario" : 457.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4165,
@@ -831,9 +1446,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 6.00,
+		"precio_unitario" : 6.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4166,
@@ -842,9 +1458,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 6.00,
+		"precio_unitario" : 6.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4211,
@@ -853,20 +1470,22 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 59.00,
+		"precio_unitario" : 59.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4212,
 		"clave_unidad" : "1038929",
-		"descripcion" : "ETIQ AMA TPO BAND 8.5X20CM P\/SE? CA",
+		"descripcion" : "ETIQ AMA TPO BAND 8.5X20CM P\/SEÑ CAB AER",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 30.00,
+		"precio_unitario" : 30.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4225,
@@ -875,64 +1494,118 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 16.00,
+		"precio_unitario" : 16.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4240,
 		"clave_unidad" : "1039922",
-		"descripcion" : "KIT INST P1 ENT MLTI PTO P\/CIER FSC",
+		"descripcion" : "KIT INST P1 ENT MLTI PTO P\/CIER FSC 350C",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 597.00,
+		"precio_unitario" : 597.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4241,
 		"clave_unidad" : "1039923",
-		"descripcion" : "KIT INST P1 ENT MLTI PTO P\/CIER FSC",
+		"descripcion" : "KIT INST P1 ENT MLTI PTO P\/CIER FSC 450B",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 725.00,
+		"precio_unitario" : 725.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4242,
+		"clave_unidad" : "1039924",
+		"descripcion" : "KIT INST P\/1 ENT MLTI PTO P\/CIER 2178L\/S",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 692.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4296,
+		"clave_unidad" : "1043413",
+		"descripcion" : "DIVISOR OPT 1:4 F1BRAS UNIMOD 1.5M\/LARGO",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 573.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4376,
 		"clave_unidad" : "1045853",
-		"descripcion" : "CIERRE LUCIERN P\/EMP CBLS FO FFD200",
+		"descripcion" : "CIERRE LUCIERN P\/EMP CBLS FO FFD2000LX-T",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1904.00,
+		"precio_unitario" : 1904.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4377,
+		"clave_unidad" : "1045854",
+		"descripcion" : "KIT DE CHAROLAS MODELO: WP10745T",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 249.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4378,
 		"clave_unidad" : "1045856",
-		"descripcion" : "KIT EMPAQUES P\/DERIVACION CABLE 6MM",
+		"descripcion" : "KIT EMPAQUES P\/DERIVACION CABLE 6MM DIAM",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 114.00,
+		"precio_unitario" : 114.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4379,
 		"clave_unidad" : "1045857",
-		"descripcion" : "KIT DERIVACION PARA CABLE EXTERIOR",
+		"descripcion" : " KIT DERIVACION PARA CABLE EXTERIOR 12 MM",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 127.00,
+		"precio_unitario" : 127.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4391,
+		"clave_unidad" : "1046555",
+		"descripcion" : "CABLE 4 FO DIELEC\/AEREO FIG-8 AFDTP-1",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 14.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4500,
@@ -941,9 +1614,10 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 115.00,
+		"precio_unitario" : 115.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4501,
@@ -952,20 +1626,94 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 497.00,
+		"precio_unitario" : 497.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4503,
+		"clave_unidad" : "1049152",
+		"descripcion" : "HERRAJ TEN TPOD SUJ GUIA CBLE PST",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 14.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4504,
 		"clave_unidad" : "1049154",
-		"descripcion" : "CAJA TERMIN OPTIC AERE 1X8\/SCUPC MA",
+		"descripcion" : "CAJA TERMIN OPTIC AERE 1X8\/SCUPC MAD\/CFE",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 1975.00,
+		"precio_unitario" : 1975.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4525,
+		"clave_unidad" : "1049753",
+		"descripcion" : "CABLE 4FO DIEL SUBTERRA TIPO SFDTP-2 UT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 9.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4526,
+		"clave_unidad" : "1049754",
+		"descripcion" : "CABLE 6FO DIEL SUBTERRA TIPO SFDTP-2 UT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 10.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4527,
+		"clave_unidad" : "1049755",
+		"descripcion" : "CABLE 12FO DIEL SUBTERRA TIPO SFDTP-2 UT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 11.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4528,
+		"clave_unidad" : "1049756",
+		"descripcion" : "CABLE 24FO DIELEC SUBTERRA TIPO SFDTP-2",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 15.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4534,
+		"clave_unidad" : "1049783",
+		"descripcion" : "CABLE 6FO DIEL AÉREO FIG.8 TIP.AFDTP-2UT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 13.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4644,
@@ -974,9 +1722,10 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 9.00,
+		"precio_unitario" : 9.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4645,
@@ -985,9 +1734,10 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 9.00,
+		"precio_unitario" : 9.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4646,
@@ -996,9 +1746,10 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 11.00,
+		"precio_unitario" : 11.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4647,
@@ -1007,9 +1758,34 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 12.00,
+		"precio_unitario" : 12.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4648,
+		"clave_unidad" : "1051357",
+		"descripcion" : "CABLE 48 FO DIEL SUBT TIPO SFDTP-2",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 18.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4649,
+		"clave_unidad" : "1051359",
+		"descripcion" : "CABLE 96 FO DIEL SUBT TIPO SFDTP-2",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 27.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4650,
@@ -1018,9 +1794,10 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 13.00,
+		"precio_unitario" : 13.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4651,
@@ -1029,9 +1806,10 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 14.00,
+		"precio_unitario" : 14.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4652,
@@ -1040,9 +1818,10 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 14.00,
+		"precio_unitario" : 14.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4653,
@@ -1051,9 +1830,34 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 16.00,
+		"precio_unitario" : 16.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4654,
+		"clave_unidad" : "1051366",
+		"descripcion" : "CABLE 48FO DIEL AÉR FIG8 T-AFDTP-2",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 21.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4655,
+		"clave_unidad" : "1051368",
+		"descripcion" : "CABLE 96FO DIEL AÉR FIG8 T-AFDTP-2",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 32.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4657,
@@ -1062,9 +1866,34 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 18.00,
+		"precio_unitario" : 18.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4658,
+		"clave_unidad" : "1051371",
+		"descripcion" : "CABLE 12 FO TM-1 ARMADO FO\/YF",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 18.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4659,
+		"clave_unidad" : "1051372",
+		"descripcion" : "CABLE 24 FO TM-1 ARMADO FO\/YF",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 21.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4662,
@@ -1073,20 +1902,250 @@
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 20.00,
+		"precio_unitario" : 20.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4663,
+		"clave_unidad" : "1051386",
+		"descripcion" : "CABLE 12 FO TM-6 ARMADO FIG.8 FO\/YF",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 23.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4664,
+		"clave_unidad" : "1051387",
+		"descripcion" : "CABLE  24 FO TM-6 ARMADO FIG.8 FO\/Y",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 28.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4665,
+		"clave_unidad" : "1051389",
+		"descripcion" : "CABLE 48FO TM-6 ARMADA FIG8 FO\/YF",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 41.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4667,
+		"clave_unidad" : "1051394",
+		"descripcion" : "C.OADSS40.CX86.SDL.DL48 SMFBK.WRLFO\/YF",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 25.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4668,
+		"clave_unidad" : "1051398",
+		"descripcion" : "C.OADSS70.CX87.SDL.DL48 SMFBK.WRLFO\/YF",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 36.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4708,
+		"clave_unidad" : "1051912",
+		"descripcion" : "TERMIN FNAL CORR SSC2811-SM-8 C_SPLIT1:8",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 1406.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4709,
+		"clave_unidad" : "1051913",
+		"descripcion" : "TERMI INTERM SSC2811-SM-9U SPLIT1:9 DESB",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 1805.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4711,
+		"clave_unidad" : "1051918",
+		"descripcion" : "CABLE DISTR C\/CONE FASTCONNECT 2 EXTR 5M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 334.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4712,
+		"clave_unidad" : "1051919",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNECT 2 EXTR 50M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 930.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4713,
+		"clave_unidad" : "1051920",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNEC 2 EXTR 100M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 1594.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4714,
+		"clave_unidad" : "1051921",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNEC 2 EXTR 150M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2259.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4715,
+		"clave_unidad" : "1051922",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNEC 2 EXTR 200M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2923.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4716,
+		"clave_unidad" : "1051923",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNEC 2 EXTR 300M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 4267.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4717,
+		"clave_unidad" : "1051924",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNEC 2 EXTR 350M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 4914.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4917,
 		"clave_unidad" : "1052740",
-		"descripcion" : "DIVISOR  ÓPTICO 1:2 (SPLITTER)",
+		"descripcion" : "DIVISOR ÓPTICO 1:2 (SPLITTER)",
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 182.00,
+		"precio_unitario" : 182.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4926,
+		"clave_unidad" : "1053047",
+		"descripcion" : "CIERRE DE EMPALME FO CRM-5811 (FOSC450 CORMAC)",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 1718.97,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4940,
+		"clave_unidad" : "1053084",
+		"descripcion" : "CIERRE DE EMPALME P\/FO FIREFLAY *SNAP",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 1630.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4952,
+		"clave_unidad" : "1051917",
+		"descripcion" : "DIVISOR 1:2 CIERRE CEDOHUBBOX SSC2802TM8",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 135.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4955,
+		"clave_unidad" : "1053230",
+		"descripcion" : "CAB CASC DISTR 5MM PRE-100M ESCA-ASCA ZT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4968,
+		"clave_unidad" : "1051916",
+		"descripcion" : "CHAROLA 24EMP CIER CEDOHUBBOX SSC2802TM8",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 29.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 4977,
@@ -1095,9 +2154,298 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 241.00,
+		"precio_unitario" : 241.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4980,
+		"clave_unidad" : "FAFDTS",
+		"descripcion" : "COLOCACION DE DIVISOR 1:2",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SACRE",
+		"precio_unitario" : 165.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 4983,
+		"clave_unidad" : "1053085",
+		"descripcion" : "KIT BANDEJA DE EMPALME 24 F.O. *SNAP",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 300.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5002,
+		"clave_unidad" : "1053233",
+		"descripcion" : "CAB CASC DISTR 5MM PRE-250M ESCA-ASCA ZT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5003,
+		"clave_unidad" : "1053232",
+		"descripcion" : "CAB CASC DISTR 5MM PRE-200M ESCA-ASCA ZT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5007,
+		"clave_unidad" : "1053057",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNEC 2 EXTR 600M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5010,
+		"clave_unidad" : "1053229",
+		"descripcion" : "CAB CASC DIST 5MM PREC-50M ESCA-ASCA ZTE",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5011,
+		"clave_unidad" : "1053210",
+		"descripcion" : "REMAT ABRAZ MALIC PLAS CAB DIST ADSS5MM",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5012,
+		"clave_unidad" : "1053054",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNECT 2 EXTR 80M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5018,
+		"clave_unidad" : "1053053",
+		"descripcion" : "CIERR PRECON HUBBOX SSC2802TM8 P\/4DIV1X2",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 1319.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5698,
+		"clave_unidad" : "1053307",
+		"descripcion" : "CAB DIST 1 HILO V3 5MM PRECONECT 110M FH",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 933.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5703,
+		"clave_unidad" : "1053308",
+		"descripcion" : "CAB DIST 1 HILO V3 5MM PRECONECT 150M FH",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 1227.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5710,
+		"clave_unidad" : "1053317",
+		"descripcion" : "CABLE BLIN3.2MM F G657A2 B6A2LSZH 300MFH",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 2662.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5712,
+		"clave_unidad" : "1053246",
+		"descripcion" : "REMATE PREFORMADO CABLE REDONDO 5 MM ZTE",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5718,
+		"clave_unidad" : "1053234",
+		"descripcion" : "CAB CASC DISTR 5MM PRE-300M ESCA-ASCA ZT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5719,
+		"clave_unidad" : "1053231",
+		"descripcion" : "CAB CASC DISTR 5MM PRE-150M ESCA-ASCA ZT",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5720,
+		"clave_unidad" : "1053228",
+		"descripcion" : "CAB CASC DIST 5MM PREC-5M ESCA-ASCA ZTE",
+		"id_cunidad" : 1,
+		"unidad" : "M",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5724,
+		"clave_unidad" : "1053056",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNEC 2 EXTR 250M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5735,
+		"clave_unidad" : "1053222",
+		"descripcion" : "CAB BAJ PRECONADSS 5MM-50M ESCA-ESCA ZTE",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5736,
+		"clave_unidad" : "1053223",
+		"descripcion" : "CAB BAJ PRECONADSS 5MM-100M ESCA-ESCA ZT",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5737,
+		"clave_unidad" : "1053224",
+		"descripcion" : "CAB BAJ PRECONADSS 5MM-150M ESCA-ESCA ZT",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5738,
+		"clave_unidad" : "1053225",
+		"descripcion" : "CAB BAJ PRECONADSS 5MM-200M ESCA-ESCA ZT",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5756,
+		"clave_unidad" : "1053055",
+		"descripcion" : "CABLE DISTR C\/CON FASTCONNEC 2 EXTR 120M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5759,
+		"clave_unidad" : "1053060",
+		"descripcion" : "CABLE DIST SUBT DUALEND FASTCONNECT 100M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5760,
+		"clave_unidad" : "1053059",
+		"descripcion" : "CABLE DIST SUBTE DUALEND FASTCONNECT 80M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 5763,
@@ -1106,20 +2454,46 @@
 		"id_cunidad" : 4,
 		"unidad" : "PZA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 871.00,
+		"precio_unitario" : 871.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5764,
+		"clave_unidad" : "1053094",
+		"descripcion" : "CABLE DIST SUBT DUALEND FASTCONNECT 250M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5765,
+		"clave_unidad" : "1053245",
+		"descripcion" : "FEBI 9 PUERTOS CON UN DIVISOR 1X8 ZTE",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 5778,
 		"clave_unidad" : "1035386",
-		"descripcion" : "CABLE CON 12 FO TIPO IOAN-R (RISER)",
+		"descripcion" : "CABLE CON 12 FO TIPO IOAN-R",
 		"id_cunidad" : 1,
 		"unidad" : "M",
 		"tipo" : "SIATEL",
 		"precio_unitario" : 19.88,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "ESTRATEGICO"
+		"agrupador" : "ESTRATEGICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 5782,
@@ -1130,7 +2504,8 @@
 		"tipo" : "SIATEL",
 		"precio_unitario" : 112.73,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "BASICO"
+		"agrupador" : "BASICO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 5784,
@@ -1139,63 +2514,1161 @@
 		"id_cunidad" : 53,
 		"unidad" : "BSA",
 		"tipo" : "SIATEL",
-		"precio_unitario" : 0.00,
+		"precio_unitario" : 0.0,
 		"tipo_costeo" : "MATERIALES",
-		"agrupador" : "MISCELANEO"
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 5785,
-		"clave_unidad" : "N24\/0-100",
-		"descripcion" : "Construcción de Terminal Óptica en rango de 0-100 mts. de cable instalado",
+		"clave_unidad" : "FN24S1",
+		"descripcion" : "Construcción Terminal Óptica Red Secundaria 0-100 metros N-24",
 		"id_cunidad" : 56,
 		"unidad" : "TER",
 		"tipo" : "FUERA_SACRE",
 		"precio_unitario" : 9747.75,
 		"tipo_costeo" : "MANO OBRA FUERA SACRE",
-		"agrupador" : "OTROS"
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 5786,
-		"clave_unidad" : "N24\/101-299",
-		"descripcion" : "Construcción de Terminal Óptica en rango de 101-299 mts. de cable instalado",
+		"clave_unidad" : "FN24S2",
+		"descripcion" : "Construcción Terminal Óptica Red Secundaria 101-299 metros N-24",
 		"id_cunidad" : 56,
 		"unidad" : "TER",
 		"tipo" : "FUERA_SACRE",
 		"precio_unitario" : 10888.48,
 		"tipo_costeo" : "MANO OBRA FUERA SACRE",
-		"agrupador" : "OTROS"
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 5787,
-		"clave_unidad" : "N24\/300-500",
-		"descripcion" : "Construcción de Terminal Óptica en rango de 300-500 mts. de cable instalado",
+		"clave_unidad" : "FN24S3",
+		"descripcion" : "Construcción Terminal Óptica Red Secundaria 300-500 metros N-24",
 		"id_cunidad" : 56,
 		"unidad" : "TER",
 		"tipo" : "FUERA_SACRE",
 		"precio_unitario" : 15578.64,
 		"tipo_costeo" : "MANO OBRA FUERA SACRE",
-		"agrupador" : "OTROS"
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
 		"id_cumontada" : 5788,
-		"clave_unidad" : "N24\/PLUSVALIA",
-		"descripcion" : "Plusvalía por construcción adicional de 50 metros de cable de fibra óptica para cuando la logitud a instalar supera los 500 metros",
+		"clave_unidad" : "FN24PV",
+		"descripcion" : "Plusvalía por Construcción Adicional de 50 m de cable de F.O.>  500m",
 		"id_cunidad" : 57,
 		"unidad" : "TRAMO",
-		"tipo": "FUERA_SACRE",
-		"precio_unitario": 1752.60,
-		"tipo_costeo": "MANO OBRA FUERA SACRE",
-		"agrupador": "OTROS"
+		"tipo" : "FUERA_SACRE",
+		"precio_unitario" : 1752.6,
+		"tipo_costeo" : "MANO OBRA FUERA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
 	},
 	{
-		"id_cumontada": 3785,
-		"clave_unidad": "1028954",
-		"descripcion": "MANGA TERMOC 2.5MM DCX60MM L PROT E",
-		"id_cunidad": 4,
-		"unidad": "PZA",
-		"tipo": "SIATEL",
-		"precio_unitario": 2.00,
-		"tipo_costeo": "MATERIALES",
-		"agrupador": "BASICO"
+		"id_cumontada" : 5792,
+		"clave_unidad" : "1053207",
+		"descripcion" : "TERMINAL OPT DESB INT 1:9 SCUPC CAB30MHW",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 26.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5798,
+		"clave_unidad" : "01000377",
+		"descripcion" : "ARGOLLA P\/CORDON DE ACOMETIDA",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5799,
+		"clave_unidad" : "01000751",
+		"descripcion" : "GRAPA CABLE MEDIANA",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5800,
+		"clave_unidad" : "01034992",
+		"descripcion" : "HEBILLA PARA FLEJE METALICO 5\/8\"",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5801,
+		"clave_unidad" : "01000381",
+		"descripcion" : "CADENA PARA DISTRIBUCION",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5802,
+		"clave_unidad" : "01000730",
+		"descripcion" : "CLAVO GALV. CABEZA PLANA 25 MM.",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5803,
+		"clave_unidad" : "01000403",
+		"descripcion" : "GRAPA PARA ALAMBRE DE TIERRA",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5804,
+		"clave_unidad" : "01010244",
+		"descripcion" : "FLEJE METALICO TIPO 316 DE 5\/8 POSTE SOL",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5805,
+		"clave_unidad" : "01049152",
+		"descripcion" : "HERRAJ TEN TPO\"D\" SUJ GUIA CBLE PSTE CFE",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "MISCELANEO",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5808,
+		"clave_unidad" : "1053061",
+		"descripcion" : "CABLE DIST SUBT DUALEND FASTCONNECT 120M",
+		"id_cunidad" : 4,
+		"unidad" : "PZA",
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5811,
+		"clave_unidad" : "1053092",
+		"descripcion" : "CABLE DIST SUBT DUALEND FASTCONNECT 150M",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5812,
+		"clave_unidad" : "1053087",
+		"descripcion" : "KIT SOPORTE EN POSTE DEL CIERRE *SNAP",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 359.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5818,
+		"clave_unidad" : "1054130",
+		"descripcion" : "CIERRE DE EMPALME FO CRM-6808B",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5821,
+		"clave_unidad" : "1053089",
+		"descripcion" : "KIT DE REETRADA DE 16MM *SNAP",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 87.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5831,
+		"clave_unidad" : "1053244",
+		"descripcion" : "FEBI 10 PUERTOS DIV 1X9 (70\/30) ZTE",
+		"id_cunidad" : 0,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5832,
+		"clave_unidad" : "FN24P1",
+		"descripcion" : "Construcción Terminal Óptica Red Principal 0-100 metros N-24",
+		"id_cunidad" : 56,
+		"unidad" : "TER",
+		"tipo" : "FUERA_SACRE",
+		"precio_unitario" : 9747.75,
+		"tipo_costeo" : "MANO OBRA FUERA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5833,
+		"clave_unidad" : "FN24P2",
+		"descripcion" : "Construcción Terminal Óptica Red Principal 101-299 metros N-24",
+		"id_cunidad" : 56,
+		"unidad" : "TER",
+		"tipo" : "FUERA_SACRE",
+		"precio_unitario" : 10888.48,
+		"tipo_costeo" : "MANO OBRA FUERA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5834,
+		"clave_unidad" : "FN24P3",
+		"descripcion" : "Construcción Terminal Óptica Red Principal 300-500 metros N-24",
+		"id_cunidad" : 56,
+		"unidad" : "TER",
+		"tipo" : "FUERA_SACRE",
+		"precio_unitario" : 15578.64,
+		"tipo_costeo" : "MANO OBRA FUERA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5840,
+		"clave_unidad" : "1054183",
+		"descripcion" : "KIT DE CHAROLA ADICIONAL CRM-6808B",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5841,
+		"clave_unidad" : "1053091",
+		"descripcion" : "KIT DE REETRADA MULTIPUERTO *SNAP",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5842,
+		"clave_unidad" : "1053043",
+		"descripcion" : "KIT DE INSTALACION PARA PARED Y POSTE (FOSC450 CORMAC)",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5843,
+		"clave_unidad" : "1052551",
+		"descripcion" : "CABLE 96 FO PRECONEC CON\/SCUPC 70M S\/FO",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5844,
+		"clave_unidad" : "1052563",
+		"descripcion" : "CABLE 96 FO PRECONEC CON\/SCUPC 150M S\/FO",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5845,
+		"clave_unidad" : "1052981",
+		"descripcion" : "KIT D INST P\/PTO SEC DIAMET 7.9 A 17.5MM (FOSC450 CORMAC)",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5846,
+		"clave_unidad" : "1053086",
+		"descripcion" : "HERRAJ FIJ CIER OP SNAP CAB FIG8 P CFE",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5847,
+		"clave_unidad" : "1053042",
+		"descripcion" : "KIT D INST P\/PTO SEC DIAMET DE 6 A 8 MM (FOSC450 CORMAC)",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5848,
+		"clave_unidad" : "1053090",
+		"descripcion" : "KIT DE REETRADA DE 19MM *SNAP",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5849,
+		"clave_unidad" : "1054131",
+		"descripcion" : "KIT DE GROMMETS 6 A 14 MM DE DIÁMETRO",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5850,
+		"clave_unidad" : "1054182",
+		"descripcion" : "KIT DE GROMMETS 14 A 18 MM DE DIÁMETRO",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5851,
+		"clave_unidad" : "1052273",
+		"descripcion" : "CAJA TERMINAL ÓPTICA AÉREA",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5852,
+		"clave_unidad" : "1052550",
+		"descripcion" : "CABLE 48 FO PRECON.  CON\/SCUPC 110M S\/FO",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5853,
+		"clave_unidad" : "1052562",
+		"descripcion" : "CABLE 96 FO PRECONEC CON\/SCUPC 110M S\/FO",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5855,
+		"clave_unidad" : "FN24TO",
+		"descripcion" : "Suministro Terminal Óptica",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5856,
+		"clave_unidad" : "FN24FA",
+		"descripcion" : "Suministro de Cable de Fibra Óptica Aérea N-24   ",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5857,
+		"clave_unidad" : "FN24FS",
+		"descripcion" : "Suministro de Cable de Fibra Óptica Subterránea N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5858,
+		"clave_unidad" : "FN24EB",
+		"descripcion" : "Suministro de Etiqueta Tipo Bandera para Cable de F.O. Aérea N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5859,
+		"clave_unidad" : "FN24CE",
+		"descripcion" : "Suministro de Cierre Empalme F.O. N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5860,
+		"clave_unidad" : "FN24CA",
+		"descripcion" : "Suministro de Charola Adicional N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5861,
+		"clave_unidad" : "FN24DO",
+		"descripcion" : "Suministro Divisor Óptico en Cierre de Empalme FOSC N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5862,
+		"clave_unidad" : "FN24HC",
+		"descripcion" : "Suministro de kit herraje cierre en poste o guia de acero N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5863,
+		"clave_unidad" : "FN24PM",
+		"descripcion" : "Suministro de Poste de Madera Cualquier Altura N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5864,
+		"clave_unidad" : "FN24DP",
+		"descripcion" : "Suministro de Domo y Platina N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5865,
+		"clave_unidad" : "FN24AR",
+		"descripcion" : "Suministro Cable Riser N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5866,
+		"clave_unidad" : "FN24CC",
+		"descripcion" : "Suministro de cable de acero para Crucero o Retenida N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5867,
+		"clave_unidad" : "FN24TS",
+		"descripcion" : "Suministro de tubo flexoducto subdivision de vias N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5868,
+		"clave_unidad" : "FN24KR",
+		"descripcion" : "Suministro de kit de reintervencion cierre F.O. N-24",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SACRE",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MANO OBRA SACRE",
+		"agrupador" : "OTROS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5869,
+		"clave_unidad" : "1053316",
+		"descripcion" : "CABLE BLIN3.2MM F G657A2 B6A2LSZH 250MFH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5870,
+		"clave_unidad" : "1053321",
+		"descripcion" : "CAJ TER INTSC\/UPC DP AF10P FITTB515BDBFH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5871,
+		"clave_unidad" : "1053219",
+		"descripcion" : "1: 2 MINI SPLITTER PARA HUB-FEB H ZTE",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5872,
+		"clave_unidad" : "1053305",
+		"descripcion" : "CAB DIST 1 HILO V3 5MM PRECONECT.50M FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5873,
+		"clave_unidad" : "1053093",
+		"descripcion" : "Cable distribución 5 mm Fast Connect  200M",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5874,
+		"clave_unidad" : "1053208",
+		"descripcion" : "TERMINAL OPT DESB INT 1:9 SCUPC CAB50MHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5875,
+		"clave_unidad" : "1053100",
+		"descripcion" : "CIERRE C\/ACO FASTC\/FASTC CAB RED 3A5MMHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5876,
+		"clave_unidad" : "1053058",
+		"descripcion" : "Cable distribución 5 mm Fast Connect  50M",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5877,
+		"clave_unidad" : "1053227",
+		"descripcion" : "CAB BAJ PRECONADSS 5MM-300M ESCA-ESCA ZT",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5878,
+		"clave_unidad" : "1053220",
+		"descripcion" : "1: 2 MINI SPLITTER PARA CAJA INTER. ZTE",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5879,
+		"clave_unidad" : "1053311",
+		"descripcion" : "CABLE BLIN 3.2MM F G657A2 B6A2LSZH 5M FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5880,
+		"clave_unidad" : "1053313",
+		"descripcion" : "CABLE BLIN 3.2MM F G657A2 B6A2LSZH 75MFH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5881,
+		"clave_unidad" : "1053240",
+		"descripcion" : "FEBS 10 PTOS C_DIV1:9(70\/30) PARED ZTE",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5882,
+		"clave_unidad" : "1053101",
+		"descripcion" : "CIERRE C\/ACO FASTC\/SCAPC CAB RED 3A6MMHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5883,
+		"clave_unidad" : "1053203",
+		"descripcion" : "CABLE INT 3MM LSZH SCAPC\/BALA SCAPC10MHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5884,
+		"clave_unidad" : "1053306",
+		"descripcion" : "CAB DIST 1 HILO V3 5MM PRECONECT 75M FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5885,
+		"clave_unidad" : "1053213",
+		"descripcion" : "HUB.FEBH 8PTOS DIV.1*1X2 P\/PARED,PTE ZTE",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5886,
+		"clave_unidad" : "1053299",
+		"descripcion" : "CAJ DIST FO EXT PREC8P FITDP461C 2S1X2FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5887,
+		"clave_unidad" : "1053206",
+		"descripcion" : "TERMINAL OPT DESB INT 1:9 SCUPC CAB10MHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5888,
+		"clave_unidad" : "1053096",
+		"descripcion" : "Cable distribución 5 mm Fast Connect  350M",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5889,
+		"clave_unidad" : "1053095",
+		"descripcion" : "Cable distribución 5 mm Fast Connect  300M",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5890,
+		"clave_unidad" : "1053319",
+		"descripcion" : "CAJA DIST EXT PREC 10PTOS FDP461A DES FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5891,
+		"clave_unidad" : "1053320",
+		"descripcion" : "CAJA DIST EXT PREC 9PTOS FDP461A DES FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5892,
+		"clave_unidad" : "1053077",
+		"descripcion" : "CABLE INT 3MM LSZH SCAPC\/BALA SCAPC40MHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5893,
+		"clave_unidad" : "1053204",
+		"descripcion" : "CABLE INT 3MM LSZH SCAPC\/BALA SCAPC20MHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5894,
+		"clave_unidad" : "1053243",
+		"descripcion" : "PUERTOS FEBS INST PARD DIV PLC BA 1:8 ZT",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5895,
+		"clave_unidad" : "1053209",
+		"descripcion" : "TERMINAL OPT BALAN INT 1:8SCUPC CAB10MHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5896,
+		"clave_unidad" : "1053217",
+		"descripcion" : "CAJA INTERIOR CON 1 SPLITTER 1X2 ZTE",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5897,
+		"clave_unidad" : "1053301",
+		"descripcion" : "DIV OPT PLC-102-SC\/APC (461C) T.M.1:2 FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5898,
+		"clave_unidad" : "1053325",
+		"descripcion" : "CLIP DE FIJACIÓN TIPO \"P\" FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5899,
+		"clave_unidad" : "1053221",
+		"descripcion" : "CAB BAJ PRECONADSS 5MM-5M ESCA-ESCA ZTE",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5900,
+		"clave_unidad" : "1053099",
+		"descripcion" : "HUBBOX INT P\/2 DIV1:2 1CHA 4PTO S\/DIV HW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5901,
+		"clave_unidad" : "1053226",
+		"descripcion" : "CAB BAJ PRECONADSS 5MM-250M ESCA-ESCA ZT",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5902,
+		"clave_unidad" : "1053314",
+		"descripcion" : "CABLE BLIN3.2MM F G657A2 B6A2LSZH 110MFH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5903,
+		"clave_unidad" : "1053205",
+		"descripcion" : "CABLE INT 3MM LSZH SCAPC\/BALA SCAPC30MHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5904,
+		"clave_unidad" : "1053318",
+		"descripcion" : "CAB DIST INT 1H 3MM SC\/APC-SC\/APC 25M FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5905,
+		"clave_unidad" : "1053212",
+		"descripcion" : "HERRAJE FIJAR TERM EXT\/GUIA ACER PCFE HW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5906,
+		"clave_unidad" : "1053297",
+		"descripcion" : "CAB CASC DIST 5MM PREC-60M ESCA-ASCA ZTE",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5907,
+		"clave_unidad" : "1053310",
+		"descripcion" : "CAB DIST 1 HILO V3 5MM PRECONECT 300M FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5908,
+		"clave_unidad" : "1053304",
+		"descripcion" : "CAB DIST 1 HILO V3 5MM PRECONECT 5M FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5909,
+		"clave_unidad" : "1053309",
+		"descripcion" : "CAB DIST 1 HILO V3 5MM PRECONECT 250M FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5910,
+		"clave_unidad" : "1053202",
+		"descripcion" : "CIERRE C\/ACO SCAPC\/SCAPC CAB RED 3A6MMHW",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5911,
+		"clave_unidad" : "1053322",
+		"descripcion" : "CAJA TER INTSC\/UPC DP AF9P FITTB515BDBFH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5912,
+		"clave_unidad" : "1053300",
+		"descripcion" : "CAJA DIS FO INT F DP410B2C\/APC 2SP1:2 FH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5913,
+		"clave_unidad" : "1053315",
+		"descripcion" : "CABLE BLIN3.2MM F G657A2 B6A2LSZH 150MFH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada" : 5914,
+		"clave_unidad" : "1053312",
+		"descripcion" : "CABLE BLIN 3.2MM F G657A2 B6A2LSZH 50MFH",
+		"id_cunidad" : null,
+		"unidad" : null,
+		"tipo" : "SIATEL",
+		"precio_unitario" : 0.0,
+		"tipo_costeo" : "MATERIALES",
+		"agrupador" : "PRECONECTORIZADOS",
+		"cur_id_constructor" : null
 	}
 ]

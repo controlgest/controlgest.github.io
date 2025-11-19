@@ -52,10 +52,10 @@
                             <span><b>Distrito: </b></span>
                             <span id="txtDistrito"></span>
                         </div>
-                        <div class="col-auto">
+                        <!-- <div class="col-auto">
                             <span><b>Terminal: </b></span>
                             <span id="txtTerminal"></span>
-                        </div>
+                        </div> -->
                         <div class="col-auto">
                             <span><b>Constructor: </b></span>
                             <span id="txtConstructor"></span>
@@ -66,14 +66,14 @@
                     <div class="row col-12 flex-row">
                         <div class="col-12 p-0 my-2">
                             <div class="form-row">
-                                <div class="col">
+                                <!-- <div class="col">
                                     <label for="txtFechaInicio">Fecha inicio</label>
                                     <input disabled type="datetime-local" class="form-control" id="txtFechaInicio" required>
                                 </div>
                                 <div class="col">
                                     <label for="txtFechaFin">Fecha término</label>
                                     <input disabled type="datetime-local" class="form-control" id="txtFechaFin" required>
-                                </div>
+                                </div> -->
                                 <div id="divAlmacen" class="col-md col-sm-12">
                                     <label for="slcAlmacen">Almacén</label>
                                     <select class="form-control" id="slcAlmacen" required></select>
@@ -90,14 +90,16 @@
                             <textarea name="descTrabajo" id="txtDescTrabajo" class="form-control"
                                 placeholder="Descripción de trabajo realizado" required></textarea>
                         </div>
+                        <div id="divCoordenadas" class="row">
+                           
+                        </div>
                     </div>
                 </div>
-
+                
                 <div class="col-12 row flex-8">
                     <div class="col-12  card p-0 ">
                         <div class="card-header flex justify-content-between align-items-center">
                             <b><span>Unidades de Construcción</span></b>
-                           
                             <div class="custom-control custom-switch">
                                 <div>
                                     <input type="radio" class="custom-control-input" name="tipoUnidad" id="chkManoObra" onchange="chkManoObra_change(event)">
@@ -105,28 +107,41 @@
                                 </div>
                                 <div>
                                     <input type="radio" class="custom-control-input" name="tipoUnidad" id="chkMateriales" onchange="chkMateriales_change(event)">
-                                    <label class="custom-control-label" for="chkMateriales">Materiales</label>
+                                    <label class="custom-control-label" for="chkMateriales">Material Tradicional</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="custom-control-input" name="tipoUnidad" id="chkMatPreconectorizado" onchange="chkMatPreconectorizado_change(event)">
+                                    <label class="custom-control-label" for="chkMatPreconectorizado">Material Preconectorizado</label>
                                 </div>
                             </div>
                         </div>
                         <div  class="card-body  p-0 overflow-scroll-x">
                             <div class="mt-3 form-row col-12 flex-0">
-                                <div class="p-0 col-12 mb-2">
-                                    <label for="txtManoDeObra">Unidad Construcción</label>
-                                    <input type="text"  class="form-control" id="txtManoDeObra" placeholder="Unidad Construcción" required>
-                                    <div id="manoDeObraAutocompleteList" class="autocomplete-items"></div>
-                                </div>
-                                <div class="p-0 col">
-                                    <label for="txtCantManoObra">Cantidad</label>
-                                    <input type="number" placeholder="Cant." min="0" pattern="[0-9]" id="txtCantManoObra" onkeyup="txtCantManoObra_change(event)" class="form-control" required>
+                                <div id="divTerminal" class="p-0 col-6 mb-2">
+                                    <label for="slcTerminal">Terminal</label>
+                                    <select class="form-control" id="slcTerminal" required></select>
                                 </div>
                                 <div class="p-0 col-6">
                                     <label for="slcTipoRed" >Tipo red</label>
                                     <select class="form-control" aria-placeholder="Tipo de red" onchange="slcTipoRed_change(event)" required id="slcTipoRed">
-                                        <option value="PRINCIPAL">PRINCIPAL</option>
-                                        <option value="SECUNDARIA">SECUNDARIA</option>
+                                        <option value="">SELECCIONAR RED</option>
+                                        <option value="PRI">PRINCIPAL</option>
+                                        <option value="SEC">SECUNDARIA</option>
+                                        <!-- <option value="SEC_H">SECUNDARIA PRECONECTORIZADA (HUAWUEI)</option>
+                                        <option value="SEC_Z">SECUNDARIA PRECONECTORIZADA (ZTE)</option>
+                                        <option value="SEC_F">SECUNDARIA PRECONECTORIZADA (FIBERHOME)</option> -->
                                     </select>
                                 </div>
+                                <div class="p-0 col mb-2">
+                                    <label for="txtManoDeObra">Unidad Const</label>
+                                    <input type="text"  class="form-control" id="txtManoDeObra" placeholder="Unidad Construcción" required>
+                                    <div id="manoDeObraAutocompleteList" class="autocomplete-items"></div>
+                                </div>
+                                <div class="p-0 col-3">
+                                    <label for="txtCantManoObra">Cantidad</label>
+                                    <input type="number" placeholder="Cant." min="0" pattern="[0-9]" id="txtCantManoObra" onkeyup="txtCantManoObra_change(event)" class="form-control" required>
+                                </div>
+                                
                                 <div id="divCableUtilizado" hidden="True" class="p-0 col-auto mb-2">
                                     <label for="slcCableUtilizado">¿Se utilizó cable?</label>
                                     <select class="form-control" id="slcCableUtilizado">
@@ -150,6 +165,7 @@
                                             <th>Cantidad</th>
                                             <th>Tipo</th>
                                             <th>Tipo de red</th>
+                                            <th>Terminal</th>
                                             <th>Acción</th>
                                         </tr>
                                     </thead>
@@ -167,7 +183,7 @@
 
             </div>
         </div>
-        <!-- <button class="btn btn-primary" id="enviar" onclick="sendDataToBot()">Enviar</button> -->
+        <button class="btn btn-primary" id="enviar" onclick="sendDataToBot()">Enviar</button>
     </form>
 	<script type="text/javascript" src='app.js'></script>
 </body>
