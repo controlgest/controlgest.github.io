@@ -154,7 +154,7 @@ let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra, inputManoO
         divCableUtilizado.hidden = true;
         if (item && item.tipo == 'FUERA_SACRE') {
             // SI NO ES PLUSVALIA SE DESHABILITA EL CAMPO DE CANTIDAD Y SE PONE 1 POR DEFECTO
-            if (item.clave_unidad != "N24/PLUSVALIA") {
+            if (item.clave_unidad != "FN24PV") {
                 txtCantManoObra.value = 1;
                 txtCantManoObra.disabled = true;
             }
@@ -284,12 +284,12 @@ let actualizarTabla = (table, data) => {
         btnEliminar.onclick = function () {
             let row = this.parentNode.parentNode;
             row.parentNode.removeChild(row);
-            UCTable = removeArrayUC({ array: UCTable, clave: item.UC_Clave, tipoRed: item.UC_TipoRed });
+            UCTable = removeArrayUC({ array: UCTable, clave: item.UC_Clave, tipoRed: item.UC_TipoRed, terminal: item.UC_Terminal });
             actualizarTabla(table, UCTable);
         }
         cellEliminar.appendChild(btnEliminar);
     });
-}
+} 
 
 let txtCantManoObra_change = (e) => {
     validaPositivos(e);
@@ -397,13 +397,12 @@ let chkMatPreconectorizado_change = (e) => {
 // }
 
 
-let removeArrayUC = ({ array, clave = "", coincidencia = "", agrupador = "",tipoRed="" }) => {
+let removeArrayUC = ({ array, clave = "", coincidencia = "", agrupador = "",tipoRed="", terminal="" }) => {
 
     // Eliminar elementos que coincidan con la clave y el tipo de red
-    if (clave !== "" && tipoRed !== "") {
-        
-        console.log(clave,  slcTipoRed.value);
-        array = array.filter(item => item.UC_Clave !== clave || item.UC_TipoRed !== tipoRed);
+    if (clave !== "" && tipoRed !== "" && terminal !== "") {
+        console.log(clave,  slcTipoRed.value, terminal);
+        array = array.filter(item => item.UC_Clave !== clave || item.UC_TipoRed !== tipoRed || item.UC_Terminal !== terminal);
         // Validar si se debe ocultar la alerta de cable
         if (!array.some(item => item.UC_Clave === "N24/0-100" && item.UC_TipoRed === "SECUNDARIA")) {
             alertaCable.hidden = true;
@@ -429,14 +428,14 @@ let validarCantidad = (item, cantidad) => {
 
             break;
         case 'FUERA_SACRE':
-            if (item.clave_unidad == "N24/PLUSVALIA" && (cantidad > 9 || cantidad < 1)) { // 1 a 13 fusiones
+            if (item.clave_unidad == "FN24PV" && (cantidad > 9 || cantidad < 1)) { // 1 a 13 fusiones
                 msg = "Para " + `${item.clave_unidad}` + "\nSólo se permite capturar la cantidad de 1 a 9, intenta nuevamente.";
                 alert(msg);
                 return false;
             }
 
             if(slcTipoRed.value == 'SECUNDARIA'){
-                if (item.clave_unidad != "N24/PLUSVALIA") { // 1 a 13 fusiones
+                if (item.clave_unidad != "FN24PV") { // 1 a 13 fusiones
                     cantidad = 1;
                     txtCantManoObra.enabled = false;
                     return true;
