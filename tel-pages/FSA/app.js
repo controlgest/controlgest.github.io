@@ -126,10 +126,10 @@ let  cargarDatos =async (params) => {
                         <label> <b>Fecha Inicio:</b> ${item.split('_')[1]} - <b>Fecha Fin:</b> ${item.split('_')[2]}</label>
                     </div>
                     <div class="col-6 p-0 pr-2">    
-                        <input type="text" id="txtLat_${item.split('_')[0]}" class="form-control" placeholder="Latitud de Terminal ${item.split('_')[0]}" required>
+                        <input type="number" id="txtLat_${item.split('_')[0]}" class="form-control" placeholder="Latitud de Terminal ${item.split('_')[0]}" required>
                     </div>
                     <div class="col-6 p-0 pl-2">    
-                        <input type="text" id="txtLong_${item.split('_')[0]}" class="form-control" placeholder="Longitud de Terminal ${item.split('_')[0]}" required>
+                        <input type="number" id="txtLong_${item.split('_')[0]}" class="form-control" placeholder="Longitud de Terminal ${item.split('_')[0]}" required>
                     </div>
                 </div>
                 `;
