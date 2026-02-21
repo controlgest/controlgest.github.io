@@ -1,4 +1,4 @@
-//?pConst=6&pDistrito=sadf456&pTerminal=45678d&pArea=leon&pCope=cope2&pTipoLum=P24&pFIni=2025-02-03%2011:35&pFFin=2025-03-13%2017:35
+//?pConst=6&pDistrito=sadf456&pTerminal=45678d1_2025-02-03%2011:35_2025-03-13%2017:35,45678d2,45678d3,45678d4,45678d5,45678d6,45678d7,45678d8,45678d9,45678d0&pArea=leon&pCope=cope2&pTipoLum=P24
 let UCTable = [];
 
 const XAVApp = {
@@ -123,7 +123,12 @@ let  cargarDatos =async (params) => {
                 <div class="form-row col-md-6 col-12 mb-2 ">
                     <div class="col-12 p-0">
                         <label class="m-0" for="txtLat_${item.split('_')[0]}"><b>Terminal ${item.split('_')[0]}:</b></label>
-                        <label> <b>Fecha Inicio:</b> ${item.split('_')[1]} - <b>Fecha Fin:</b> ${item.split('_')[2]}</label>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <label id="fechaIni_${item.split('_')[0]}"> <b>Fecha Inicio:</b> ${item.split('_')[1]} </label>
+                            <label> - </label>
+                            <label id="fechaFin_${item.split('_')[0]}"> <b>Fecha Fin:</b> ${item.split('_')[2]}</label>
+                        </div>
+                            
                     </div>
                     <div class="col-6 p-0 pr-2">    
                         <input type="number" id="txtLat_${item.split('_')[0]}" class="form-control" placeholder="Latitud de Terminal ${item.split('_')[0]}" required>
@@ -232,7 +237,7 @@ let agregarUC = () => {
                         UC_Desc: item.descripcion,
                         UC_Unidad: item.unidad,
                         UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SECUNDARIA" ? (slcCableUtilizado.value === "true") : "",
-                        UC_Tipo: item.tipo,
+                        UC_Tipo:item.tipo_costeo == 'MATERIALES' && item.agrupador == 'PRECONECTORIZADOS'? 'MATERIAL PRE': item.tipo_costeo == 'MATERIALES'? 'MATERIAL TRA': 'MANO DE OBRA',
                         UC_TipoRed: slcTipoRed.value,
                         UC_Agrupador: item.agrupador,
                         UC_Terminal: document.getElementById('slcTerminal').value
@@ -272,7 +277,7 @@ let actualizarTabla = (table, data) => {
         cellDescripcion.innerHTML = item.UC_Desc;
         cellUnidad.innerHTML = item.UC_Unidad;
         cellCantidad.innerHTML = item.UC_Cantidad;
-        cellTipo.innerHTML = item.UC_Tipo == 'SIATEL' ? 'Materiales' : 'Mano de obra';
+        cellTipo.innerHTML = item.UC_Tipo; //== 'SIATEL' ? 'Materiales' : 'Mano de obra';
         cellTipoRed.innerHTML = item.UC_TipoRed;
         cellTerminal.innerHTML = item.UC_Terminal;
 
@@ -358,10 +363,14 @@ let sendDataToBot = () => {
             latInputs.forEach(latEl => {
                 const terminalId = latEl.id.substring('txtLat_'.length);
                 const longEl = document.getElementById(`txtLong_${terminalId}`);
+                const fechaIni = document.getElementById(`fechaIni_${terminalId}`).textContent.replace('Fecha Inicio: ', '').trim();
+                const fechaFin = document.getElementById(`fechaFin_${terminalId}`).textContent.replace('Fecha Fin: ', '').trim();
                 coordenadas.push({
                     terminal: terminalId,
                     latitud: latEl.value || '',
-                    longitud: longEl ? longEl.value || '' : ''
+                    longitud: longEl ? longEl.value || '' : '',
+                    fechaIni: fechaIni,
+                    fechaFin: fechaFin
                 });
             });
             return coordenadas;
