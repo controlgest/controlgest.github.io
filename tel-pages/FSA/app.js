@@ -412,7 +412,7 @@ let removeArrayUC = ({ array, clave = "", coincidencia = "", agrupador = "",tipo
         console.log(clave,  slcTipoRed.value, terminal);
         array = array.filter(item => item.UC_Clave !== clave || item.UC_TipoRed !== tipoRed || item.UC_Terminal !== terminal);
         // Validar si se debe ocultar la alerta de cable
-        if (!array.some(item => item.UC_Clave === "N24/0-100" && item.UC_TipoRed === "SECUNDARIA")) {
+        if (!array.some(item => item.UC_Clave === "N24/0-100" && item.UC_TipoRed === "SEC")) {
             alertaCable.hidden = true;
             console.log("alertaCable", alertaCable.hidden);
 
@@ -523,7 +523,7 @@ let slcTipoRed_change = (e) => {
 
     const divCableUtilizado = document.getElementById('divCableUtilizado');
     const txtManoObra = document.getElementById('txtManoDeObra');
-    if (e.target.value == "SECUNDARIA" && txtManoObra.value.includes("N24/0-100")) {
+    if (e.target.value == "SEC" && txtManoObra.value.includes("N24/0-100")) {
         divCableUtilizado.hidden = false;
     } else {
         divCableUtilizado.hidden = true;
