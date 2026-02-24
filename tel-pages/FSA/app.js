@@ -1,4 +1,5 @@
 //?pConst=6&pDistrito=sadf456&pTerminal=45678d1_2025-02-03%2011:35_2025-03-13%2017:35,45678d2,45678d3,45678d4,45678d5,45678d6,45678d7,45678d8,45678d9,45678d0&pArea=leon&pCope=cope2&pTipoLum=P24
+//?pConst=6&pDistrito=sadf456&pTerminal=45678d1_2025-02-03%2011:35_2025-03-13%2017:35,45678d2_2025-02-03%2011:35_2025-03-13%2017:35&pArea=leon&pCope=cope2&pTipoLum=P24
 let UCTable = [];
 
 const XAVApp = {
@@ -321,6 +322,18 @@ let sendDataToBot = () => {
         return;
     }
 
+    //validar que exista almenos una unidad de construcción para cada una de las terminales que aparecen el el select de terminales
+    let slcTerminal = document.getElementById('slcTerminal');
+    let terminalesSeleccionadas = Array.from(slcTerminal.options).filter(option => option.value !== "").map(option => option.value);
+    let terminalesConUC = [...new Set(UCTable.map(item => item.UC_Terminal))];
+    for (let terminal of terminalesSeleccionadas) {
+        if (!terminalesConUC.includes(terminal)) {
+            alert(`Debe agregar al menos una unidad de construcción para la terminal ${terminal}`);
+            return;
+        }
+    }
+
+
     // let txtFechaInicio = document.getElementById('txtFechaInicio');
     // let txtFechaFin = document.getElementById('txtFechaFin');
 
@@ -342,7 +355,7 @@ let sendDataToBot = () => {
     UCTable = UCTable.map(item => {
         item.UC_TipoRed = item.UC_TipoRed == "PRI"?"P":item.UC_TipoRed == "SEC"?"S":"";
         delete item.UC_Desc;
-        delete item.UC_Unidad;
+        //delete item.UC_Unidad;
         delete item.UC_Tipo;
         delete item.UC_Agrupador;
         delete item.UC_Clave;
