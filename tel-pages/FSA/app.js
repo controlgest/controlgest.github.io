@@ -113,7 +113,8 @@ let  cargarDatos =async (params) => {
             const slcTerminal = document.getElementById('slcTerminal');
             slcTerminal.innerHTML = '<option value="">Seleccione una opción</option>';
             terminales.forEach(item => {
-                slcTerminal.innerHTML += `<option value="${item.split('_')[0]}">${item.split('_')[0]}</option>`;
+                // slcTerminal.innerHTML += `<option value="${item.split('_')[0]}">${item.split('_')[0]}</option>`;
+                slcTerminal.innerHTML += `<option value="${item}">${item}</option>`;
             });
 
             // agregar a divCoordenadas input para lat y long para cada una de las terminales
