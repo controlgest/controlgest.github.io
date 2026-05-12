@@ -1,5 +1,5 @@
 //?pConst=6&pDistrito=sadf456&pTerminal=45678d1_2025-02-03%2011:35_2025-03-13%2017:35,45678d2,45678d3,45678d4,45678d5,45678d6,45678d7,45678d8,45678d9,45678d0&pArea=leon&pCope=cope2&pTipoLum=P24
-//?pConst=6&pDistrito=sadf456&pTerminal=45678d1_2025-02-03%2011:35_2025-03-13%2017:35,45678d2_2025-02-03%2011:35_2025-03-13%2017:35&pArea=leon&pCope=cope2&pTipoLum=P24
+//?pConst=6&pDistrito=sadf456&pTerminal=45678d1|2025-02-03%2011:35|2025-03-13%2017:35,45678d2|2025-02-03%2011:35|2025-03-13%2017:35&pArea=leon&pCope=cope2&pTipoLum=P24
 let UCTable = [];
 
 const XAVApp = {
@@ -132,10 +132,24 @@ let  cargarDatos =async (params) => {
                             
                     </div>
                     <div class="col-6 p-0 pr-2">    
-                        <input type="number" id="txtLat_${item.split('|')[0]}" class="form-control" placeholder="Latitud de Terminal ${item.split('|')[0]}" required>
+                        <input type="number"
+                            id="txtLat_${item.split('|')[0]}" 
+                            class="form-control" 
+                            placeholder="Latitud: ${item.split('|')[0]}" 
+                            step="any" 
+                            min="-90" 
+                            max="90" 
+                            required>
                     </div>
                     <div class="col-6 p-0 pl-2">    
-                        <input type="number" id="txtLong_${item.split('|')[0]}" class="form-control" placeholder="Longitud de Terminal ${item.split('|')[0]}" required>
+                        <input type="number" 
+                            id="txtLong_${item.split('|')[0]}" 
+                            class="form-control" 
+                            placeholder="Longitud: ${item.split('|')[0]}" 
+                            step="any" 
+                            min="-180" 
+                            max="180" 
+                            required>
                     </div>
                 </div>
                 `;

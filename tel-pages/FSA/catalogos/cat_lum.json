@@ -3670,5 +3670,17 @@
 		"tipo_costeo" : "MATERIALES",
 		"agrupador" : "PRECONECTORIZADOS",
 		"cur_id_constructor" : null
+	},
+	{
+		"id_cumontada": 2822,
+		"clave_unidad": "1000430",
+		"descripcion": "CINTA 19 MM. NEGRA C\/ADHESIVO PVC",
+		"id_cunidad": 4,
+		"unidad": "PZA",
+		"tipo": "SIATEL",
+		"precio_unitario": 10.0,
+		"tipo_costeo": "MATERIALES",
+		"agrupador": "OTROS",
+		"cur_id_constructor": null
 	}
 ]
