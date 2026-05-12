@@ -123,19 +123,19 @@ let  cargarDatos =async (params) => {
                 divCoordenadas.innerHTML += `
                 <div class="form-row col-md-6 col-12 mb-2 ">
                     <div class="col-12 p-0">
-                        <label class="m-0" for="txtLat_${item.split('_')[0]}"><b>Terminal ${item.split('_')[0]}:</b></label>
+                        <label class="m-0" for="txtLat_${item.split('|')[0]}"><b>Terminal ${item.split('|')[0]}:</b></label>
                         <div class="d-flex justify-content-start align-items-center">
-                            <label id="fechaIni_${item.split('_')[0]}"> <b>Fecha Inicio:</b> ${item.split('_')[1]} </label>
+                            <label id="fechaIni_${item.split('|')[0]}"> <b>Fecha Inicio:</b> ${item.split('|')[1]} </label>
                             <label> - </label>
-                            <label id="fechaFin_${item.split('_')[0]}"> <b>Fecha Fin:</b> ${item.split('_')[2]}</label>
+                            <label id="fechaFin_${item.split('|')[0]}"> <b>Fecha Fin:</b> ${item.split('|')[2]}</label>
                         </div>
                             
                     </div>
                     <div class="col-6 p-0 pr-2">    
-                        <input type="number" id="txtLat_${item.split('_')[0]}" class="form-control" placeholder="Latitud de Terminal ${item.split('_')[0]}" required>
+                        <input type="number" id="txtLat_${item.split('|')[0]}" class="form-control" placeholder="Latitud de Terminal ${item.split('|')[0]}" required>
                     </div>
                     <div class="col-6 p-0 pl-2">    
-                        <input type="number" id="txtLong_${item.split('_')[0]}" class="form-control" placeholder="Longitud de Terminal ${item.split('_')[0]}" required>
+                        <input type="number" id="txtLong_${item.split('|')[0]}" class="form-control" placeholder="Longitud de Terminal ${item.split('|')[0]}" required>
                     </div>
                 </div>
                 `;
