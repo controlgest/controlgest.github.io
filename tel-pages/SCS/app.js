@@ -45,6 +45,7 @@ XAVApp.MainButton.onClick(() => {
 
 let cargarDatos = (params) => {
     const txtTipoLum = document.getElementById('txtTipoLum');
+    const txtTipoCaptura = document.getElementById('txtTipoCaptura');
     const inputManoObra = document.getElementById('txtManoDeObra');
     const autocompleteListManoObra = document.getElementById('manoDeObraAutocompleteList');
     const txtFolio = document.getElementById('txtFolio');
@@ -58,8 +59,11 @@ let cargarDatos = (params) => {
     let idConstructor = params.get("pConst");
     let tipoLUM = params.get("pTipoLum");
     let constructorSacre = params.get("pSacre");
+    let tipoCaptura = params.get("pTipo");
 
     txtTipoLum.textContent = tipoLUM.toUpperCase();
+    txtTipoCaptura.textContent = tipoCaptura.toUpperCase();
+    txtTipoCaptura2.textContent = tipoCaptura.toUpperCase();
     chkManoObra.checked = true;
     txtFolio.textContent = folio.toUpperCase();
     txtArea.textContent = area.toUpperCase();

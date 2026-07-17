@@ -24,12 +24,6 @@
 		"estatus" : 1
 	},
 	{
-		"id_cconstructor" : 6,
-		"constructor" : "ENLACE DIGITAL",
-		"sacre" : 0,
-		"estatus" : 1
-	},
-	{
 		"id_cconstructor" : 7,
 		"constructor" : "HTM (HELICOM)",
 		"sacre" : 1,
