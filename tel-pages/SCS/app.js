@@ -62,8 +62,8 @@ let cargarDatos = (params) => {
     let tipoCaptura = params.get("pTipo");
 
     txtTipoLum.textContent = tipoLUM.toUpperCase();
-    txtTipoCaptura.textContent = tipoCaptura.toUpperCase();
-    txtTipoCaptura2.textContent = tipoCaptura.toUpperCase();
+    txtTipoCaptura.textContent = tipoCaptura? tipoCaptura.toUpperCase():'LUM'
+    txtTipoCaptura2.textContent = tipoCaptura? tipoCaptura.toUpperCase():'LUM'
     chkManoObra.checked = true;
     txtFolio.textContent = folio.toUpperCase();
     txtArea.textContent = area.toUpperCase();
