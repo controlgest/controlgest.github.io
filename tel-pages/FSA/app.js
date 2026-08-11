@@ -59,15 +59,18 @@ let  cargarDatos =async (params) => {
     const slcCableUtilizado = document.getElementById('slcCableUtilizado');
     const slcAlmacen = document.getElementById('slcAlmacen');
     const txtConstructor = document.getElementById('txtConstructor');
+    const txtTipoCaptura = document.getElementById('txtTipoCaptura');
+    const txtTipoCaptura2 = document.getElementById('txtTipoCaptura2');
     // let txtFechaInicio = document.getElementById('txtFechaInicio');
     // let txtFechaFin = document.getElementById('txtFechaFin');
-
+    
     let area = params.get("pArea");
     let cope = params.get("pCope");
     let distrito = params.get("pDistrito");
     let terminal = params.get("pTerminal");
     let idConstructor = params.get("pConst");
     let tipoLum = params.get("pTipoLum");
+    let tipoCaptura = params.get("pTipo");
     // let fechaIni = params.get("pFIni");
     // let fechaFin = params.get("pFFin");
 
@@ -77,6 +80,8 @@ let  cargarDatos =async (params) => {
     txtDistrito.textContent = distrito.toUpperCase();
     // txtTerminal.textContent = terminal.toUpperCase();
     txtTipoLum.textContent = tipoLum.toUpperCase();
+    txtTipoCaptura.textContent = tipoCaptura? tipoCaptura.toUpperCase():'LUM'
+    txtTipoCaptura2.textContent = tipoCaptura? tipoCaptura.toUpperCase():'LUM'
     //fechas en formato yyyy-MM-dd HH:mm 
     // txtFechaInicio.value = fechaIni;
     // txtFechaFin.value = fechaFin;
@@ -137,8 +142,8 @@ let  cargarDatos =async (params) => {
                             class="form-control" 
                             placeholder="Latitud: ${item.split('|')[0]}" 
                             step="any" 
-                            min="-90" 
-                            max="90" 
+                            min="14.5" 
+                            max="32.72" 
                             required>
                     </div>
                     <div class="col-6 p-0 pl-2">    
@@ -147,8 +152,8 @@ let  cargarDatos =async (params) => {
                             class="form-control" 
                             placeholder="Longitud: ${item.split('|')[0]}" 
                             step="any" 
-                            min="-180" 
-                            max="180" 
+                            min="-118.4" 
+                            max="-86.7" 
                             required>
                     </div>
                 </div>
