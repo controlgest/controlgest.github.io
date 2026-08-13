@@ -49,6 +49,8 @@ let cargarDatos = (params) => {
     const txtArea = document.getElementById('txtArea');
     const txtCope = document.getElementById('txtCope');
     const chkManoObra = document.getElementById('chkManoObra');
+    const txtTipoCaptura = document.getElementById('txtTipoCaptura');
+    const txtTipoCaptura2 = document.getElementById('txtTipoCaptura2');
 
     let folio = params.get("pFolio");
     let area = params.get("pArea");
@@ -56,12 +58,15 @@ let cargarDatos = (params) => {
     let idConstructor = params.get("pConst");
     let tipoLUM = params.get("pTipoLum");
     let constructorSacre = params.get("pSacre");
+    let tipoCaptura = params.get("pTipo");
 
     txtTipoLum.textContent = tipoLUM.toUpperCase();
     chkManoObra.checked = true;
     txtFolio.textContent = folio.toUpperCase();
     txtArea.textContent = area.toUpperCase();
     txtCope.textContent = cope.toUpperCase();
+    txtTipoCaptura.textContent = tipoCaptura? tipoCaptura.toUpperCase():'LUM MTTO'
+    txtTipoCaptura2.textContent = tipoCaptura? tipoCaptura.toUpperCase():'LUM MTTO'
 
     if (constructor != null) {
         fetch('./catalogos/catConstructores.json')
