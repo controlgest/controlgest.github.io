@@ -219,11 +219,19 @@ let agregarUC = () => {
 
     let txtManoObraArray = txtManoObra.value.split(' / ')
     let clave = txtManoObraArray[0].trim();
+    let familiaFN24 = clave.match(/^(FN24[PS])[1-3]$/);
 
     for (let i = 0; i < table.rows.length; i++) {
         let row = table.rows[i]
-        if (row.cells[0].innerHTML == clave && row.cells[5].innerHTML == slcTipoRed.value && row.cells[6].innerHTML == slcTerminal.value) {
+        let mismoAlcance = row.cells[5].innerHTML == slcTipoRed.value && row.cells[6].innerHTML == slcTerminal.value;
+        if (row.cells[0].innerHTML == clave && mismoAlcance) {
             alert('La unidad de construcción ya existe en la lista con el mismo tipo de red y terminal.');
+            return;
+        }
+
+        let familiaExistente = row.cells[0].innerHTML.match(/^(FN24[PS])[1-3]$/);
+        if (familiaFN24 && familiaExistente && familiaFN24[1] == familiaExistente[1] && mismoAlcance) {
+            alert(`Solo se permite una clave ${familiaFN24[1]}1, ${familiaFN24[1]}2 o ${familiaFN24[1]}3 por tipo de red y terminal.`);
             return;
         }
     }
@@ -486,6 +494,14 @@ let validarCantidad = (item, cantidad) => {
     return true;
 }
 
+let  llenarAutocompleteManoObra =async (autocompleteListManoObra,inputManoObra,item, value) => {
+    if (item.clave_unidad.toLowerCase().includes(value)) {
+        insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+    } else if (item.descripcion.toLowerCase().includes(value)) {
+        insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+    }
+}
+
 let slcTipoRed_change = (e) => {
     const inputManoObra = document.getElementById('txtManoDeObra');
     const autocompleteListManoObra = document.getElementById('manoDeObraAutocompleteList');
@@ -513,33 +529,22 @@ let slcTipoRed_change = (e) => {
                 return false;
             }
 
-            data.forEach(item => {
-
-                //check mano de obra == true, tipo: sacre y si constructor es Enlace Digital tipo:Fuera de sacre
-                //check materiales == true, tipo: siatel
+            data.forEach(async item => {
                 if (chkManoObra.checked) {
                     if (item.tipo == 'FUERA_SACRE') {
-                        if (item.clave_unidad.toLowerCase().includes(value)) {
-                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                        } else if (item.descripcion.toLowerCase().includes(value)) {
-                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
+                        if (slcTipoRed.value == 'SEC' && item.clave_unidad.includes("FN24S")) {
+                           await llenarAutocompleteManoObra(autocompleteListManoObra,inputManoObra,item, value);
+                        } else if (slcTipoRed.value == 'PRI' && item.clave_unidad.includes("FN24P") || item.clave_unidad.includes("FN24PV")) {
+                            await llenarAutocompleteManoObra(autocompleteListManoObra,inputManoObra,item, value);
                         }
                     }
                 } else if (chkMateriales.checked) {
                     if (item.tipo == 'SIATEL' && item.agrupador != 'PRECONECTORIZADOS') {
-                        if (item.clave_unidad.toLowerCase().includes(value)) {
-                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                        } else if (item.descripcion.toLowerCase().includes(value)) {
-                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                        }
+                        await llenarAutocompleteManoObra(autocompleteListManoObra,inputManoObra,item, value);
                     }
                 }  else if (chkMatPreconectorizado.checked ) {
                     if (item.tipo == 'SIATEL' && item.agrupador == 'PRECONECTORIZADOS') {
-                        if ((item.clave_unidad.toLowerCase().includes(value))) {
-                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                        } else if (item.descripcion.toLowerCase().includes(value)) {
-                            insertItemManoDeObraAutocompleteList(autocompleteListManoObra, inputManoObra, item);
-                        }
+                        await llenarAutocompleteManoObra(autocompleteListManoObra,inputManoObra,item, value);
                     }
                 }
             });
@@ -561,3 +566,5 @@ let slcTipoRed_change = (e) => {
         divCableUtilizado.hidden = true;
     }
 }
+
+
