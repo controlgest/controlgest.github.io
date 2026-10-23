@@ -171,9 +171,9 @@ let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra, inputManoO
 
     const div = document.createElement('div');
     div.classList.add('manoDeObraAutocompleteList');
-    div.innerHTML = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
+    div.innerHTML = `${item.clave_unidad_secundaria?item.clave_unidad_secundaria:item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
     div.addEventListener('click', () => {
-        inputManoObra.value = `${item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
+        inputManoObra.value = `${item.clave_unidad_secundaria?item.clave_unidad_secundaria:item.clave_unidad} / ${item.descripcion} / ${item.unidad}`;
         autocompleteListManoObra.innerHTML = '';
         txtCantManoObra.disabled = false;
         divCableUtilizado.hidden = true;
@@ -245,7 +245,7 @@ let agregarUC = () => {
         .then(response => response.json())
         .then(data => {
             data.forEach(item => {
-                if (item.clave_unidad == clave) {
+                if (item.clave_unidad == clave || item.clave_unidad_secundaria == clave) {
                     if (!validarCantidad(item, txtCantManoObra.value)) {
                         return;
                     }
@@ -265,7 +265,7 @@ let agregarUC = () => {
                     UCTable.push({
                         UC_Idcumontada: item.id_cumontada,
                         UC_Cantidad: txtCantManoObra.value,
-                        UC_Clave: item.clave_unidad,
+                        UC_Clave: item.clave_unidad_secundaria?item.clave_unidad_secundaria:item.clave_unidad,
                         UC_Desc: item.descripcion,
                         UC_Unidad: item.unidad,
                         UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SEC" ? (slcCableUtilizado.value === "true") : "",
