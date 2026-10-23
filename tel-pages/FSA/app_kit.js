@@ -189,7 +189,7 @@ let insertItemManoDeObraAutocompleteList = (autocompleteListManoObra, inputManoO
                 divCableUtilizado.hidden = false;
             }
         } else {            
-            if (item.descripcion.includes('Kit')) {
+            if (item.descripcion.includes('Kit') || item.descripcion.includes('POSTE')) {
                 txtCantManoObra.value = 1;
                 txtCantManoObra.disabled = true;
             }
@@ -239,6 +239,12 @@ let agregarUC = () => {
             alert(`Solo se permite una clave ${familiaFN24[1]}1, ${familiaFN24[1]}2 o ${familiaFN24[1]}3 por tipo de red y terminal.`);
             return;
         }
+
+        //SOLO PERMITIR UN POSTE DEL TIPO QUE SEA
+        if(row.cells[1].innerHTML.includes('POSTE') && txtManoObraArray[1].includes('POSTE') && row.cells[6].innerHTML == slcTerminal.value){
+            alert('Solo se puede agregar un poste por terminal')
+            return
+        }
     }
 
     fetch('./catalogos/cat_lum_kit.json')
@@ -269,7 +275,7 @@ let agregarUC = () => {
                         UC_Desc: item.descripcion,
                         UC_Unidad: item.unidad,
                         UC_CableUtilizado: item.clave_unidad == "N24/0-100" && slcTipoRed.value == "SEC" ? (slcCableUtilizado.value === "true") : "",
-                        UC_Tipo:item.tipo_costeo == 'MATERIALES' && item.agrupador == 'PRECONECTORIZADOS'? 'MATERIAL PRE': item.tipo_costeo == 'MATERIALES'? 'MATERIAL TRA': 'MANO DE OBRA',
+                        UC_Tipo:item.tipo_costeo,// == 'MATERIALES' && item.agrupador == 'PRECONECTORIZADOS'? 'MATERIAL PRE': item.tipo_costeo == 'MATERIALES'? 'MATERIAL TRA': 'MANO DE OBRA',
                         UC_TipoRed: slcTipoRed.value,
                         UC_Agrupador: item.agrupador,
                         UC_Terminal: document.getElementById('slcTerminal').value
