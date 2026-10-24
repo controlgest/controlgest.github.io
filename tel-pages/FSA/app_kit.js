@@ -234,6 +234,7 @@ let agregarUC = () => {
             return;
         }
 
+        //SOLO PERMITE CAPTURAR UN TIPO DE UNIDAD POR METRAJE (0-100)
         let familiaExistente = row.cells[0].innerHTML.match(/^(FN24[PS])[1-3]$/);
         if (familiaFN24 && familiaExistente && familiaFN24[1] == familiaExistente[1] && mismoAlcance) {
             alert(`Solo se permite una clave ${familiaFN24[1]}1, ${familiaFN24[1]}2 o ${familiaFN24[1]}3 por tipo de red y terminal.`);
@@ -365,8 +366,63 @@ let sendDataToBot = () => {
     let terminalesSeleccionadas = Array.from(slcTerminal.options).filter(option => option.value !== "").map(option => option.value);
     let terminalesConUC = [...new Set(UCTable.map(item => item.UC_Terminal))];
     for (let terminal of terminalesSeleccionadas) {
-        if (!terminalesConUC.includes(terminal)) {
-            alert(`Debe agregar al menos una unidad de construcción para la terminal ${terminal}`);
+        // if (!terminalesConUC.includes(terminal)) {
+        //     alert(`Debe agregar al menos una unidad de construcción para la terminal ${terminal}`);
+        //     return;
+        // }
+
+        const tieneMetrajeSecundario = UCTable.some(item =>
+            item.UC_Terminal === terminal &&
+            item.UC_TipoRed === 'SEC' &&
+            item.UC_Tipo === 'MANO OBRA FUERA SACRE' &&
+            /^FN24S[1-3]$/i.test(item.UC_Clave)
+        );
+
+        if (!tieneMetrajeSecundario) {
+            alert(`Debe agregar una unidad de metraje de mano de obra de red secundaria para la terminal ${terminal}`);
+            return;
+        }
+    }
+
+    const registrosPrincipalConPosteOPlusvalia = UCTable.filter(item =>
+        item.UC_TipoRed === 'PRI' &&
+        (item.UC_Clave === 'FN24PV' || item.UC_Desc.toUpperCase().includes('POSTE'))
+    );
+
+    for (let registro of registrosPrincipalConPosteOPlusvalia) {
+        const tieneMetrajePrincipal = UCTable.some(item =>
+            item.UC_Terminal === registro.UC_Terminal &&
+            item.UC_TipoRed === registro.UC_TipoRed &&
+            item.UC_Tipo === 'MANO OBRA FUERA SACRE' &&
+            /^FN24P[1-3]$/i.test(item.UC_Clave)
+        );
+
+        if (!tieneMetrajePrincipal) {
+            alert(`Debe agregar una unidad de metraje de mano de obra de red principal para la terminal ${registro.UC_Terminal} que tiene poste o plusvalía`);
+            return;
+        }
+    }
+
+    const materialesDeMetraje = UCTable.filter(item =>
+        item.UC_Tipo === 'MATERIALES' && /^FN24[PS][1-3]0$/i.test(item.UC_Clave)
+    );
+
+    for (let material of materialesDeMetraje) {
+        const rangoMaterial = material.UC_Clave.match(/^FN24([PS])([1-3])0$/i);
+        const letraRed = material.UC_TipoRed === 'PRI' ? 'P' : material.UC_TipoRed === 'SEC' ? 'S' : '';
+        const tieneManoObraMismoRango = UCTable.some(item => {
+            const rangoManoObra = item.UC_Clave.match(/^FN24([PS])([1-3])$/i);
+            return item.UC_Terminal === material.UC_Terminal &&
+                item.UC_TipoRed === material.UC_TipoRed &&
+                item.UC_Tipo === 'MANO OBRA FUERA SACRE' &&
+                rangoManoObra &&
+                rangoManoObra[1].toUpperCase() === letraRed &&
+                rangoManoObra[2] === rangoMaterial[2];
+        });
+
+        if (!tieneManoObraMismoRango) {
+            const red = material.UC_TipoRed === 'PRI' ? 'principal' : 'secundaria';
+            alert(`El material de metraje ${material.UC_Clave} debe coincidir con el rango de mano de obra de red ${red} para la terminal ${material.UC_Terminal}`);
             return;
         }
     }
